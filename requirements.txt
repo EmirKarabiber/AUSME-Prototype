@@ -1,0 +1,2 @@
+# Phase 1: static frontend — no Python dependencies.
+# Add backend/script dependencies here when needed.
