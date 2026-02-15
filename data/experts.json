@@ -1,1 +1,5252 @@
-[]
+[
+  {
+    "id": "SAN0028",
+    "name": "Sathyanarayanan Aakur",
+    "publicationCount": 49,
+    "keywordCount": 191
+  },
+  {
+    "id": "MZA0264",
+    "name": "Mehrnaz Abbasi",
+    "publicationCount": 25,
+    "keywordCount": 90
+  },
+  {
+    "id": "APA0011",
+    "name": "Anthony Abbate",
+    "publicationCount": 19,
+    "keywordCount": 76
+  },
+  {
+    "id": "ABEBEAS",
+    "name": "Asheber Abebe",
+    "publicationCount": 117,
+    "keywordCount": 450
+  },
+  {
+    "id": "YZA0006",
+    "name": "Younis Abiedalla",
+    "publicationCount": 30,
+    "keywordCount": 95
+  },
+  {
+    "id": "YNA0001",
+    "name": "Yadrianna Acosta-Sojo",
+    "publicationCount": 13,
+    "keywordCount": 51
+  },
+  {
+    "id": "ADAMSG1",
+    "name": "Garry Adams",
+    "publicationCount": 23,
+    "keywordCount": 103
+  },
+  {
+    "id": "MLA0019",
+    "name": "Mark Adams",
+    "publicationCount": 97,
+    "keywordCount": 365
+  },
+  {
+    "id": "ADANUSA",
+    "name": "Sabit Adanur",
+    "publicationCount": 83,
+    "keywordCount": 325
+  },
+  {
+    "id": "SZA0016",
+    "name": "Sushil Adhikari",
+    "publicationCount": 249,
+    "keywordCount": 765
+  },
+  {
+    "id": "ADLERFR",
+    "name": "Francesca Adler-Baeder",
+    "publicationCount": 128,
+    "keywordCount": 435
+  },
+  {
+    "id": "AGARWPA",
+    "name": "Payal Agarwal",
+    "publicationCount": 41,
+    "keywordCount": 142
+  },
+  {
+    "id": "SAW0011",
+    "name": "Sara Ahnell",
+    "publicationCount": 2,
+    "keywordCount": 10
+  },
+  {
+    "id": "JAA0025",
+    "name": "Joseph Aistrup",
+    "publicationCount": 28,
+    "keywordCount": 126
+  },
+  {
+    "id": "AKINGBT",
+    "name": "Benson Akingbemi",
+    "publicationCount": 94,
+    "keywordCount": 289
+  },
+  {
+    "id": "AKSOYBU",
+    "name": "Burak Aksoy",
+    "publicationCount": 51,
+    "keywordCount": 198
+  },
+  {
+    "id": "RMA0034",
+    "name": "Razan Al Fakir",
+    "publicationCount": 24,
+    "keywordCount": 83
+  },
+  {
+    "id": "JMA0019",
+    "name": "Jaena Alabi",
+    "publicationCount": 13,
+    "keywordCount": 49
+  },
+  {
+    "id": "JRA0024",
+    "name": "Janaki Alavalapati",
+    "publicationCount": 187,
+    "keywordCount": 611
+  },
+  {
+    "id": "CSW0015",
+    "name": "Courtney Alexander",
+    "publicationCount": 30,
+    "keywordCount": 125
+  },
+  {
+    "id": "HDA0010",
+    "name": "Heather Alexander",
+    "publicationCount": 179,
+    "keywordCount": 510
+  },
+  {
+    "id": "SLA0044",
+    "name": "Symone Alexander",
+    "publicationCount": 24,
+    "keywordCount": 105
+  },
+  {
+    "id": "HBA0007",
+    "name": "Haneen Ali",
+    "publicationCount": 52,
+    "keywordCount": 202
+  },
+  {
+    "id": "BCA0027",
+    "name": "Brendon Allen",
+    "publicationCount": 32,
+    "keywordCount": 105
+  },
+  {
+    "id": "IMA0010",
+    "name": "Isabel Altamirano",
+    "publicationCount": 9,
+    "keywordCount": 36
+  },
+  {
+    "id": "DZA0013",
+    "name": "Duha Tore Altindag",
+    "publicationCount": 31,
+    "keywordCount": 131
+  },
+  {
+    "id": "RHA0003",
+    "name": "Rajesh Amin",
+    "publicationCount": 96,
+    "keywordCount": 306
+  },
+  {
+    "id": "LZA0060",
+    "name": "Li An",
+    "publicationCount": 142,
+    "keywordCount": 496
+  },
+  {
+    "id": "ANDERCJ",
+    "name": "Christopher Anderson",
+    "publicationCount": 79,
+    "keywordCount": 280
+  },
+  {
+    "id": "JBA0005",
+    "name": "Jeremy Anderson",
+    "publicationCount": 81,
+    "keywordCount": 313
+  },
+  {
+    "id": "WMA0016",
+    "name": "Wesley Anderson",
+    "publicationCount": 20,
+    "keywordCount": 84
+  },
+  {
+    "id": "ANDRUMR",
+    "name": "Miranda Andrus",
+    "publicationCount": 53,
+    "keywordCount": 197
+  },
+  {
+    "id": "CEA0011",
+    "name": "Carey Andrzejewski",
+    "publicationCount": 29,
+    "keywordCount": 127
+  },
+  {
+    "id": "APPELAG",
+    "name": "Arthur Appel",
+    "publicationCount": 187,
+    "keywordCount": 566
+  },
+  {
+    "id": "MZA0223",
+    "name": "Mehmet Arik",
+    "publicationCount": 249,
+    "keywordCount": 721
+  },
+  {
+    "id": "ARMBRJW",
+    "name": "Jonathan Armbruster",
+    "publicationCount": 114,
+    "keywordCount": 415
+  },
+  {
+    "id": "RDA0007",
+    "name": "Robert Arnold",
+    "publicationCount": 143,
+    "keywordCount": 478
+  },
+  {
+    "id": "GZA0041",
+    "name": "Georgios Arseniou",
+    "publicationCount": 10,
+    "keywordCount": 39
+  },
+  {
+    "id": "MLA0001",
+    "name": "Maria Auad",
+    "publicationCount": 168,
+    "keywordCount": 546
+  },
+  {
+    "id": "AAA0078",
+    "name": "Atiya Avery",
+    "publicationCount": 17,
+    "keywordCount": 78
+  },
+  {
+    "id": "LAA0029",
+    "name": "Adriana Avila Flores",
+    "publicationCount": 26,
+    "keywordCount": 93
+  },
+  {
+    "id": "SZA0001",
+    "name": "Salman Azhar",
+    "publicationCount": 167,
+    "keywordCount": 564
+  },
+  {
+    "id": "RMB0119",
+    "name": "Ryan Babl",
+    "publicationCount": 17,
+    "keywordCount": 63
+  },
+  {
+    "id": "HCB0017",
+    "name": "Hannah Baggett",
+    "publicationCount": 30,
+    "keywordCount": 116
+  },
+  {
+    "id": "BAGINME",
+    "name": "Michael Baginski",
+    "publicationCount": 82,
+    "keywordCount": 313
+  },
+  {
+    "id": "LTB0004",
+    "name": "Lakami Baker",
+    "publicationCount": 16,
+    "keywordCount": 66
+  },
+  {
+    "id": "MJB0100",
+    "name": "Margaret Ballen",
+    "publicationCount": 79,
+    "keywordCount": 292
+  },
+  {
+    "id": "PZB0035",
+    "name": "Priyanka Banerjee",
+    "publicationCount": 83,
+    "keywordCount": 264
+  },
+  {
+    "id": "RZB0120",
+    "name": "Rahul Banerjee",
+    "publicationCount": 26,
+    "keywordCount": 91
+  },
+  {
+    "id": "TZB0018",
+    "name": "Tannista Banerjee",
+    "publicationCount": 22,
+    "keywordCount": 94
+  },
+  {
+    "id": "RZB0144",
+    "name": "Rojan Baniya",
+    "publicationCount": 24,
+    "keywordCount": 92
+  },
+  {
+    "id": "RJB0003",
+    "name": "Rebecca Barlow",
+    "publicationCount": 48,
+    "keywordCount": 176
+  },
+  {
+    "id": "BARNERW",
+    "name": "Robert Barnes",
+    "publicationCount": 69,
+    "keywordCount": 251
+  },
+  {
+    "id": "BARNEM4",
+    "name": "Mark Barnett",
+    "publicationCount": 105,
+    "keywordCount": 377
+  },
+  {
+    "id": "AZB0117",
+    "name": "Adil Bashir",
+    "publicationCount": 38,
+    "keywordCount": 142
+  },
+  {
+    "id": "BASKISA",
+    "name": "Sanjeev Baskiyar",
+    "publicationCount": 37,
+    "keywordCount": 136
+  },
+  {
+    "id": "RDB0057",
+    "name": "Ronald Bassar",
+    "publicationCount": 65,
+    "keywordCount": 235
+  },
+  {
+    "id": "WDB0007",
+    "name": "William Batchelor",
+    "publicationCount": 229,
+    "keywordCount": 709
+  },
+  {
+    "id": "JMB0336",
+    "name": "Jennie Baumann",
+    "publicationCount": 11,
+    "keywordCount": 42
+  },
+  {
+    "id": "SDB0072",
+    "name": "Stephanie Baumann",
+    "publicationCount": 12,
+    "keywordCount": 53
+  },
+  {
+    "id": "HSB0025",
+    "name": "Harsimran Baweja",
+    "publicationCount": 56,
+    "keywordCount": 209
+  },
+  {
+    "id": "BSB0025",
+    "name": "Bryan Beckingham",
+    "publicationCount": 111,
+    "keywordCount": 365
+  },
+  {
+    "id": "LEB0071",
+    "name": "Lauren Beckingham",
+    "publicationCount": 132,
+    "keywordCount": 405
+  },
+  {
+    "id": "JFB0028",
+    "name": "John Beckmann",
+    "publicationCount": 32,
+    "keywordCount": 101
+  },
+  {
+    "id": "ADB0097",
+    "name": "Aeriel Belk",
+    "publicationCount": 35,
+    "keywordCount": 138
+  },
+  {
+    "id": "AVB0033",
+    "name": "Aniruddha Belsare",
+    "publicationCount": 41,
+    "keywordCount": 153
+  },
+  {
+    "id": "JDB0068",
+    "name": "Justin Benefield",
+    "publicationCount": 46,
+    "keywordCount": 176
+  },
+  {
+    "id": "EAK0020",
+    "name": "Elizabeth Benson",
+    "publicationCount": 5,
+    "keywordCount": 23
+  },
+  {
+    "id": "SZB0281",
+    "name": "Stefano Beretta",
+    "publicationCount": 318,
+    "keywordCount": 879
+  },
+  {
+    "id": "LIB0016",
+    "name": "Liam Berigan",
+    "publicationCount": 13,
+    "keywordCount": 42
+  },
+  {
+    "id": "MAB0205",
+    "name": "Moises Antonio Bernal de Leon",
+    "publicationCount": 43,
+    "keywordCount": 156
+  },
+  {
+    "id": "RDB0045",
+    "name": "Rafael Bernardi",
+    "publicationCount": 53,
+    "keywordCount": 191
+  },
+  {
+    "id": "AVR0001",
+    "name": "Anna Bertolet",
+    "publicationCount": 7,
+    "keywordCount": 32
+  },
+  {
+    "id": "BEVLYDM",
+    "name": "David Bevly",
+    "publicationCount": 231,
+    "keywordCount": 806
+  },
+  {
+    "id": "BIANMOR",
+    "name": "Morris Bian",
+    "publicationCount": 6,
+    "keywordCount": 29
+  },
+  {
+    "id": "VCB0005",
+    "name": "Vinicia Biancardi",
+    "publicationCount": 89,
+    "keywordCount": 250
+  },
+  {
+    "id": "BIAZSAA",
+    "name": "Saad Biaz",
+    "publicationCount": 107,
+    "keywordCount": 369
+  },
+  {
+    "id": "LDB0036",
+    "name": "Laura Bilenker",
+    "publicationCount": 66,
+    "keywordCount": 220
+  },
+  {
+    "id": "BILLONE",
+    "name": "Nedret Billor",
+    "publicationCount": 70,
+    "keywordCount": 258
+  },
+  {
+    "id": "BIRDGOR",
+    "name": "Gorham Bird",
+    "publicationCount": 4,
+    "keywordCount": 18
+  },
+  {
+    "id": "JEB0218",
+    "name": "Jennifer Blackhurst",
+    "publicationCount": 73,
+    "keywordCount": 272
+  },
+  {
+    "id": "SKB0058",
+    "name": "Sara Blaine",
+    "publicationCount": 49,
+    "keywordCount": 182
+  },
+  {
+    "id": "JZB0124",
+    "name": "Justin Blankenship",
+    "publicationCount": 6,
+    "keywordCount": 20
+  },
+  {
+    "id": "DMB0040",
+    "name": "David Blersch",
+    "publicationCount": 68,
+    "keywordCount": 263
+  },
+  {
+    "id": "RZB0118",
+    "name": "Reginald Blockett",
+    "publicationCount": 20,
+    "keywordCount": 79
+  },
+  {
+    "id": "DEB0022",
+    "name": "Dora Bock",
+    "publicationCount": 40,
+    "keywordCount": 161
+  },
+  {
+    "id": "DZB0059",
+    "name": "Dennis Bodewits",
+    "publicationCount": 434,
+    "keywordCount": 1074
+  },
+  {
+    "id": "BBB0034",
+    "name": "Brian Boston",
+    "publicationCount": 123,
+    "keywordCount": 357
+  },
+  {
+    "id": "DVB0006",
+    "name": "Dianna Bourassa",
+    "publicationCount": 103,
+    "keywordCount": 353
+  },
+  {
+    "id": "BOURDBL",
+    "name": "Brian Bourdeau",
+    "publicationCount": 24,
+    "keywordCount": 98
+  },
+  {
+    "id": "BFB0014",
+    "name": "Benjamin Bowers",
+    "publicationCount": 85,
+    "keywordCount": 295
+  },
+  {
+    "id": "DAP0067",
+    "name": "Danielle Boyd",
+    "publicationCount": 17,
+    "keywordCount": 73
+  },
+  {
+    "id": "BRANDDM",
+    "name": "Duane Brandon",
+    "publicationCount": 26,
+    "keywordCount": 106
+  },
+  {
+    "id": "JUB0001",
+    "name": "Juliane Braun",
+    "publicationCount": 5,
+    "keywordCount": 23
+  },
+  {
+    "id": "LLOYDKB",
+    "name": "Kimberly Braxton-Lloyd",
+    "publicationCount": 50,
+    "keywordCount": 209
+  },
+  {
+    "id": "SKB0064",
+    "name": "Shannon Brewer",
+    "publicationCount": 128,
+    "keywordCount": 458
+  },
+  {
+    "id": "JEB0002",
+    "name": "Jennifer Brooks",
+    "publicationCount": 14,
+    "keywordCount": 58
+  },
+  {
+    "id": "MKB0096",
+    "name": "Michael Brown",
+    "publicationCount": 13,
+    "keywordCount": 44
+  },
+  {
+    "id": "ONB0001",
+    "name": "Onikia Brown",
+    "publicationCount": 91,
+    "keywordCount": 299
+  },
+  {
+    "id": "TAB0110",
+    "name": "Tiffany Brown",
+    "publicationCount": 165,
+    "keywordCount": 428
+  },
+  {
+    "id": "SZB0130",
+    "name": "Selina Bruckner",
+    "publicationCount": 20,
+    "keywordCount": 66
+  },
+  {
+    "id": "BRUMBKA",
+    "name": "Kelly Brumbeloe Schweck",
+    "publicationCount": 4,
+    "keywordCount": 17
+  },
+  {
+    "id": "BRUNNBR",
+    "name": "Brigitta Brunner-Johnson",
+    "publicationCount": 0,
+    "keywordCount": 0
+  },
+  {
+    "id": "CHB0093",
+    "name": "Christopher Brush",
+    "publicationCount": 59,
+    "keywordCount": 210
+  },
+  {
+    "id": "MEB0105",
+    "name": "Meghan Buchanan",
+    "publicationCount": 35,
+    "keywordCount": 136
+  },
+  {
+    "id": "KMB0163",
+    "name": "Katherine Buckley",
+    "publicationCount": 53,
+    "keywordCount": 190
+  },
+  {
+    "id": "SAB0019",
+    "name": "Stephen Bullard",
+    "publicationCount": 160,
+    "keywordCount": 504
+  },
+  {
+    "id": "MJN0004",
+    "name": "Marilyn Bulloch",
+    "publicationCount": 51,
+    "keywordCount": 194
+  },
+  {
+    "id": "EJT0048",
+    "name": "Elizabeth Burkhead",
+    "publicationCount": 4,
+    "keywordCount": 19
+  },
+  {
+    "id": "EWB0026",
+    "name": "Eric Burkholder",
+    "publicationCount": 49,
+    "keywordCount": 182
+  },
+  {
+    "id": "RAB0011",
+    "name": "Richard Burt",
+    "publicationCount": 48,
+    "keywordCount": 200
+  },
+  {
+    "id": "MEB0042",
+    "name": "Megan Burton",
+    "publicationCount": 54,
+    "keywordCount": 202
+  },
+  {
+    "id": "BUSHBEM",
+    "name": "Benjamin Bush",
+    "publicationCount": 4,
+    "keywordCount": 14
+  },
+  {
+    "id": "IAB0007",
+    "name": "Ian Butts",
+    "publicationCount": 150,
+    "keywordCount": 439
+  },
+  {
+    "id": "PZB0047",
+    "name": "Phi Hung Bya",
+    "publicationCount": 29,
+    "keywordCount": 112
+  },
+  {
+    "id": "SZB0054",
+    "name": "Sweta Byahut",
+    "publicationCount": 17,
+    "keywordCount": 73
+  },
+  {
+    "id": "LOC0005",
+    "name": "Latifat Cabirou",
+    "publicationCount": 6,
+    "keywordCount": 26
+  },
+  {
+    "id": "AIC0001",
+    "name": "Angela Calderon",
+    "publicationCount": 70,
+    "keywordCount": 263
+  },
+  {
+    "id": "ADC0044",
+    "name": "Anthony Campbell",
+    "publicationCount": 19,
+    "keywordCount": 87
+  },
+  {
+    "id": "YZC0009",
+    "name": "Yanzhao Cao",
+    "publicationCount": 549,
+    "keywordCount": 2136
+  },
+  {
+    "id": "VMC0004",
+    "name": "Victoria Cardullo",
+    "publicationCount": 36,
+    "keywordCount": 130
+  },
+  {
+    "id": "CARPEDM",
+    "name": "David Carpenter",
+    "publicationCount": 85,
+    "keywordCount": 342
+  },
+  {
+    "id": "TWC0009",
+    "name": "Tessa Carr",
+    "publicationCount": 11,
+    "keywordCount": 49
+  },
+  {
+    "id": "CARROAL",
+    "name": "Alicia Carroll",
+    "publicationCount": 3,
+    "keywordCount": 15
+  },
+  {
+    "id": "CEGIECA",
+    "name": "Casimer Cegielski",
+    "publicationCount": 70,
+    "keywordCount": 273
+  },
+  {
+    "id": "EZC0066",
+    "name": "Elvan Ceyhan",
+    "publicationCount": 64,
+    "keywordCount": 227
+  },
+  {
+    "id": "DZC0003",
+    "name": "Debolina Chakraborty",
+    "publicationCount": 93,
+    "keywordCount": 296
+  },
+  {
+    "id": "IZC0018",
+    "name": "Imon Chakraborty",
+    "publicationCount": 91,
+    "keywordCount": 310
+  },
+  {
+    "id": "SZC0199",
+    "name": "Saikat Chakraborty Thakur",
+    "publicationCount": 204,
+    "keywordCount": 610
+  },
+  {
+    "id": "RYC0003",
+    "name": "Ronan Chalmin",
+    "publicationCount": 7,
+    "keywordCount": 32
+  },
+  {
+    "id": "CHAPMRO",
+    "name": "Richard Chapman",
+    "publicationCount": 14,
+    "keywordCount": 61
+  },
+  {
+    "id": "CJC0154",
+    "name": "Christine Charvet",
+    "publicationCount": 46,
+    "keywordCount": 180
+  },
+  {
+    "id": "VZC0001",
+    "name": "Veena Chattaraman",
+    "publicationCount": 68,
+    "keywordCount": 275
+  },
+  {
+    "id": "CYC0002",
+    "name": "Charles Chen",
+    "publicationCount": 132,
+    "keywordCount": 426
+  },
+  {
+    "id": "CZC0105",
+    "name": "Chen Chen",
+    "publicationCount": 41,
+    "keywordCount": 150
+  },
+  {
+    "id": "HZC0134",
+    "name": "Hao Chen",
+    "publicationCount": 88,
+    "keywordCount": 331
+  },
+  {
+    "id": "LZC0090",
+    "name": "Le Chen",
+    "publicationCount": 24,
+    "keywordCount": 93
+  },
+  {
+    "id": "PZC0057",
+    "name": "Pang-Li Chen",
+    "publicationCount": 6,
+    "keywordCount": 26
+  },
+  {
+    "id": "PZC0026",
+    "name": "Pengyu Chen",
+    "publicationCount": 72,
+    "keywordCount": 270
+  },
+  {
+    "id": "SZC0255",
+    "name": "Sanchuan Chen",
+    "publicationCount": 9,
+    "keywordCount": 39
+  },
+  {
+    "id": "CHENGZH",
+    "name": "Zhongyang Cheng",
+    "publicationCount": 328,
+    "keywordCount": 951
+  },
+  {
+    "id": "TLC0045",
+    "name": "Tiffani Chidume",
+    "publicationCount": 22,
+    "keywordCount": 81
+  },
+  {
+    "id": "SZC0181",
+    "name": "Sungeun Cho",
+    "publicationCount": 39,
+    "keywordCount": 165
+  },
+  {
+    "id": "CHOESON",
+    "name": "Song-Yul Choe",
+    "publicationCount": 118,
+    "keywordCount": 371
+  },
+  {
+    "id": "MZC0113",
+    "name": "Myounggi Chon",
+    "publicationCount": 47,
+    "keywordCount": 171
+  },
+  {
+    "id": "EZC0033",
+    "name": "Eun Ji Chung",
+    "publicationCount": 10,
+    "keywordCount": 42
+  },
+  {
+    "id": "DCC0023",
+    "name": "David Cicero",
+    "publicationCount": 23,
+    "keywordCount": 87
+  },
+  {
+    "id": "CLARKCR",
+    "name": "C Clark",
+    "publicationCount": 249,
+    "keywordCount": 764
+  },
+  {
+    "id": "SCC0066",
+    "name": "Stuart Clark-Price",
+    "publicationCount": 122,
+    "keywordCount": 415
+  },
+  {
+    "id": "CAC0132",
+    "name": "Christopher Clemons",
+    "publicationCount": 47,
+    "keywordCount": 172
+  },
+  {
+    "id": "CLINEDJ",
+    "name": "David Cline",
+    "publicationCount": 20,
+    "keywordCount": 90
+  },
+  {
+    "id": "PAC0006",
+    "name": "Paul Cobine",
+    "publicationCount": 140,
+    "keywordCount": 433
+  },
+  {
+    "id": "DJC0079",
+    "name": "Dustin Cole",
+    "publicationCount": 6,
+    "keywordCount": 27
+  },
+  {
+    "id": "JJC0032",
+    "name": "Jeffrey Coleman",
+    "publicationCount": 70,
+    "keywordCount": 214
+  },
+  {
+    "id": "WAC0020",
+    "name": "Wesley Collins",
+    "publicationCount": 37,
+    "keywordCount": 153
+  },
+  {
+    "id": "COLQULL",
+    "name": "Larry Colquitt",
+    "publicationCount": 30,
+    "keywordCount": 134
+  },
+  {
+    "id": "CJC0183",
+    "name": "Carol Connell",
+    "publicationCount": 129,
+    "keywordCount": 439
+  },
+  {
+    "id": "BLC0016",
+    "name": "Brian Connelly",
+    "publicationCount": 74,
+    "keywordCount": 295
+  },
+  {
+    "id": "MPC0035",
+    "name": "Michael Cook",
+    "publicationCount": 56,
+    "keywordCount": 202
+  },
+  {
+    "id": "LAK0007",
+    "name": "Leslie Cordie",
+    "publicationCount": 51,
+    "keywordCount": 194
+  },
+  {
+    "id": "MAC0084",
+    "name": "Marilyn Cornish",
+    "publicationCount": 45,
+    "keywordCount": 159
+  },
+  {
+    "id": "CORRECJ",
+    "name": "Christopher Correia",
+    "publicationCount": 99,
+    "keywordCount": 323
+  },
+  {
+    "id": "ABC0140",
+    "name": "Adrian Cottam",
+    "publicationCount": 10,
+    "keywordCount": 39
+  },
+  {
+    "id": "BAC0071",
+    "name": "Brian Counterman",
+    "publicationCount": 58,
+    "keywordCount": 200
+  },
+  {
+    "id": "EAW0006",
+    "name": "Elizabeth Covington",
+    "publicationCount": 41,
+    "keywordCount": 160
+  },
+  {
+    "id": "LZC0047",
+    "name": "Lorenzo Cremaschi",
+    "publicationCount": 98,
+    "keywordCount": 308
+  },
+  {
+    "id": "SZC0113",
+    "name": "Selen Cremaschi",
+    "publicationCount": 133,
+    "keywordCount": 477
+  },
+  {
+    "id": "RZC0067",
+    "name": "Richard Cristan",
+    "publicationCount": 23,
+    "keywordCount": 85
+  },
+  {
+    "id": "JMC0180",
+    "name": "Joel Cuffey",
+    "publicationCount": 36,
+    "keywordCount": 142
+  },
+  {
+    "id": "TMC0093",
+    "name": "Thomas Cullen",
+    "publicationCount": 49,
+    "keywordCount": 191
+  },
+  {
+    "id": "PLC0022",
+    "name": "Piper Cumbo",
+    "publicationCount": 3,
+    "keywordCount": 5
+  },
+  {
+    "id": "WZD0027",
+    "name": "Wellison Jarles Da Silva Diniz",
+    "publicationCount": 135,
+    "keywordCount": 385
+  },
+  {
+    "id": "SZD0085",
+    "name": "Siyuan Dai",
+    "publicationCount": 70,
+    "keywordCount": 204
+  },
+  {
+    "id": "MZD0060",
+    "name": "Marissa Daniel",
+    "publicationCount": 12,
+    "keywordCount": 49
+  },
+  {
+    "id": "JLD0105",
+    "name": "Jessica Darby",
+    "publicationCount": 14,
+    "keywordCount": 61
+  },
+  {
+    "id": "MZD0157",
+    "name": "Mohammadreza Daroonparvar",
+    "publicationCount": 112,
+    "keywordCount": 314
+  },
+  {
+    "id": "AED0022",
+    "name": "Allan David",
+    "publicationCount": 75,
+    "keywordCount": 264
+  },
+  {
+    "id": "AHD0033",
+    "name": "Alison Davis",
+    "publicationCount": 33,
+    "keywordCount": 121
+  },
+  {
+    "id": "DAVISDA",
+    "name": "Donald Davis",
+    "publicationCount": 390,
+    "keywordCount": 1038
+  },
+  {
+    "id": "EWD0001",
+    "name": "Edward Davis",
+    "publicationCount": 50,
+    "keywordCount": 206
+  },
+  {
+    "id": "JDD0042",
+    "name": "Jeremiah Davis",
+    "publicationCount": 194,
+    "keywordCount": 783
+  },
+  {
+    "id": "JND0026",
+    "name": "Jonathan Davis",
+    "publicationCount": 5,
+    "keywordCount": 25
+  },
+  {
+    "id": "DAVISVA",
+    "name": "Virginia Davis",
+    "publicationCount": 180,
+    "keywordCount": 587
+  },
+  {
+    "id": "EZD0028",
+    "name": "Elizabeth Davis-Sramek",
+    "publicationCount": 49,
+    "keywordCount": 218
+  },
+  {
+    "id": "LZD0005",
+    "name": "Leonardo De La Fuente",
+    "publicationCount": 176,
+    "keywordCount": 466
+  },
+  {
+    "id": "DEANRON",
+    "name": "Robert Dean",
+    "publicationCount": 170,
+    "keywordCount": 630
+  },
+  {
+    "id": "BCD0039",
+    "name": "Brian Delaney",
+    "publicationCount": 9,
+    "keywordCount": 39
+  },
+  {
+    "id": "SBD0026",
+    "name": "Sara Demoiny",
+    "publicationCount": 14,
+    "keywordCount": 61
+  },
+  {
+    "id": "SZD0139",
+    "name": "Shenrui Deng",
+    "publicationCount": 14,
+    "keywordCount": 66
+  },
+  {
+    "id": "DENNETS",
+    "name": "Thomas Denney",
+    "publicationCount": 282,
+    "keywordCount": 873
+  },
+  {
+    "id": "DERZINC",
+    "name": "Nicholas Derzis",
+    "publicationCount": 13,
+    "keywordCount": 54
+  },
+  {
+    "id": "GZD0005",
+    "name": "Gopikrishna Deshpande",
+    "publicationCount": 218,
+    "keywordCount": 628
+  },
+  {
+    "id": "DEVRIDR",
+    "name": "Dennis Devries",
+    "publicationCount": 137,
+    "keywordCount": 475
+  },
+  {
+    "id": "SZD0024",
+    "name": "Sarit Dhar",
+    "publicationCount": 131,
+    "keywordCount": 376
+  },
+  {
+    "id": "DILLASA",
+    "name": "Sandra Dillard",
+    "publicationCount": 154,
+    "keywordCount": 452
+  },
+  {
+    "id": "CZD0084",
+    "name": "Chen Ding",
+    "publicationCount": 29,
+    "keywordCount": 114
+  },
+  {
+    "id": "HZD0054",
+    "name": "Hao Ding",
+    "publicationCount": 5,
+    "keywordCount": 24
+  },
+  {
+    "id": "DITCHSS",
+    "name": "Stephen Ditchkoff",
+    "publicationCount": 152,
+    "keywordCount": 520
+  },
+  {
+    "id": "LDD0022",
+    "name": "LeTrice Donaldson",
+    "publicationCount": 8,
+    "keywordCount": 22
+  },
+  {
+    "id": "DONGJIA",
+    "name": "Jianjun Dong",
+    "publicationCount": 87,
+    "keywordCount": 284
+  },
+  {
+    "id": "DORMITV",
+    "name": "Teresa Dormitorio",
+    "publicationCount": 44,
+    "keywordCount": 149
+  },
+  {
+    "id": "DOZIEGV",
+    "name": "Gerry Dozier",
+    "publicationCount": 194,
+    "keywordCount": 625
+  },
+  {
+    "id": "WAD0005",
+    "name": "William Dozier",
+    "publicationCount": 219,
+    "keywordCount": 599
+  },
+  {
+    "id": "CMD0109",
+    "name": "Christine Drew",
+    "publicationCount": 23,
+    "keywordCount": 84
+  },
+  {
+    "id": "EMD0081",
+    "name": "Eliana DuBosar",
+    "publicationCount": 17,
+    "keywordCount": 66
+  },
+  {
+    "id": "JMD0137",
+    "name": "Joshua Duke",
+    "publicationCount": 100,
+    "keywordCount": 365
+  },
+  {
+    "id": "DUNHARA",
+    "name": "Rex Dunham",
+    "publicationCount": 359,
+    "keywordCount": 925
+  },
+  {
+    "id": "DURHASH",
+    "name": "Spencer Durham",
+    "publicationCount": 58,
+    "keywordCount": 213
+  },
+  {
+    "id": "PWD0003",
+    "name": "Paul Dyce",
+    "publicationCount": 101,
+    "keywordCount": 298
+  },
+  {
+    "id": "FBD0001",
+    "name": "Ford Dyke",
+    "publicationCount": 5,
+    "keywordCount": 24
+  },
+  {
+    "id": "SEE0026",
+    "name": "Susan Earp",
+    "publicationCount": 18,
+    "keywordCount": 65
+  },
+  {
+    "id": "CJE0003",
+    "name": "Christopher Easley",
+    "publicationCount": 78,
+    "keywordCount": 285
+  },
+  {
+    "id": "CEE0051",
+    "name": "Casey Eaton",
+    "publicationCount": 30,
+    "keywordCount": 114
+  },
+  {
+    "id": "ECKHALG",
+    "name": "Lori Eckhardt",
+    "publicationCount": 94,
+    "keywordCount": 292
+  },
+  {
+    "id": "EDENMAR",
+    "name": "Mario Eden",
+    "publicationCount": 205,
+    "keywordCount": 653
+  },
+  {
+    "id": "CME0011",
+    "name": "Carson Edge",
+    "publicationCount": 11,
+    "keywordCount": 45
+  },
+  {
+    "id": "AME0060",
+    "name": "Anna Ehrhorn",
+    "publicationCount": 6,
+    "keywordCount": 25
+  },
+  {
+    "id": "EILANLS",
+    "name": "Lea Eiland",
+    "publicationCount": 98,
+    "keywordCount": 354
+  },
+  {
+    "id": "ELSHEMM",
+    "name": "Mona El Sheikh",
+    "publicationCount": 215,
+    "keywordCount": 563
+  },
+  {
+    "id": "CAE0027",
+    "name": "Chinedu Anthony Eleh",
+    "publicationCount": 12,
+    "keywordCount": 48
+  },
+  {
+    "id": "ELMORMF",
+    "name": "Michelle Elmore",
+    "publicationCount": 12,
+    "keywordCount": 50
+  },
+  {
+    "id": "ECE0031",
+    "name": "Ethan Engelhardt",
+    "publicationCount": 10,
+    "keywordCount": 46
+  },
+  {
+    "id": "SAE0001",
+    "name": "Stephen Erath",
+    "publicationCount": 115,
+    "keywordCount": 359
+  },
+  {
+    "id": "COE0001",
+    "name": "Cathleen Erwin",
+    "publicationCount": 24,
+    "keywordCount": 102
+  },
+  {
+    "id": "EVANSJL",
+    "name": "John Evans",
+    "publicationCount": 116,
+    "keywordCount": 366
+  },
+  {
+    "id": "TCE0018",
+    "name": "Travis Evans",
+    "publicationCount": 34,
+    "keywordCount": 127
+  },
+  {
+    "id": "BPF0009",
+    "name": "Benjamin Fagan",
+    "publicationCount": 7,
+    "keywordCount": 28
+  },
+  {
+    "id": "JTF0049",
+    "name": "Jeffrey Fairbrother",
+    "publicationCount": 44,
+    "keywordCount": 180
+  },
+  {
+    "id": "NZF0038",
+    "name": "Nicoletta Fala",
+    "publicationCount": 25,
+    "keywordCount": 106
+  },
+  {
+    "id": "JMF0031",
+    "name": "John Falligant",
+    "publicationCount": 89,
+    "keywordCount": 316
+  },
+  {
+    "id": "JZF0007",
+    "name": "Jinyan Fan",
+    "publicationCount": 56,
+    "keywordCount": 207
+  },
+  {
+    "id": "ZZF0008",
+    "name": "Zhaofei Fan",
+    "publicationCount": 116,
+    "keywordCount": 409
+  },
+  {
+    "id": "XZF0001",
+    "name": "Xing Fang",
+    "publicationCount": 220,
+    "keywordCount": 655
+  },
+  {
+    "id": "GZF0027",
+    "name": "Georges Fares",
+    "publicationCount": 2,
+    "keywordCount": 10
+  },
+  {
+    "id": "EZF0057",
+    "name": "Effat Farhana",
+    "publicationCount": 23,
+    "keywordCount": 101
+  },
+  {
+    "id": "SZF0021",
+    "name": "Saiada Farjana",
+    "publicationCount": 17,
+    "keywordCount": 66
+  },
+  {
+    "id": "BHF0003",
+    "name": "Byron Farnum",
+    "publicationCount": 73,
+    "keywordCount": 263
+  },
+  {
+    "id": "FARROCB",
+    "name": "Charles Farrow",
+    "publicationCount": 45,
+    "keywordCount": 178
+  },
+  {
+    "id": "FASINOO",
+    "name": "Oladiran Fasina",
+    "publicationCount": 145,
+    "keywordCount": 485
+  },
+  {
+    "id": "SJF0036",
+    "name": "Samantha Fede",
+    "publicationCount": 44,
+    "keywordCount": 141
+  },
+  {
+    "id": "CAF0068",
+    "name": "Christine Feeley",
+    "publicationCount": 26,
+    "keywordCount": 102
+  },
+  {
+    "id": "FENGYUC",
+    "name": "Yucheng Feng",
+    "publicationCount": 115,
+    "keywordCount": 379
+  },
+  {
+    "id": "ZZF0006",
+    "name": "Ziqin Feng",
+    "publicationCount": 26,
+    "keywordCount": 92
+  },
+  {
+    "id": "MFC0034",
+    "name": "Miria Ferreira Criado",
+    "publicationCount": 58,
+    "keywordCount": 194
+  },
+  {
+    "id": "LKF0009",
+    "name": "Linda Ferrell",
+    "publicationCount": 96,
+    "keywordCount": 335
+  },
+  {
+    "id": "OCF0003",
+    "name": "Odies Ferrell",
+    "publicationCount": 277,
+    "keywordCount": 795
+  },
+  {
+    "id": "PGF0011",
+    "name": "Paul Fitchett",
+    "publicationCount": 64,
+    "keywordCount": 239
+  },
+  {
+    "id": "MMF0010",
+    "name": "Margaret Flores",
+    "publicationCount": 78,
+    "keywordCount": 259
+  },
+  {
+    "id": "FLOWEGT",
+    "name": "George Flowers",
+    "publicationCount": 231,
+    "keywordCount": 781
+  },
+  {
+    "id": "KMF0004",
+    "name": "Kathryn Floyd",
+    "publicationCount": 8,
+    "keywordCount": 37
+  },
+  {
+    "id": "MRF0006",
+    "name": "Michael Fogle",
+    "publicationCount": 127,
+    "keywordCount": 403
+  },
+  {
+    "id": "CDF0008",
+    "name": "Chad Foradori",
+    "publicationCount": 54,
+    "keywordCount": 180
+  },
+  {
+    "id": "FORBESA",
+    "name": "Sean Forbes",
+    "publicationCount": 27,
+    "keywordCount": 119
+  },
+  {
+    "id": "JCF0088",
+    "name": "Jillian Ford",
+    "publicationCount": 10,
+    "keywordCount": 44
+  },
+  {
+    "id": "FOXBREN",
+    "name": "Brent Fox",
+    "publicationCount": 89,
+    "keywordCount": 339
+  },
+  {
+    "id": "EZF0034",
+    "name": "Eros Artur Francisco",
+    "publicationCount": 101,
+    "keywordCount": 342
+  },
+  {
+    "id": "ECF0004",
+    "name": "Emily Friedman",
+    "publicationCount": 11,
+    "keywordCount": 43
+  },
+  {
+    "id": "XZF0012",
+    "name": "Xaq Frohlich",
+    "publicationCount": 5,
+    "keywordCount": 19
+  },
+  {
+    "id": "JAF0086",
+    "name": "John Fronimos",
+    "publicationCount": 7,
+    "keywordCount": 24
+  },
+  {
+    "id": "CAF0060",
+    "name": "Cynthia Frosch",
+    "publicationCount": 32,
+    "keywordCount": 135
+  },
+  {
+    "id": "TEF0005",
+    "name": "Thomas Fuller-Rowell",
+    "publicationCount": 96,
+    "keywordCount": 316
+  },
+  {
+    "id": "CBG0035",
+    "name": "Colin Gabler",
+    "publicationCount": 58,
+    "keywordCount": 242
+  },
+  {
+    "id": "AMG0028",
+    "name": "Arianne Gaetano",
+    "publicationCount": 20,
+    "keywordCount": 91
+  },
+  {
+    "id": "AMG0272",
+    "name": "Amy Gall",
+    "publicationCount": 63,
+    "keywordCount": 185
+  },
+  {
+    "id": "AVG0001",
+    "name": "Audrey Gamble",
+    "publicationCount": 121,
+    "keywordCount": 381
+  },
+  {
+    "id": "CEG0004",
+    "name": "Courtney Gamston",
+    "publicationCount": 20,
+    "keywordCount": 86
+  },
+  {
+    "id": "ZZG0036",
+    "name": "Zihe Gao",
+    "publicationCount": 54,
+    "keywordCount": 178
+  },
+  {
+    "id": "TMG0067",
+    "name": "Taryn Garlock",
+    "publicationCount": 63,
+    "keywordCount": 229
+  },
+  {
+    "id": "KBL0005",
+    "name": "Kimberly Garza",
+    "publicationCount": 71,
+    "keywordCount": 271
+  },
+  {
+    "id": "SZG0094",
+    "name": "Surendra Chowdari Gatiganti",
+    "publicationCount": 18,
+    "keywordCount": 71
+  },
+  {
+    "id": "AZG0212",
+    "name": "Ali Ghanbari",
+    "publicationCount": 15,
+    "keywordCount": 67
+  },
+  {
+    "id": "MRG0081",
+    "name": "Michelle Gibbs",
+    "publicationCount": 6,
+    "keywordCount": 21
+  },
+  {
+    "id": "ELG0036",
+    "name": "Ernest Gibson",
+    "publicationCount": 5,
+    "keywordCount": 21
+  },
+  {
+    "id": "GIBSOLM",
+    "name": "Linda Gibson-Young",
+    "publicationCount": 43,
+    "keywordCount": 157
+  },
+  {
+    "id": "GILLEJW",
+    "name": "James Gillespie",
+    "publicationCount": 17,
+    "keywordCount": 53
+  },
+  {
+    "id": "GILLIBR",
+    "name": "Brian Gillis",
+    "publicationCount": 19,
+    "keywordCount": 69
+  },
+  {
+    "id": "PSG0021",
+    "name": "Paulo Gimenez Cremonez",
+    "publicationCount": 38,
+    "keywordCount": 130
+  },
+  {
+    "id": "RAG0012",
+    "name": "Robert Gitzen",
+    "publicationCount": 83,
+    "keywordCount": 318
+  },
+  {
+    "id": "GIUSTCM",
+    "name": "Cathleen Giustino",
+    "publicationCount": 6,
+    "keywordCount": 19
+  },
+  {
+    "id": "GLADDLB",
+    "name": "L Gladden",
+    "publicationCount": 192,
+    "keywordCount": 584
+  },
+  {
+    "id": "MRG0054",
+    "name": "Mark Gleim",
+    "publicationCount": 30,
+    "keywordCount": 122
+  },
+  {
+    "id": "GOERTLR",
+    "name": "Leslie Goertzen",
+    "publicationCount": 58,
+    "keywordCount": 215
+  },
+  {
+    "id": "SHG0015",
+    "name": "Spencer Goidel",
+    "publicationCount": 15,
+    "keywordCount": 65
+  },
+  {
+    "id": "CRG0005",
+    "name": "Christian Goldsmith",
+    "publicationCount": 72,
+    "keywordCount": 262
+  },
+  {
+    "id": "XZG0017",
+    "name": "Xiaowen Gong",
+    "publicationCount": 45,
+    "keywordCount": 174
+  },
+  {
+    "id": "GOODWDC",
+    "name": "Douglas Goodwin",
+    "publicationCount": 42,
+    "keywordCount": 148
+  },
+  {
+    "id": "WPG0006",
+    "name": "Wendy Gordon",
+    "publicationCount": 97,
+    "keywordCount": 339
+  },
+  {
+    "id": "KZG0003",
+    "name": "Keren Gorodeisky",
+    "publicationCount": 3,
+    "keywordCount": 14
+  },
+  {
+    "id": "RZG0099",
+    "name": "Raphael Gottardi",
+    "publicationCount": 54,
+    "keywordCount": 175
+  },
+  {
+    "id": "CZG0109",
+    "name": "Christian Goulding",
+    "publicationCount": 11,
+    "keywordCount": 51
+  },
+  {
+    "id": "ABG0011",
+    "name": "Adelia Grabowsky",
+    "publicationCount": 31,
+    "keywordCount": 124
+  },
+  {
+    "id": "SHG0013",
+    "name": "Scott Graham",
+    "publicationCount": 15,
+    "keywordCount": 60
+  },
+  {
+    "id": "MWG0016",
+    "name": "Michael Gramlich",
+    "publicationCount": 50,
+    "keywordCount": 178
+  },
+  {
+    "id": "RMG0022",
+    "name": "Rita Graze",
+    "publicationCount": 30,
+    "keywordCount": 108
+  },
+  {
+    "id": "MWG0006",
+    "name": "Michael Greene",
+    "publicationCount": 105,
+    "keywordCount": 320
+  },
+  {
+    "id": "CZG0090",
+    "name": "Christopher Grieco",
+    "publicationCount": 52,
+    "keywordCount": 194
+  },
+  {
+    "id": "KZG0067",
+    "name": "Kristine Griffett",
+    "publicationCount": 30,
+    "keywordCount": 108
+  },
+  {
+    "id": "CHG0039",
+    "name": "Chandler Gruener",
+    "publicationCount": 26,
+    "keywordCount": 87
+  },
+  {
+    "id": "LCG0016",
+    "name": "Leigh Gruwell",
+    "publicationCount": 5,
+    "keywordCount": 24
+  },
+  {
+    "id": "LZG0022",
+    "name": "Luca Guazzotto",
+    "publicationCount": 58,
+    "keywordCount": 204
+  },
+  {
+    "id": "UZG0005",
+    "name": "Ujjwal Guin",
+    "publicationCount": 87,
+    "keywordCount": 279
+  },
+  {
+    "id": "WDG0010",
+    "name": "William Gulsby",
+    "publicationCount": 38,
+    "keywordCount": 141
+  },
+  {
+    "id": "AZG0074",
+    "name": "Ashish Gupta",
+    "publicationCount": 95,
+    "keywordCount": 372
+  },
+  {
+    "id": "SZG0130",
+    "name": "Suhasini Gururaja",
+    "publicationCount": 89,
+    "keywordCount": 289
+  },
+  {
+    "id": "DZG0029",
+    "name": "Davide Guzzetti",
+    "publicationCount": 65,
+    "keywordCount": 250
+  },
+  {
+    "id": "NZH0020",
+    "name": "Nicole Habbit",
+    "publicationCount": 15,
+    "keywordCount": 54
+  },
+  {
+    "id": "HLH0085",
+    "name": "Heidi Hadley",
+    "publicationCount": 20,
+    "keywordCount": 78
+  },
+  {
+    "id": "SSH0035",
+    "name": "Steven Hague",
+    "publicationCount": 150,
+    "keywordCount": 486
+  },
+  {
+    "id": "HAMESWE",
+    "name": "Willis Hames",
+    "publicationCount": 219,
+    "keywordCount": 735
+  },
+  {
+    "id": "AMH0218",
+    "name": "Ahmed Hamid",
+    "publicationCount": 45,
+    "keywordCount": 149
+  },
+  {
+    "id": "MCH0021",
+    "name": "Michael Hamilton",
+    "publicationCount": 177,
+    "keywordCount": 647
+  },
+  {
+    "id": "XZH0003",
+    "name": "Xiaoying Han",
+    "publicationCount": 70,
+    "keywordCount": 268
+  },
+  {
+    "id": "CLH0149",
+    "name": "Charlene Hanlon",
+    "publicationCount": 13,
+    "keywordCount": 53
+  },
+  {
+    "id": "HANNAJB",
+    "name": "Joseph Hanna",
+    "publicationCount": 79,
+    "keywordCount": 311
+  },
+  {
+    "id": "NBH0006",
+    "name": "Nathaniel Hardy",
+    "publicationCount": 70,
+    "keywordCount": 262
+  },
+  {
+    "id": "HARRIDK",
+    "name": "Daniel Harris",
+    "publicationCount": 71,
+    "keywordCount": 268
+  },
+  {
+    "id": "GAH0015",
+    "name": "Gregory Harris",
+    "publicationCount": 123,
+    "keywordCount": 428
+  },
+  {
+    "id": "LMH0159",
+    "name": "Lauren Harris",
+    "publicationCount": 26,
+    "keywordCount": 104
+  },
+  {
+    "id": "JLH0069",
+    "name": "Jamie Harrison",
+    "publicationCount": 19,
+    "keywordCount": 74
+  },
+  {
+    "id": "HARTAVM",
+    "name": "Valentina Hartarska",
+    "publicationCount": 113,
+    "keywordCount": 373
+  },
+  {
+    "id": "HARTFRJ",
+    "name": "Roy Hartfield",
+    "publicationCount": 146,
+    "keywordCount": 478
+  },
+  {
+    "id": "PJH0011",
+    "name": "Patricia Hartman",
+    "publicationCount": 22,
+    "keywordCount": 82
+  },
+  {
+    "id": "MZH0233",
+    "name": "Mohtadin Hashemi",
+    "publicationCount": 23,
+    "keywordCount": 94
+  },
+  {
+    "id": "HLH0048",
+    "name": "Heidi Hausse",
+    "publicationCount": 3,
+    "keywordCount": 15
+  },
+  {
+    "id": "TLH0069",
+    "name": "Timothy Hawthorne",
+    "publicationCount": 56,
+    "keywordCount": 201
+  },
+  {
+    "id": "HZH0121",
+    "name": "Huan He",
+    "publicationCount": 19,
+    "keywordCount": 72
+  },
+  {
+    "id": "PZH0057",
+    "name": "Pan He",
+    "publicationCount": 28,
+    "keywordCount": 116
+  },
+  {
+    "id": "QZH0004",
+    "name": "Qinghua He",
+    "publicationCount": 118,
+    "keywordCount": 410
+  },
+  {
+    "id": "CPH0032",
+    "name": "Courtney Heaton",
+    "publicationCount": 18,
+    "keywordCount": 75
+  },
+  {
+    "id": "WHH0027",
+    "name": "William Heaton",
+    "publicationCount": 32,
+    "keywordCount": 105
+  },
+  {
+    "id": "MEH0085",
+    "name": "Megan Heim LaFrombois",
+    "publicationCount": 9,
+    "keywordCount": 39
+  },
+  {
+    "id": "DWH0004",
+    "name": "David Held",
+    "publicationCount": 268,
+    "keywordCount": 891
+  },
+  {
+    "id": "HENDRTD",
+    "name": "Theron Hendrix",
+    "publicationCount": 56,
+    "keywordCount": 178
+  },
+  {
+    "id": "AEH0159",
+    "name": "Abigail Higgins",
+    "publicationCount": 4,
+    "keywordCount": 14
+  },
+  {
+    "id": "BTH0023",
+    "name": "Brendan Higgins",
+    "publicationCount": 65,
+    "keywordCount": 225
+  },
+  {
+    "id": "EAH0113",
+    "name": "Ethan Hill",
+    "publicationCount": 21,
+    "keywordCount": 82
+  },
+  {
+    "id": "HILLGEE",
+    "name": "Geoffrey Hill",
+    "publicationCount": 265,
+    "keywordCount": 813
+  },
+  {
+    "id": "JEH0016",
+    "name": "Jimmy Hilliard",
+    "publicationCount": 75,
+    "keywordCount": 306
+  },
+  {
+    "id": "JZH0023",
+    "name": "Jitka Hilliard",
+    "publicationCount": 28,
+    "keywordCount": 119
+  },
+  {
+    "id": "TBH0028",
+    "name": "Tierney Hinman",
+    "publicationCount": 20,
+    "keywordCount": 74
+  },
+  {
+    "id": "JBH0020",
+    "name": "James Hinnant",
+    "publicationCount": 65,
+    "keywordCount": 225
+  },
+  {
+    "id": "HINSODW",
+    "name": "David Hinson",
+    "publicationCount": 12,
+    "keywordCount": 50
+  },
+  {
+    "id": "TZH0059",
+    "name": "Thi Thao Phuong Hoang",
+    "publicationCount": 31,
+    "keywordCount": 107
+  },
+  {
+    "id": "MRH0032",
+    "name": "Matthew Hoch",
+    "publicationCount": 17,
+    "keywordCount": 77
+  },
+  {
+    "id": "MAH0142",
+    "name": "Mark Hoffman",
+    "publicationCount": 69,
+    "keywordCount": 209
+  },
+  {
+    "id": "LAH0036",
+    "name": "Lindsey Hohmann",
+    "publicationCount": 40,
+    "keywordCount": 152
+  },
+  {
+    "id": "NSH0010",
+    "name": "Natalie Hohmann",
+    "publicationCount": 45,
+    "keywordCount": 175
+  },
+  {
+    "id": "HOLLEPW",
+    "name": "Paul Holley",
+    "publicationCount": 14,
+    "keywordCount": 53
+  },
+  {
+    "id": "TPH0007",
+    "name": "Travis Holt",
+    "publicationCount": 20,
+    "keywordCount": 91
+  },
+  {
+    "id": "WRH0001",
+    "name": "Wendy Hood",
+    "publicationCount": 132,
+    "keywordCount": 466
+  },
+  {
+    "id": "CDH0059",
+    "name": "Christopher Hopkins",
+    "publicationCount": 61,
+    "keywordCount": 264
+  },
+  {
+    "id": "HORNSLB",
+    "name": "Lori Hornsby",
+    "publicationCount": 29,
+    "keywordCount": 105
+  },
+  {
+    "id": "KAH0091",
+    "name": "Katharine Horzmann",
+    "publicationCount": 30,
+    "keywordCount": 100
+  },
+  {
+    "id": "MPH0043",
+    "name": "Michael Howard",
+    "publicationCount": 49,
+    "keywordCount": 197
+  },
+  {
+    "id": "BZH0108",
+    "name": "Bingyang Hu",
+    "publicationCount": 37,
+    "keywordCount": 130
+  },
+  {
+    "id": "CZH0109",
+    "name": "Chen Che Huang",
+    "publicationCount": 26,
+    "keywordCount": 91
+  },
+  {
+    "id": "EZH0098",
+    "name": "Edward Huang",
+    "publicationCount": 90,
+    "keywordCount": 362
+  },
+  {
+    "id": "LZH0041",
+    "name": "Lei Huang",
+    "publicationCount": 43,
+    "keywordCount": 171
+  },
+  {
+    "id": "SZH0224",
+    "name": "Shuai Huang",
+    "publicationCount": 18,
+    "keywordCount": 75
+  },
+  {
+    "id": "HUGGIKW",
+    "name": "Kevin Huggins",
+    "publicationCount": 48,
+    "keywordCount": 171
+  },
+  {
+    "id": "SLH0021",
+    "name": "Stacey Hunt",
+    "publicationCount": 5,
+    "keywordCount": 15
+  },
+  {
+    "id": "JZH0011",
+    "name": "Jung Won Hur",
+    "publicationCount": 29,
+    "keywordCount": 109
+  },
+  {
+    "id": "SZH0158",
+    "name": "Samir Huseynov",
+    "publicationCount": 27,
+    "keywordCount": 114
+  },
+  {
+    "id": "KKI0001",
+    "name": "Kerry Inger",
+    "publicationCount": 29,
+    "keywordCount": 114
+  },
+  {
+    "id": "RZI0003",
+    "name": "Rafay Ishfaq",
+    "publicationCount": 19,
+    "keywordCount": 82
+  },
+  {
+    "id": "AHI0003",
+    "name": "Ahmed Ismaeel",
+    "publicationCount": 93,
+    "keywordCount": 276
+  },
+  {
+    "id": "JACKSR7",
+    "name": "Robert Jackson",
+    "publicationCount": 188,
+    "keywordCount": 618
+  },
+  {
+    "id": "ALJ0043",
+    "name": "Alana Jacobson",
+    "publicationCount": 114,
+    "keywordCount": 350
+  },
+  {
+    "id": "HZJ0048",
+    "name": "Hossein Jahromi",
+    "publicationCount": 38,
+    "keywordCount": 137
+  },
+  {
+    "id": "SHJ0010",
+    "name": "Samantha James",
+    "publicationCount": 6,
+    "keywordCount": 23
+  },
+  {
+    "id": "TAJ0038",
+    "name": "Tierra James",
+    "publicationCount": 9,
+    "keywordCount": 41
+  },
+  {
+    "id": "AVJ0003",
+    "name": "Abhishek Virendrabhai Jariwala",
+    "publicationCount": 4,
+    "keywordCount": 14
+  },
+  {
+    "id": "AIJ0006",
+    "name": "August Jenkins",
+    "publicationCount": 19,
+    "keywordCount": 76
+  },
+  {
+    "id": "JGJ0014",
+    "name": "James Jenkins",
+    "publicationCount": 71,
+    "keywordCount": 275
+  },
+  {
+    "id": "JENSERM",
+    "name": "Marlin Jensen",
+    "publicationCount": 26,
+    "keywordCount": 108
+  },
+  {
+    "id": "JRJ0073",
+    "name": "Jeba Jesudoss Chelladurai",
+    "publicationCount": 51,
+    "keywordCount": 183
+  },
+  {
+    "id": "JFJ0010",
+    "name": "Jennifer Jettner",
+    "publicationCount": 21,
+    "keywordCount": 73
+  },
+  {
+    "id": "ZHJ0007",
+    "name": "Zhen Jia",
+    "publicationCount": 38,
+    "keywordCount": 132
+  },
+  {
+    "id": "ZZJ0012",
+    "name": "Zhihua Jiang",
+    "publicationCount": 80,
+    "keywordCount": 305
+  },
+  {
+    "id": "WZJ0029",
+    "name": "Wencan Jin",
+    "publicationCount": 81,
+    "keywordCount": 263
+  },
+  {
+    "id": "PLJ0009",
+    "name": "Portia Johnson",
+    "publicationCount": 5,
+    "keywordCount": 24
+  },
+  {
+    "id": "JOLLEKD",
+    "name": "Kelly Jolley",
+    "publicationCount": 10,
+    "keywordCount": 40
+  },
+  {
+    "id": "JONESJ6",
+    "name": "Jefferson Jones",
+    "publicationCount": 41,
+    "keywordCount": 141
+  },
+  {
+    "id": "HDJ0002",
+    "name": "Hilary Joyce",
+    "publicationCount": 12,
+    "keywordCount": 51
+  },
+  {
+    "id": "MDJ0048",
+    "name": "Matthew Jurjonas",
+    "publicationCount": 17,
+    "keywordCount": 70
+  },
+  {
+    "id": "PZK0031",
+    "name": "Pankush Kalgotra",
+    "publicationCount": 38,
+    "keywordCount": 159
+  },
+  {
+    "id": "KALINLA",
+    "name": "Latif Kalin",
+    "publicationCount": 154,
+    "keywordCount": 499
+  },
+  {
+    "id": "FZK0016",
+    "name": "Farah Kandah",
+    "publicationCount": 51,
+    "keywordCount": 173
+  },
+  {
+    "id": "GZK0062",
+    "name": "Govind Kannan",
+    "publicationCount": 112,
+    "keywordCount": 345
+  },
+  {
+    "id": "FZK0020",
+    "name": "Fariborz Kargar",
+    "publicationCount": 106,
+    "keywordCount": 300
+  },
+  {
+    "id": "RRK0008",
+    "name": "Rashad Karimov",
+    "publicationCount": 29,
+    "keywordCount": 110
+  },
+  {
+    "id": "KATZJEF",
+    "name": "Jeffrey Katz",
+    "publicationCount": 155,
+    "keywordCount": 568
+  },
+  {
+    "id": "KAVOOJA",
+    "name": "Jan Kavookjian",
+    "publicationCount": 102,
+    "keywordCount": 322
+  },
+  {
+    "id": "ABK0039",
+    "name": "Adam Keeton",
+    "publicationCount": 162,
+    "keywordCount": 438
+  },
+  {
+    "id": "KEIRSCM",
+    "name": "Christopher Keirstead",
+    "publicationCount": 6,
+    "keywordCount": 26
+  },
+  {
+    "id": "AJK0037",
+    "name": "Andrea Kelley",
+    "publicationCount": 3,
+    "keywordCount": 15
+  },
+  {
+    "id": "WATSOKM",
+    "name": "Kristi Kelley",
+    "publicationCount": 68,
+    "keywordCount": 258
+  },
+  {
+    "id": "AMK0105",
+    "name": "Anita Kelly",
+    "publicationCount": 117,
+    "keywordCount": 415
+  },
+  {
+    "id": "PZK0026",
+    "name": "Pellumb Kelmendi",
+    "publicationCount": 11,
+    "keywordCount": 46
+  },
+  {
+    "id": "LAK0008",
+    "name": "Lisa Kensler",
+    "publicationCount": 33,
+    "keywordCount": 123
+  },
+  {
+    "id": "KETCHDA",
+    "name": "David Ketchen",
+    "publicationCount": 241,
+    "keywordCount": 781
+  },
+  {
+    "id": "KETRISA",
+    "name": "Scott Ketring",
+    "publicationCount": 67,
+    "keywordCount": 248
+  },
+  {
+    "id": "KHODAJM",
+    "name": "Jeyhoon Khodadadi",
+    "publicationCount": 112,
+    "keywordCount": 358
+  },
+  {
+    "id": "HKJ0008",
+    "name": "Hassan Khodaei Jalalabadi",
+    "publicationCount": 15,
+    "keywordCount": 66
+  },
+  {
+    "id": "AZK0150",
+    "name": "Ali Khosravi",
+    "publicationCount": 77,
+    "keywordCount": 280
+  },
+  {
+    "id": "KIMDON2",
+    "name": "Dong-Joo Kim",
+    "publicationCount": 316,
+    "keywordCount": 1073
+  },
+  {
+    "id": "HZK0083",
+    "name": "Haejin Kim",
+    "publicationCount": 64,
+    "keywordCount": 196
+  },
+  {
+    "id": "HZK0001",
+    "name": "Hyeongwoo Kim",
+    "publicationCount": 53,
+    "keywordCount": 206
+  },
+  {
+    "id": "JSK0022",
+    "name": "Jeffrey Kim",
+    "publicationCount": 30,
+    "keywordCount": 119
+  },
+  {
+    "id": "JJK0036",
+    "name": "Jisu Kim",
+    "publicationCount": 6,
+    "keywordCount": 24
+  },
+  {
+    "id": "KINGDAT",
+    "name": "David King",
+    "publicationCount": 159,
+    "keywordCount": 524
+  },
+  {
+    "id": "MRK0085",
+    "name": "Matthew Kirchner",
+    "publicationCount": 13,
+    "keywordCount": 57
+  },
+  {
+    "id": "AFK0006",
+    "name": "Alexei Kisselev",
+    "publicationCount": 83,
+    "keywordCount": 254
+  },
+  {
+    "id": "KLEPPEL",
+    "name": "Erika Kleppinger",
+    "publicationCount": 30,
+    "keywordCount": 106
+  },
+  {
+    "id": "KZK0125",
+    "name": "Konstantin Klyukin",
+    "publicationCount": 37,
+    "keywordCount": 147
+  },
+  {
+    "id": "TJK0013",
+    "name": "Thorsten Knappenberger",
+    "publicationCount": 83,
+    "keywordCount": 339
+  },
+  {
+    "id": "BRESTEV",
+    "name": "Elizabeth Knight",
+    "publicationCount": 45,
+    "keywordCount": 192
+  },
+  {
+    "id": "JCK0041",
+    "name": "Jenny Koebernick",
+    "publicationCount": 66,
+    "keywordCount": 248
+  },
+  {
+    "id": "KOHLMJL",
+    "name": "Jada Kohlmeier",
+    "publicationCount": 7,
+    "keywordCount": 30
+  },
+  {
+    "id": "SSK0024",
+    "name": "Shalece Kohnke",
+    "publicationCount": 6,
+    "keywordCount": 17
+  },
+  {
+    "id": "XZK0006",
+    "name": "Xiangwen Kong",
+    "publicationCount": 19,
+    "keywordCount": 73
+  },
+  {
+    "id": "JMK0052",
+    "name": "Jaclyn Koopmann",
+    "publicationCount": 27,
+    "keywordCount": 118
+  },
+  {
+    "id": "CNK0029",
+    "name": "Connor Kopchick",
+    "publicationCount": 0,
+    "keywordCount": 0
+  },
+  {
+    "id": "EGK0033",
+    "name": "Evdokiya Kostadinova",
+    "publicationCount": 81,
+    "keywordCount": 263
+  },
+  {
+    "id": "DMK0025",
+    "name": "David Kriete",
+    "publicationCount": 16,
+    "keywordCount": 66
+  },
+  {
+    "id": "DZK0067",
+    "name": "Daniel Kroeger",
+    "publicationCount": 29,
+    "keywordCount": 112
+  },
+  {
+    "id": "ALK0043",
+    "name": "Alicia Krzton",
+    "publicationCount": 38,
+    "keywordCount": 124
+  },
+  {
+    "id": "WZK0004",
+    "name": "Wei Shinn Ku",
+    "publicationCount": 211,
+    "keywordCount": 745
+  },
+  {
+    "id": "KUEHNJM",
+    "name": "Jane Kuehne",
+    "publicationCount": 9,
+    "keywordCount": 36
+  },
+  {
+    "id": "SZK0139",
+    "name": "Sanjiv Kumar",
+    "publicationCount": 99,
+    "keywordCount": 322
+  },
+  {
+    "id": "JWK0030",
+    "name": "Jonathan Kunstman",
+    "publicationCount": 48,
+    "keywordCount": 189
+  },
+  {
+    "id": "VLK0004",
+    "name": "Virginia Kunzer",
+    "publicationCount": 4,
+    "keywordCount": 20
+  },
+  {
+    "id": "MAK0037",
+    "name": "Marcelo Kuroda",
+    "publicationCount": 51,
+    "keywordCount": 188
+  },
+  {
+    "id": "HZK0070",
+    "name": "Hugh Kwon",
+    "publicationCount": 2,
+    "keywordCount": 6
+  },
+  {
+    "id": "KWONWIS",
+    "name": "Wi-Suk Kwon",
+    "publicationCount": 80,
+    "keywordCount": 311
+  },
+  {
+    "id": "CSK0021",
+    "name": "Konstantinos Kyriakis",
+    "publicationCount": 37,
+    "keywordCount": 131
+  },
+  {
+    "id": "LALLPRA",
+    "name": "Pradeep Lall",
+    "publicationCount": 565,
+    "keywordCount": 1436
+  },
+  {
+    "id": "JSL0005",
+    "name": "Jasmeet Lamba",
+    "publicationCount": 82,
+    "keywordCount": 279
+  },
+  {
+    "id": "JJL0006",
+    "name": "Jeffrey LaMondia",
+    "publicationCount": 65,
+    "keywordCount": 260
+  },
+  {
+    "id": "LANDEAL",
+    "name": "Allen Landers",
+    "publicationCount": 228,
+    "keywordCount": 646
+  },
+  {
+    "id": "MZL0062",
+    "name": "Monique Laney",
+    "publicationCount": 3,
+    "keywordCount": 14
+  },
+  {
+    "id": "MDL0054",
+    "name": "Melinda Lanius",
+    "publicationCount": 19,
+    "keywordCount": 79
+  },
+  {
+    "id": "EDW0031",
+    "name": "Elizabeth Larson",
+    "publicationCount": 19,
+    "keywordCount": 82
+  },
+  {
+    "id": "ECL0012",
+    "name": "Emma Lathan-Powell",
+    "publicationCount": 66,
+    "keywordCount": 238
+  },
+  {
+    "id": "GML0012",
+    "name": "Guillaume Laurent",
+    "publicationCount": 74,
+    "keywordCount": 269
+  },
+  {
+    "id": "DOWLIKA",
+    "name": "Katelyn Lawson",
+    "publicationCount": 34,
+    "keywordCount": 132
+  },
+  {
+    "id": "DRL0021",
+    "name": "Desmond Layne",
+    "publicationCount": 105,
+    "keywordCount": 389
+  },
+  {
+    "id": "LZL0017",
+    "name": "Lucia Lazarowski",
+    "publicationCount": 58,
+    "keywordCount": 221
+  },
+  {
+    "id": "ANB0051",
+    "name": "Allison Ledford",
+    "publicationCount": 9,
+    "keywordCount": 34
+  },
+  {
+    "id": "VAL0021",
+    "name": "Victoria Ledford",
+    "publicationCount": 20,
+    "keywordCount": 93
+  },
+  {
+    "id": "AZL0144",
+    "name": "Angie Lee",
+    "publicationCount": 15,
+    "keywordCount": 64
+  },
+  {
+    "id": "JZL0375",
+    "name": "JooChul Lee",
+    "publicationCount": 12,
+    "keywordCount": 50
+  },
+  {
+    "id": "KBL0009",
+    "name": "Kang Lee",
+    "publicationCount": 44,
+    "keywordCount": 197
+  },
+  {
+    "id": "LEEMING",
+    "name": "Ming-Kuo Lee",
+    "publicationCount": 128,
+    "keywordCount": 387
+  },
+  {
+    "id": "YZL0085",
+    "name": "Yee Ming Lee",
+    "publicationCount": 44,
+    "keywordCount": 170
+  },
+  {
+    "id": "YEL0002",
+    "name": "Yejee Lee",
+    "publicationCount": 8,
+    "keywordCount": 33
+  },
+  {
+    "id": "CAL0044",
+    "name": "Christopher Lepczyk",
+    "publicationCount": 210,
+    "keywordCount": 747
+  },
+  {
+    "id": "WZL0064",
+    "name": "Wenying Li",
+    "publicationCount": 27,
+    "keywordCount": 126
+  },
+  {
+    "id": "XZL0004",
+    "name": "Xiao Li",
+    "publicationCount": 47,
+    "keywordCount": 170
+  },
+  {
+    "id": "XIL0005",
+    "name": "Xiaolong Li",
+    "publicationCount": 10,
+    "keywordCount": 24
+  },
+  {
+    "id": "XZL0031",
+    "name": "Xuechao Li",
+    "publicationCount": 13,
+    "keywordCount": 46
+  },
+  {
+    "id": "LILESMA",
+    "name": "Mark Liles",
+    "publicationCount": 225,
+    "keywordCount": 684
+  },
+  {
+    "id": "CZL0194",
+    "name": "Chin-Yen Lin",
+    "publicationCount": 51,
+    "keywordCount": 149
+  },
+  {
+    "id": "JZL0097",
+    "name": "Junshan Lin",
+    "publicationCount": 35,
+    "keywordCount": 132
+  },
+  {
+    "id": "ALL0093",
+    "name": "Autumn Linford",
+    "publicationCount": 0,
+    "keywordCount": 0
+  },
+  {
+    "id": "ACL0089",
+    "name": "Anna Linhoss",
+    "publicationCount": 96,
+    "keywordCount": 334
+  },
+  {
+    "id": "JEL0296",
+    "name": "John Linhoss",
+    "publicationCount": 36,
+    "keywordCount": 128
+  },
+  {
+    "id": "EAL0003",
+    "name": "Elizabeth Lipke",
+    "publicationCount": 111,
+    "keywordCount": 359
+  },
+  {
+    "id": "LIUJUNS",
+    "name": "Junshan Liu",
+    "publicationCount": 35,
+    "keywordCount": 129
+  },
+  {
+    "id": "LZL0116",
+    "name": "Luyu Liu",
+    "publicationCount": 16,
+    "keywordCount": 67
+  },
+  {
+    "id": "LIUNANN",
+    "name": "Nannan Liu",
+    "publicationCount": 0,
+    "keywordCount": 0
+  },
+  {
+    "id": "JRL0027",
+    "name": "Jennifer Lockhart",
+    "publicationCount": 5,
+    "keywordCount": 22
+  },
+  {
+    "id": "TPL0002",
+    "name": "Thomas Lockhart",
+    "publicationCount": 3,
+    "keywordCount": 15
+  },
+  {
+    "id": "FTL0001",
+    "name": "Franz Lohrke",
+    "publicationCount": 54,
+    "keywordCount": 209
+  },
+  {
+    "id": "JHL0009",
+    "name": "James Long",
+    "publicationCount": 28,
+    "keywordCount": 116
+  },
+  {
+    "id": "MSL0052",
+    "name": "Matthew Loop",
+    "publicationCount": 78,
+    "keywordCount": 275
+  },
+  {
+    "id": "LORAATM",
+    "name": "Tina Loraas",
+    "publicationCount": 23,
+    "keywordCount": 99
+  },
+  {
+    "id": "PFL0004",
+    "name": "Priscila Lotsch",
+    "publicationCount": 34,
+    "keywordCount": 124
+  },
+  {
+    "id": "JZL0297",
+    "name": "Jean-Francois Louf",
+    "publicationCount": 59,
+    "keywordCount": 220
+  },
+  {
+    "id": "AZL0009",
+    "name": "Angela Love",
+    "publicationCount": 13,
+    "keywordCount": 57
+  },
+  {
+    "id": "LUCIEMJ",
+    "name": "Mallory Lucier-Greer",
+    "publicationCount": 97,
+    "keywordCount": 360
+  },
+  {
+    "id": "WZL0071",
+    "name": "Wen Luo",
+    "publicationCount": 7,
+    "keywordCount": 32
+  },
+  {
+    "id": "JDM0096",
+    "name": "Jeremy Mackey",
+    "publicationCount": 72,
+    "keywordCount": 241
+  },
+  {
+    "id": "ADM0074",
+    "name": "Adam Maggard",
+    "publicationCount": 30,
+    "keywordCount": 111
+  },
+  {
+    "id": "ACM0153",
+    "name": "Alicia Maggard",
+    "publicationCount": 1,
+    "keywordCount": 5
+  },
+  {
+    "id": "BZM0054",
+    "name": "Binita Mahato",
+    "publicationCount": 8,
+    "keywordCount": 38
+  },
+  {
+    "id": "MZM0185",
+    "name": "Masoud Mahjouri Samani",
+    "publicationCount": 128,
+    "keywordCount": 411
+  },
+  {
+    "id": "RWM0028",
+    "name": "Russell Mailen",
+    "publicationCount": 37,
+    "keywordCount": 132
+  },
+  {
+    "id": "AZM0343",
+    "name": "Aniruddha Maity",
+    "publicationCount": 132,
+    "keywordCount": 457
+  },
+  {
+    "id": "JZM0052",
+    "name": "Joseph Majdalani",
+    "publicationCount": 206,
+    "keywordCount": 658
+  },
+  {
+    "id": "MANSOMA",
+    "name": "Mahmoud Mansour",
+    "publicationCount": 79,
+    "keywordCount": 307
+  },
+  {
+    "id": "SZM0001",
+    "name": "Shiwen Mao",
+    "publicationCount": 498,
+    "keywordCount": 1513
+  },
+  {
+    "id": "MARCUEA",
+    "name": "Eric Marcus",
+    "publicationCount": 4,
+    "keywordCount": 18
+  },
+  {
+    "id": "MARGHDB",
+    "name": "Dan Marghitu",
+    "publicationCount": 143,
+    "keywordCount": 502
+  },
+  {
+    "id": "MARLOKF",
+    "name": "Karen Marlowe",
+    "publicationCount": 26,
+    "keywordCount": 110
+  },
+  {
+    "id": "MARTIDA",
+    "name": "David Martin",
+    "publicationCount": 28,
+    "keywordCount": 123
+  },
+  {
+    "id": "KMM0173",
+    "name": "Kathleen Martin",
+    "publicationCount": 48,
+    "keywordCount": 164
+  },
+  {
+    "id": "MARTIWG",
+    "name": "Wayne Martin",
+    "publicationCount": 61,
+    "keywordCount": 222
+  },
+  {
+    "id": "MARZELJ",
+    "name": "Luke Marzen",
+    "publicationCount": 70,
+    "keywordCount": 264
+  },
+  {
+    "id": "JRM0219",
+    "name": "Jillian Maxcy-Brown",
+    "publicationCount": 13,
+    "keywordCount": 56
+  },
+  {
+    "id": "YYM0001",
+    "name": "Yulia Maxuitenko",
+    "publicationCount": 92,
+    "keywordCount": 263
+  },
+  {
+    "id": "BEM0040",
+    "name": "Brian McCabe",
+    "publicationCount": 88,
+    "keywordCount": 312
+  },
+  {
+    "id": "JRM0204",
+    "name": "John McCall",
+    "publicationCount": 6,
+    "keywordCount": 23
+  },
+  {
+    "id": "AEM0200",
+    "name": "Allie McCreary",
+    "publicationCount": 32,
+    "keywordCount": 109
+  },
+  {
+    "id": "HEM0064",
+    "name": "Heath McCullough",
+    "publicationCount": 12,
+    "keywordCount": 53
+  },
+  {
+    "id": "JSM0010",
+    "name": "Joseph McElroy",
+    "publicationCount": 275,
+    "keywordCount": 721
+  },
+  {
+    "id": "MJM0055",
+    "name": "Mary McIlwain",
+    "publicationCount": 8,
+    "keywordCount": 39
+  },
+  {
+    "id": "JDM0184",
+    "name": "Jason McKibben",
+    "publicationCount": 40,
+    "keywordCount": 147
+  },
+  {
+    "id": "MCLELAJ",
+    "name": "Andrew McLelland",
+    "publicationCount": 11,
+    "keywordCount": 41
+  },
+  {
+    "id": "KSM0041",
+    "name": "Karen McNeal",
+    "publicationCount": 224,
+    "keywordCount": 715
+  },
+  {
+    "id": "MENDOMT",
+    "name": "Mary Mendonca",
+    "publicationCount": 180,
+    "keywordCount": 595
+  },
+  {
+    "id": "BLM0022",
+    "name": "Bradley Merner",
+    "publicationCount": 30,
+    "keywordCount": 113
+  },
+  {
+    "id": "NDM0011",
+    "name": "Nancy Merner",
+    "publicationCount": 50,
+    "keywordCount": 181
+  },
+  {
+    "id": "JMM0079",
+    "name": "Jill Meyer",
+    "publicationCount": 29,
+    "keywordCount": 103
+  },
+  {
+    "id": "RZM0050",
+    "name": "Ruiqing Miao",
+    "publicationCount": 88,
+    "keywordCount": 298
+  },
+  {
+    "id": "JBM0154",
+    "name": "James Michael",
+    "publicationCount": 91,
+    "keywordCount": 342
+  },
+  {
+    "id": "DMM0029",
+    "name": "Dawn Michaelson",
+    "publicationCount": 33,
+    "keywordCount": 135
+  },
+  {
+    "id": "JSM0047",
+    "name": "Jesse Michel",
+    "publicationCount": 53,
+    "keywordCount": 220
+  },
+  {
+    "id": "MSM0019",
+    "name": "Michael Milford",
+    "publicationCount": 10,
+    "keywordCount": 37
+  },
+  {
+    "id": "EZM0048",
+    "name": "Evangelos Miliordos",
+    "publicationCount": 88,
+    "keywordCount": 308
+  },
+  {
+    "id": "MWM0024",
+    "name": "Matthew Miller",
+    "publicationCount": 172,
+    "keywordCount": 535
+  },
+  {
+    "id": "PZM0049",
+    "name": "Panagiotis Mistriotis",
+    "publicationCount": 59,
+    "keywordCount": 201
+  },
+  {
+    "id": "CZM0033",
+    "name": "Chandana Mitra",
+    "publicationCount": 83,
+    "keywordCount": 298
+  },
+  {
+    "id": "JZM0029",
+    "name": "Jay Mittal",
+    "publicationCount": 19,
+    "keywordCount": 80
+  },
+  {
+    "id": "NZM0095",
+    "name": "Nobuaki Mizumoto",
+    "publicationCount": 53,
+    "keywordCount": 199
+  },
+  {
+    "id": "MOBLECB",
+    "name": "Christopher Mobley",
+    "publicationCount": 159,
+    "keywordCount": 449
+  },
+  {
+    "id": "RZM0143",
+    "name": "Reza Molaei",
+    "publicationCount": 21,
+    "keywordCount": 57
+  },
+  {
+    "id": "RCM0075",
+    "name": "Roberto Molinari",
+    "publicationCount": 64,
+    "keywordCount": 208
+  },
+  {
+    "id": "JZM0090",
+    "name": "Jack Montgomery",
+    "publicationCount": 88,
+    "keywordCount": 305
+  },
+  {
+    "id": "TMM0047",
+    "name": "Timothy Moore",
+    "publicationCount": 192,
+    "keywordCount": 643
+  },
+  {
+    "id": "SZM0235",
+    "name": "Shankumar Mooyottu",
+    "publicationCount": 37,
+    "keywordCount": 110
+  },
+  {
+    "id": "RZM0066",
+    "name": "Raquel Moraes Puchalski",
+    "publicationCount": 66,
+    "keywordCount": 227
+  },
+  {
+    "id": "TRM0047",
+    "name": "Tyler Morgan",
+    "publicationCount": 21,
+    "keywordCount": 90
+  },
+  {
+    "id": "JCM0143",
+    "name": "John Morris",
+    "publicationCount": 102,
+    "keywordCount": 415
+  },
+  {
+    "id": "WCM0005",
+    "name": "Wayde Morse",
+    "publicationCount": 78,
+    "keywordCount": 311
+  },
+  {
+    "id": "MOSSANT",
+    "name": "Anthony Moss",
+    "publicationCount": 77,
+    "keywordCount": 281
+  },
+  {
+    "id": "MUELLJM",
+    "name": "Jennifer Mueller",
+    "publicationCount": 23,
+    "keywordCount": 95
+  },
+  {
+    "id": "SZM0211",
+    "name": "Samuel Mulder",
+    "publicationCount": 32,
+    "keywordCount": 113
+  },
+  {
+    "id": "MZE0018",
+    "name": "Eduard Muljadi",
+    "publicationCount": 387,
+    "keywordCount": 1143
+  },
+  {
+    "id": "CLINEMK",
+    "name": "Mary Mullenix",
+    "publicationCount": 34,
+    "keywordCount": 130
+  },
+  {
+    "id": "BKM0048",
+    "name": "Brian Munis",
+    "publicationCount": 20,
+    "keywordCount": 81
+  },
+  {
+    "id": "ZMM0023",
+    "name": "Zoe Munis",
+    "publicationCount": 12,
+    "keywordCount": 49
+  },
+  {
+    "id": "KAM0005",
+    "name": "Kerri Munoz",
+    "publicationCount": 3,
+    "keywordCount": 14
+  },
+  {
+    "id": "WMM0017",
+    "name": "William Murrah",
+    "publicationCount": 52,
+    "keywordCount": 201
+  },
+  {
+    "id": "MZK0141",
+    "name": "Konstantinos Mykoniatis",
+    "publicationCount": 43,
+    "keywordCount": 171
+  },
+  {
+    "id": "NADOLDA",
+    "name": "Denis Nadolnyak",
+    "publicationCount": 83,
+    "keywordCount": 295
+  },
+  {
+    "id": "EZN0001",
+    "name": "Erkan Nane",
+    "publicationCount": 57,
+    "keywordCount": 181
+  },
+  {
+    "id": "LLN0005",
+    "name": "Lana Narine",
+    "publicationCount": 43,
+    "keywordCount": 136
+  },
+  {
+    "id": "KAN0030",
+    "name": "Kristina Neely",
+    "publicationCount": 62,
+    "keywordCount": 234
+  },
+  {
+    "id": "EMN0037",
+    "name": "Eric Negangard",
+    "publicationCount": 16,
+    "keywordCount": 72
+  },
+  {
+    "id": "NELMSRM",
+    "name": "Robert Nelms",
+    "publicationCount": 177,
+    "keywordCount": 627
+  },
+  {
+    "id": "JND0047",
+    "name": "Joaquim Neto Dias",
+    "publicationCount": 11,
+    "keywordCount": 42
+  },
+  {
+    "id": "NEWLAMC",
+    "name": "M Newland",
+    "publicationCount": 117,
+    "keywordCount": 373
+  },
+  {
+    "id": "SZN0053",
+    "name": "Surachat Ngorsuraches",
+    "publicationCount": 149,
+    "keywordCount": 469
+  },
+  {
+    "id": "AZN0044",
+    "name": "Anh Nguyen",
+    "publicationCount": 51,
+    "keywordCount": 193
+  },
+  {
+    "id": "NIUGUOF",
+    "name": "Guofu Niu",
+    "publicationCount": 280,
+    "keywordCount": 836
+  },
+  {
+    "id": "ZAN0002",
+    "name": "Zachary Noel",
+    "publicationCount": 55,
+    "keywordCount": 203
+  },
+  {
+    "id": "KMV0011",
+    "name": "Kelley Noll",
+    "publicationCount": 6,
+    "keywordCount": 22
+  },
+  {
+    "id": "JWN0027",
+    "name": "John Noonan",
+    "publicationCount": 106,
+    "keywordCount": 312
+  },
+  {
+    "id": "JRN0031",
+    "name": "Joshua Novak",
+    "publicationCount": 85,
+    "keywordCount": 313
+  },
+  {
+    "id": "ASN0007",
+    "name": "Andrzej Nowak",
+    "publicationCount": 337,
+    "keywordCount": 993
+  },
+  {
+    "id": "ETN0002",
+    "name": "Erich Nunn",
+    "publicationCount": 5,
+    "keywordCount": 24
+  },
+  {
+    "id": "FCO0002",
+    "name": "Frances O'Donnell",
+    "publicationCount": 80,
+    "keywordCount": 271
+  },
+  {
+    "id": "ONEILM1",
+    "name": "Martin O'Neill",
+    "publicationCount": 92,
+    "keywordCount": 335
+  },
+  {
+    "id": "JRO0014",
+    "name": "Jamie Oaks",
+    "publicationCount": 56,
+    "keywordCount": 219
+  },
+  {
+    "id": "LAO0004",
+    "name": "Luke Oeding",
+    "publicationCount": 33,
+    "keywordCount": 112
+  },
+  {
+    "id": "TZO0011",
+    "name": "Tae-Sik Oh",
+    "publicationCount": 65,
+    "keywordCount": 265
+  },
+  {
+    "id": "PEO0005",
+    "name": "Paul Ohno",
+    "publicationCount": 32,
+    "keywordCount": 106
+  },
+  {
+    "id": "ASO0013",
+    "name": "Ann Ojeda",
+    "publicationCount": 61,
+    "keywordCount": 217
+  },
+  {
+    "id": "GDO0001",
+    "name": "Gretchen Oliver",
+    "publicationCount": 260,
+    "keywordCount": 754
+  },
+  {
+    "id": "DAO0002",
+    "name": "Darren Olsen",
+    "publicationCount": 15,
+    "keywordCount": 58
+  },
+  {
+    "id": "YZO0015",
+    "name": "Yaniv Olshansky",
+    "publicationCount": 54,
+    "keywordCount": 197
+  },
+  {
+    "id": "BVO0001",
+    "name": "Brenda Ortiz",
+    "publicationCount": 190,
+    "keywordCount": 580
+  },
+  {
+    "id": "JNT0020",
+    "name": "Jakita Owensby Thomas",
+    "publicationCount": 67,
+    "keywordCount": 249
+  },
+  {
+    "id": "PADGEDT",
+    "name": "Daniel Padgett",
+    "publicationCount": 25,
+    "keywordCount": 108
+  },
+  {
+    "id": "VNP0006",
+    "name": "Verena Paepcke-Hjeltness",
+    "publicationCount": 25,
+    "keywordCount": 89
+  },
+  {
+    "id": "JRP0015",
+    "name": "Jennifer Panizzi",
+    "publicationCount": 11,
+    "keywordCount": 38
+  },
+  {
+    "id": "PRP0003",
+    "name": "Peter Panizzi",
+    "publicationCount": 108,
+    "keywordCount": 342
+  },
+  {
+    "id": "RJP0029",
+    "name": "Robert Pantazes",
+    "publicationCount": 22,
+    "keywordCount": 87
+  },
+  {
+    "id": "DBP0011",
+    "name": "David Paradice",
+    "publicationCount": 98,
+    "keywordCount": 357
+  },
+  {
+    "id": "JZP0170",
+    "name": "Junyoung Park",
+    "publicationCount": 7,
+    "keywordCount": 33
+  },
+  {
+    "id": "MIP0024",
+    "name": "Minjae Park",
+    "publicationCount": 9,
+    "keywordCount": 33
+  },
+  {
+    "id": "SWW0011",
+    "name": "Sang Wook Park",
+    "publicationCount": 35,
+    "keywordCount": 115
+  },
+  {
+    "id": "JDP0078",
+    "name": "Jinesh Patel",
+    "publicationCount": 72,
+    "keywordCount": 249
+  },
+  {
+    "id": "KJP0013",
+    "name": "Konrad Patkowski",
+    "publicationCount": 72,
+    "keywordCount": 246
+  },
+  {
+    "id": "EJP0034",
+    "name": "Eleanor Patterson",
+    "publicationCount": 8,
+    "keywordCount": 36
+  },
+  {
+    "id": "FLP0008",
+    "name": "Filip Pawlowski",
+    "publicationCount": 63,
+    "keywordCount": 234
+  },
+  {
+    "id": "AMP0129",
+    "name": "Andrew Pendola",
+    "publicationCount": 31,
+    "keywordCount": 126
+  },
+  {
+    "id": "YZP0027",
+    "name": "Yucheng Peng",
+    "publicationCount": 42,
+    "keywordCount": 146
+  },
+  {
+    "id": "CZP0134",
+    "name": "Clint Penick",
+    "publicationCount": 83,
+    "keywordCount": 312
+  },
+  {
+    "id": "THP0006",
+    "name": "Tal Peretz",
+    "publicationCount": 10,
+    "keywordCount": 45
+  },
+  {
+    "id": "MAP0032",
+    "name": "Michael Perez",
+    "publicationCount": 87,
+    "keywordCount": 278
+  },
+  {
+    "id": "AZP0111",
+    "name": "Alexey Petrov",
+    "publicationCount": 44,
+    "keywordCount": 146
+  },
+  {
+    "id": "GNP0010",
+    "name": "Gabrielle Pfund",
+    "publicationCount": 46,
+    "keywordCount": 155
+  },
+  {
+    "id": "GAP0034",
+    "name": "Gary Piazza",
+    "publicationCount": 305,
+    "keywordCount": 786
+  },
+  {
+    "id": "PICKEJM",
+    "name": "Jeremy Pickens",
+    "publicationCount": 64,
+    "keywordCount": 246
+  },
+  {
+    "id": "JSP0086",
+    "name": "Jay Pickern",
+    "publicationCount": 6,
+    "keywordCount": 29
+  },
+  {
+    "id": "NAP0003",
+    "name": "Nathan Pinner",
+    "publicationCount": 40,
+    "keywordCount": 150
+  },
+  {
+    "id": "LWP0002",
+    "name": "Laura Plexico",
+    "publicationCount": 41,
+    "keywordCount": 171
+  },
+  {
+    "id": "SRP0010",
+    "name": "Satyanarayana Pondugula",
+    "publicationCount": 41,
+    "keywordCount": 154
+  },
+  {
+    "id": "LEP0083",
+    "name": "Lauramarie Pope",
+    "publicationCount": 22,
+    "keywordCount": 79
+  },
+  {
+    "id": "CJP0084",
+    "name": "Cassandra Porter",
+    "publicationCount": 24,
+    "keywordCount": 85
+  },
+  {
+    "id": "NZP0024",
+    "name": "Neha Potnis",
+    "publicationCount": 133,
+    "keywordCount": 375
+  },
+  {
+    "id": "SZP0208",
+    "name": "Sabin Poudel",
+    "publicationCount": 21,
+    "keywordCount": 71
+  },
+  {
+    "id": "KRP0069",
+    "name": "Kimberly Powell",
+    "publicationCount": 24,
+    "keywordCount": 80
+  },
+  {
+    "id": "ARP0042",
+    "name": "Alicia Powers",
+    "publicationCount": 50,
+    "keywordCount": 200
+  },
+  {
+    "id": "JRP0089",
+    "name": "Jennifer Prado",
+    "publicationCount": 7,
+    "keywordCount": 31
+  },
+  {
+    "id": "RZP0050",
+    "name": "Rishi Prasad",
+    "publicationCount": 144,
+    "keywordCount": 477
+  },
+  {
+    "id": "PROROBC",
+    "name": "Barton Prorok",
+    "publicationCount": 196,
+    "keywordCount": 620
+  },
+  {
+    "id": "GTP0013",
+    "name": "Gregory Purdy",
+    "publicationCount": 23,
+    "keywordCount": 91
+  },
+  {
+    "id": "KZQ0008",
+    "name": "Kangkang Qi",
+    "publicationCount": 8,
+    "keywordCount": 37
+  },
+  {
+    "id": "JZQ0004",
+    "name": "Jingjing Qian",
+    "publicationCount": 185,
+    "keywordCount": 553
+  },
+  {
+    "id": "XZQ0001",
+    "name": "Xiao Qin",
+    "publicationCount": 485,
+    "keywordCount": 1543
+  },
+  {
+    "id": "MZR0108",
+    "name": "Mostafa Rahgouy",
+    "publicationCount": 23,
+    "keywordCount": 81
+  },
+  {
+    "id": "AZR0154",
+    "name": "Akond Ashfaque Ur Rahman",
+    "publicationCount": 146,
+    "keywordCount": 506
+  },
+  {
+    "id": "RAINERK",
+    "name": "Rex Rainer",
+    "publicationCount": 70,
+    "keywordCount": 277
+  },
+  {
+    "id": "RAMAPJB",
+    "name": "Jayachandra Ramapuram",
+    "publicationCount": 194,
+    "keywordCount": 631
+  },
+  {
+    "id": "SRS0065",
+    "name": "Saravanan Ramiah Shanmugam",
+    "publicationCount": 59,
+    "keywordCount": 190
+  },
+  {
+    "id": "RCR0031",
+    "name": "Ryan Range",
+    "publicationCount": 32,
+    "keywordCount": 108
+  },
+  {
+    "id": "RZS0025",
+    "name": "Shashank Rao",
+    "publicationCount": 42,
+    "keywordCount": 165
+  },
+  {
+    "id": "SZR0067",
+    "name": "Samir Raouafi",
+    "publicationCount": 6,
+    "keywordCount": 25
+  },
+  {
+    "id": "JTR0014",
+    "name": "John Rapp",
+    "publicationCount": 158,
+    "keywordCount": 497
+  },
+  {
+    "id": "AMR0008",
+    "name": "Aaron Rashotte",
+    "publicationCount": 59,
+    "keywordCount": 189
+  },
+  {
+    "id": "WYBENLM",
+    "name": "Lauren Redden",
+    "publicationCount": 20,
+    "keywordCount": 79
+  },
+  {
+    "id": "REEDMIR",
+    "name": "Miranda Reed",
+    "publicationCount": 87,
+    "keywordCount": 279
+  },
+  {
+    "id": "TUR0001",
+    "name": "Tanzeel Rehman",
+    "publicationCount": 41,
+    "keywordCount": 159
+  },
+  {
+    "id": "MAR0046",
+    "name": "Meredith Reid",
+    "publicationCount": 81,
+    "keywordCount": 206
+  },
+  {
+    "id": "RCR0001",
+    "name": "Rebecca Retzlaff",
+    "publicationCount": 17,
+    "keywordCount": 69
+  },
+  {
+    "id": "MAR0009",
+    "name": "Melanie Rhodes",
+    "publicationCount": 58,
+    "keywordCount": 182
+  },
+  {
+    "id": "JJR0033",
+    "name": "Jeffrey Rice",
+    "publicationCount": 29,
+    "keywordCount": 101
+  },
+  {
+    "id": "RGR0010",
+    "name": "Robert Richey",
+    "publicationCount": 112,
+    "keywordCount": 440
+  },
+  {
+    "id": "SMR0043",
+    "name": "Sarah Richling",
+    "publicationCount": 39,
+    "keywordCount": 153
+  },
+  {
+    "id": "DJR0009",
+    "name": "David Riese",
+    "publicationCount": 76,
+    "keywordCount": 229
+  },
+  {
+    "id": "BDR0032",
+    "name": "Beverley Rilett",
+    "publicationCount": 4,
+    "keywordCount": 19
+  },
+  {
+    "id": "LRR0023",
+    "name": "Laurence Rilett",
+    "publicationCount": 217,
+    "keywordCount": 740
+  },
+  {
+    "id": "ASR0042",
+    "name": "Anthony Roath",
+    "publicationCount": 40,
+    "keywordCount": 172
+  },
+  {
+    "id": "ROBERJ4",
+    "name": "Jordan Roberts",
+    "publicationCount": 25,
+    "keywordCount": 85
+  },
+  {
+    "id": "JLR0029",
+    "name": "Jennifer Robinson",
+    "publicationCount": 102,
+    "keywordCount": 327
+  },
+  {
+    "id": "SGR0059",
+    "name": "Stacey Robinson",
+    "publicationCount": 22,
+    "keywordCount": 96
+  },
+  {
+    "id": "AAY0001",
+    "name": "Ashley Roccapriore",
+    "publicationCount": 10,
+    "keywordCount": 48
+  },
+  {
+    "id": "ROCHESJ",
+    "name": "Samuel Rochell",
+    "publicationCount": 64,
+    "keywordCount": 225
+  },
+  {
+    "id": "MCR0010",
+    "name": "Maria Rodezno",
+    "publicationCount": 66,
+    "keywordCount": 234
+  },
+  {
+    "id": "CZR0079",
+    "name": "Camila Rodrigues",
+    "publicationCount": 62,
+    "keywordCount": 228
+  },
+  {
+    "id": "SRR0030",
+    "name": "Stephanie Rogers",
+    "publicationCount": 53,
+    "keywordCount": 198
+  },
+  {
+    "id": "ROHRBGN",
+    "name": "Guy Rohrbaugh",
+    "publicationCount": 4,
+    "keywordCount": 13
+  },
+  {
+    "id": "JAR0105",
+    "name": "Jaimie Roper",
+    "publicationCount": 90,
+    "keywordCount": 310
+  },
+  {
+    "id": "CGR0002",
+    "name": "Chad Rose",
+    "publicationCount": 52,
+    "keywordCount": 203
+  },
+  {
+    "id": "DGR0003",
+    "name": "Derek Ross",
+    "publicationCount": 27,
+    "keywordCount": 115
+  },
+  {
+    "id": "DBR0011",
+    "name": "David Roueche",
+    "publicationCount": 126,
+    "keywordCount": 439
+  },
+  {
+    "id": "ROYLUKE",
+    "name": "Luke Roy",
+    "publicationCount": 137,
+    "keywordCount": 446
+  },
+  {
+    "id": "SZR0099",
+    "name": "Sushan Ru",
+    "publicationCount": 47,
+    "keywordCount": 170
+  },
+  {
+    "id": "MZR0097",
+    "name": "Marko Rudar",
+    "publicationCount": 60,
+    "keywordCount": 187
+  },
+  {
+    "id": "NCR0007",
+    "name": "Natalia Ruiz-Junco",
+    "publicationCount": 18,
+    "keywordCount": 72
+  },
+  {
+    "id": "KWR0015",
+    "name": "Katherine Rush",
+    "publicationCount": 12,
+    "keywordCount": 41
+  },
+  {
+    "id": "RUSSEJ3",
+    "name": "Jared Russell",
+    "publicationCount": 67,
+    "keywordCount": 250
+  },
+  {
+    "id": "ALR0149",
+    "name": "Andrew Rypel",
+    "publicationCount": 149,
+    "keywordCount": 546
+  },
+  {
+    "id": "AZS0143",
+    "name": "Amrut Sadachar",
+    "publicationCount": 74,
+    "keywordCount": 290
+  },
+  {
+    "id": "MZS0190",
+    "name": "Mehdi Zahid Sadi",
+    "publicationCount": 28,
+    "keywordCount": 99
+  },
+  {
+    "id": "HZS0135",
+    "name": "Hae Sagong",
+    "publicationCount": 21,
+    "keywordCount": 80
+  },
+  {
+    "id": "SALISJI",
+    "name": "Jill Salisbury-Glennon",
+    "publicationCount": 32,
+    "keywordCount": 119
+  },
+  {
+    "id": "AZS0072",
+    "name": "Amna Salman",
+    "publicationCount": 26,
+    "keywordCount": 99
+  },
+  {
+    "id": "DRS0032",
+    "name": "Diana Samek",
+    "publicationCount": 49,
+    "keywordCount": 168
+  },
+  {
+    "id": "VMS0025",
+    "name": "Victoria Sanchez",
+    "publicationCount": 20,
+    "keywordCount": 76
+  },
+  {
+    "id": "SANDAMJ",
+    "name": "Mary Sandage",
+    "publicationCount": 75,
+    "keywordCount": 303
+  },
+  {
+    "id": "MZS0011",
+    "name": "Maninder Sandey",
+    "publicationCount": 67,
+    "keywordCount": 232
+  },
+  {
+    "id": "KSS0072",
+    "name": "Kenneth Sands",
+    "publicationCount": 22,
+    "keywordCount": 89
+  },
+  {
+    "id": "HSS0044",
+    "name": "Harman Sangha",
+    "publicationCount": 9,
+    "keywordCount": 33
+  },
+  {
+    "id": "AZS0223",
+    "name": "Alvaro Sanz Saez de Jauregui",
+    "publicationCount": 70,
+    "keywordCount": 237
+  },
+  {
+    "id": "WPS0015",
+    "name": "Wendiam Sawadgo",
+    "publicationCount": 28,
+    "keywordCount": 110
+  },
+  {
+    "id": "GZS0043",
+    "name": "Gargi Sawhney",
+    "publicationCount": 39,
+    "keywordCount": 158
+  },
+  {
+    "id": "JTS0109",
+    "name": "Jason Sawyer",
+    "publicationCount": 110,
+    "keywordCount": 370
+  },
+  {
+    "id": "DES0018",
+    "name": "David Scarborough",
+    "publicationCount": 71,
+    "keywordCount": 264
+  },
+  {
+    "id": "MCS0084",
+    "name": "Mark Schall",
+    "publicationCount": 141,
+    "keywordCount": 418
+  },
+  {
+    "id": "HKS0015",
+    "name": "Henry Schenck",
+    "publicationCount": 81,
+    "keywordCount": 260
+  },
+  {
+    "id": "SCHINAK",
+    "name": "Anton Schindler",
+    "publicationCount": 105,
+    "keywordCount": 351
+  },
+  {
+    "id": "HES0071",
+    "name": "Harry Schulz",
+    "publicationCount": 239,
+    "keywordCount": 823
+  },
+  {
+    "id": "KDS0069",
+    "name": "Kyle Schulze",
+    "publicationCount": 65,
+    "keywordCount": 236
+  },
+  {
+    "id": "EHS0009",
+    "name": "Elizabeth Schwartz",
+    "publicationCount": 94,
+    "keywordCount": 284
+  },
+  {
+    "id": "TSS0019",
+    "name": "Tonia Schwartz",
+    "publicationCount": 68,
+    "keywordCount": 273
+  },
+  {
+    "id": "JAS0422",
+    "name": "James Scott",
+    "publicationCount": 18,
+    "keywordCount": 76
+  },
+  {
+    "id": "SEALSCD",
+    "name": "Cheryl Seals",
+    "publicationCount": 132,
+    "keywordCount": 470
+  },
+  {
+    "id": "RAS0029",
+    "name": "Richard Seals",
+    "publicationCount": 29,
+    "keywordCount": 113
+  },
+  {
+    "id": "JMS0018",
+    "name": "Joellen Sefton",
+    "publicationCount": 92,
+    "keywordCount": 312
+  },
+  {
+    "id": "KCS0047",
+    "name": "Kadir Sener",
+    "publicationCount": 64,
+    "keywordCount": 216
+  },
+  {
+    "id": "AZS0074",
+    "name": "Aditi Sengupta",
+    "publicationCount": 4,
+    "keywordCount": 19
+  },
+  {
+    "id": "AMS0206",
+    "name": "Amy Serafini",
+    "publicationCount": 11,
+    "keywordCount": 51
+  },
+  {
+    "id": "RFS0006",
+    "name": "Richard Sesek",
+    "publicationCount": 160,
+    "keywordCount": 513
+  },
+  {
+    "id": "NZS0130",
+    "name": "Nila Shakiba",
+    "publicationCount": 26,
+    "keywordCount": 103
+  },
+  {
+    "id": "NZS0058",
+    "name": "Nima Shamsaei",
+    "publicationCount": 326,
+    "keywordCount": 695
+  },
+  {
+    "id": "SZS0398",
+    "name": "Songling Shan",
+    "publicationCount": 49,
+    "keywordCount": 155
+  },
+  {
+    "id": "SZS0244",
+    "name": "Shuai Shao",
+    "publicationCount": 179,
+    "keywordCount": 473
+  },
+  {
+    "id": "SHAPISK",
+    "name": "Steven Shapiro",
+    "publicationCount": 44,
+    "keywordCount": 176
+  },
+  {
+    "id": "NZS0089",
+    "name": "Nek Sharan",
+    "publicationCount": 22,
+    "keywordCount": 91
+  },
+  {
+    "id": "AZS0365",
+    "name": "Ajay Sharma",
+    "publicationCount": 83,
+    "keywordCount": 315
+  },
+  {
+    "id": "NES0060",
+    "name": "Neha Sharma",
+    "publicationCount": 39,
+    "keywordCount": 124
+  },
+  {
+    "id": "TMS0122",
+    "name": "Timothy Shearman",
+    "publicationCount": 27,
+    "keywordCount": 92
+  },
+  {
+    "id": "EZS0038",
+    "name": "Elay Shech",
+    "publicationCount": 18,
+    "keywordCount": 73
+  },
+  {
+    "id": "SHELLJR",
+    "name": "James Shelley",
+    "publicationCount": 5,
+    "keywordCount": 22
+  },
+  {
+    "id": "JZS0019",
+    "name": "Jianzhong Shen",
+    "publicationCount": 48,
+    "keywordCount": 147
+  },
+  {
+    "id": "MZS0166",
+    "name": "Mo Shen",
+    "publicationCount": 7,
+    "keywordCount": 33
+  },
+  {
+    "id": "WENXISH",
+    "name": "Wenxian Shen",
+    "publicationCount": 78,
+    "keywordCount": 257
+  },
+  {
+    "id": "SLS0070",
+    "name": "Stephanie Shepherd",
+    "publicationCount": 39,
+    "keywordCount": 142
+  },
+  {
+    "id": "TAS0011",
+    "name": "Todd Shipman",
+    "publicationCount": 3,
+    "keywordCount": 15
+  },
+  {
+    "id": "SHIPPME",
+    "name": "Margaret Shippen",
+    "publicationCount": 57,
+    "keywordCount": 219
+  },
+  {
+    "id": "KMS0233",
+    "name": "Kristen Shockley",
+    "publicationCount": 88,
+    "keywordCount": 324
+  },
+  {
+    "id": "TZS0058",
+    "name": "Tao Shu",
+    "publicationCount": 54,
+    "keywordCount": 206
+  },
+  {
+    "id": "KAS0007",
+    "name": "Kristrina Shuler",
+    "publicationCount": 20,
+    "keywordCount": 85
+  },
+  {
+    "id": "SIKOREJ",
+    "name": "Edward Sikora",
+    "publicationCount": 164,
+    "keywordCount": 486
+  },
+  {
+    "id": "DFS0008",
+    "name": "Daniel Silva Izquierdo",
+    "publicationCount": 40,
+    "keywordCount": 158
+  },
+  {
+    "id": "MCS0252",
+    "name": "Molly Simonis",
+    "publicationCount": 20,
+    "keywordCount": 81
+  },
+  {
+    "id": "SINGHAD",
+    "name": "Adit Singh",
+    "publicationCount": 161,
+    "keywordCount": 612
+  },
+  {
+    "id": "NKS0029",
+    "name": "Nitin Singh",
+    "publicationCount": 19,
+    "keywordCount": 82
+  },
+  {
+    "id": "CSS0069",
+    "name": "Corbitt Sirmans",
+    "publicationCount": 13,
+    "keywordCount": 61
+  },
+  {
+    "id": "ARS0152",
+    "name": "April Smith",
+    "publicationCount": 182,
+    "keywordCount": 546
+  },
+  {
+    "id": "SMITHBF",
+    "name": "Bruce Smith",
+    "publicationCount": 104,
+    "keywordCount": 359
+  },
+  {
+    "id": "SMITHFT",
+    "name": "Forrest Smith",
+    "publicationCount": 57,
+    "keywordCount": 213
+  },
+  {
+    "id": "SMITHR5",
+    "name": "James Smith",
+    "publicationCount": 7,
+    "keywordCount": 33
+  },
+  {
+    "id": "MDS0007",
+    "name": "Mark Smith",
+    "publicationCount": 72,
+    "keywordCount": 273
+  },
+  {
+    "id": "MLS0154",
+    "name": "Michael Smith",
+    "publicationCount": 35,
+    "keywordCount": 130
+  },
+  {
+    "id": "WBS0001",
+    "name": "William Smith",
+    "publicationCount": 148,
+    "keywordCount": 527
+  },
+  {
+    "id": "SES0131",
+    "name": "Sean Smithgall",
+    "publicationCount": 12,
+    "keywordCount": 52
+  },
+  {
+    "id": "WCS0061",
+    "name": "William Snider",
+    "publicationCount": 5,
+    "keywordCount": 20
+  },
+  {
+    "id": "HILLDE1",
+    "name": "Deborah Solomon",
+    "publicationCount": 3,
+    "keywordCount": 14
+  },
+  {
+    "id": "JAS0385",
+    "name": "Jennifer Somers",
+    "publicationCount": 57,
+    "keywordCount": 216
+  },
+  {
+    "id": "KZS0063",
+    "name": "Karen Sonik",
+    "publicationCount": 10,
+    "keywordCount": 47
+  },
+  {
+    "id": "GMS0014",
+    "name": "Gilad Sorek",
+    "publicationCount": 5,
+    "keywordCount": 22
+  },
+  {
+    "id": "MZS0357",
+    "name": "Madison Sowden",
+    "publicationCount": 16,
+    "keywordCount": 57
+  },
+  {
+    "id": "JFS0048",
+    "name": "Jessica Sparks",
+    "publicationCount": 8,
+    "keywordCount": 32
+  },
+  {
+    "id": "GJS0038",
+    "name": "Gregory Spray",
+    "publicationCount": 16,
+    "keywordCount": 72
+  },
+  {
+    "id": "SZS0397",
+    "name": "Shabarinath Srikumar",
+    "publicationCount": 39,
+    "keywordCount": 139
+  },
+  {
+    "id": "SLS0009",
+    "name": "Sunny Stalter-Pace",
+    "publicationCount": 10,
+    "keywordCount": 43
+  },
+  {
+    "id": "EGS0061",
+    "name": "Ezekiel Stear",
+    "publicationCount": 4,
+    "keywordCount": 20
+  },
+  {
+    "id": "AJS0141",
+    "name": "Amanda Sterling",
+    "publicationCount": 7,
+    "keywordCount": 23
+  },
+  {
+    "id": "TDS0009",
+    "name": "Todd Steury",
+    "publicationCount": 70,
+    "keywordCount": 286
+  },
+  {
+    "id": "LSS0021",
+    "name": "Laurie Stevison",
+    "publicationCount": 44,
+    "keywordCount": 163
+  },
+  {
+    "id": "JAS0018",
+    "name": "James Stoeckel",
+    "publicationCount": 89,
+    "keywordCount": 317
+  },
+  {
+    "id": "ASS0028",
+    "name": "Amanda Strayer-Scherer",
+    "publicationCount": 61,
+    "keywordCount": 189
+  },
+  {
+    "id": "STROMPS",
+    "name": "Paris Strom",
+    "publicationCount": 61,
+    "keywordCount": 221
+  },
+  {
+    "id": "STRUTME",
+    "name": "Marilyn Strutchen",
+    "publicationCount": 81,
+    "keywordCount": 275
+  },
+  {
+    "id": "ZHS0011",
+    "name": "Zhe Su",
+    "publicationCount": 13,
+    "keywordCount": 47
+  },
+  {
+    "id": "SUHLIJC",
+    "name": "Jeffrey Suhling",
+    "publicationCount": 495,
+    "keywordCount": 1217
+  },
+  {
+    "id": "SZS0266",
+    "name": "Selim Sukhtaiev",
+    "publicationCount": 17,
+    "keywordCount": 66
+  },
+  {
+    "id": "SUMMEGI",
+    "name": "Giovanna Summerfield",
+    "publicationCount": 14,
+    "keywordCount": 52
+  },
+  {
+    "id": "YZS0078",
+    "name": "Yin Sun",
+    "publicationCount": 82,
+    "keywordCount": 308
+  },
+  {
+    "id": "DWS0015",
+    "name": "Daniel Surry",
+    "publicationCount": 53,
+    "keywordCount": 208
+  },
+  {
+    "id": "EZT0028",
+    "name": "Ehsan Taheri",
+    "publicationCount": 82,
+    "keywordCount": 307
+  },
+  {
+    "id": "TAOYAXI",
+    "name": "Ya-Xiong Tao",
+    "publicationCount": 134,
+    "keywordCount": 370
+  },
+  {
+    "id": "AML0019",
+    "name": "Andrea Tarnecki",
+    "publicationCount": 43,
+    "keywordCount": 155
+  },
+  {
+    "id": "TATARBJ",
+    "name": "Bruce Tatarchuk",
+    "publicationCount": 275,
+    "keywordCount": 925
+  },
+  {
+    "id": "DRT0015",
+    "name": "Daniel Tauritz",
+    "publicationCount": 115,
+    "keywordCount": 361
+  },
+  {
+    "id": "BARNEMA",
+    "name": "Margaret Taylor",
+    "publicationCount": 6,
+    "keywordCount": 26
+  },
+  {
+    "id": "MRT0055",
+    "name": "Mykel Taylor",
+    "publicationCount": 95,
+    "keywordCount": 364
+  },
+  {
+    "id": "SIMMOKP",
+    "name": "Karla Teel",
+    "publicationCount": 16,
+    "keywordCount": 58
+  },
+  {
+    "id": "THOMA07",
+    "name": "Chippewa Thomas",
+    "publicationCount": 20,
+    "keywordCount": 87
+  },
+  {
+    "id": "THOMAED",
+    "name": "Edward Thomas",
+    "publicationCount": 148,
+    "keywordCount": 449
+  },
+  {
+    "id": "JKT0022",
+    "name": "Joyce Thomas",
+    "publicationCount": 32,
+    "keywordCount": 123
+  },
+  {
+    "id": "RWT0012",
+    "name": "Ryan Thomson",
+    "publicationCount": 24,
+    "keywordCount": 105
+  },
+  {
+    "id": "LMT0039",
+    "name": "LaDonna Thornton",
+    "publicationCount": 19,
+    "keywordCount": 81
+  },
+  {
+    "id": "THUROBS",
+    "name": "Brian Thurow",
+    "publicationCount": 176,
+    "keywordCount": 566
+  },
+  {
+    "id": "DZT0025",
+    "name": "Di Tian",
+    "publicationCount": 70,
+    "keywordCount": 251
+  },
+  {
+    "id": "TIMMDAV",
+    "name": "David Timm",
+    "publicationCount": 167,
+    "keywordCount": 526
+  },
+  {
+    "id": "TIPPUHV",
+    "name": "Hareesh Tippur",
+    "publicationCount": 131,
+    "keywordCount": 404
+  },
+  {
+    "id": "JAT0088",
+    "name": "Jesus Tirado",
+    "publicationCount": 15,
+    "keywordCount": 66
+  },
+  {
+    "id": "RWT0021",
+    "name": "Rodney Tollerson",
+    "publicationCount": 7,
+    "keywordCount": 30
+  },
+  {
+    "id": "JRT0033",
+    "name": "Joseph Tomasso",
+    "publicationCount": 114,
+    "keywordCount": 363
+  },
+  {
+    "id": "TORBEAL",
+    "name": "Henry Torbert",
+    "publicationCount": 388,
+    "keywordCount": 1066
+  },
+  {
+    "id": "NHT0002",
+    "name": "Nam Tran",
+    "publicationCount": 167,
+    "keywordCount": 503
+  },
+  {
+    "id": "TRIGGED",
+    "name": "Eldon Triggs",
+    "publicationCount": 12,
+    "keywordCount": 41
+  },
+  {
+    "id": "PZT0022",
+    "name": "Pao-Feng Tsai",
+    "publicationCount": 59,
+    "keywordCount": 190
+  },
+  {
+    "id": "YZT0065",
+    "name": "Yazhou Tu",
+    "publicationCount": 23,
+    "keywordCount": 91
+  },
+  {
+    "id": "EOT0004",
+    "name": "Ernest Tufuor",
+    "publicationCount": 15,
+    "keywordCount": 54
+  },
+  {
+    "id": "FJT0001",
+    "name": "Felicia Tuggle",
+    "publicationCount": 19,
+    "keywordCount": 78
+  },
+  {
+    "id": "TUGNAJK",
+    "name": "Jitendra Tugnait",
+    "publicationCount": 116,
+    "keywordCount": 375
+  },
+  {
+    "id": "MST0022",
+    "name": "Malti Tuttle",
+    "publicationCount": 39,
+    "keywordCount": 131
+  },
+  {
+    "id": "UDDINAS",
+    "name": "Ashraf Uddin",
+    "publicationCount": 74,
+    "keywordCount": 236
+  },
+  {
+    "id": "JWU0003",
+    "name": "Jason Upton",
+    "publicationCount": 44,
+    "keywordCount": 113
+  },
+  {
+    "id": "RSV0005",
+    "name": "Richard Vachula",
+    "publicationCount": 70,
+    "keywordCount": 258
+  },
+  {
+    "id": "MZV0042",
+    "name": "Michail Vafeiadis",
+    "publicationCount": 22,
+    "keywordCount": 90
+  },
+  {
+    "id": "VALENJO",
+    "name": "Jorge Valenzuela",
+    "publicationCount": 58,
+    "keywordCount": 226
+  },
+  {
+    "id": "HZV0008",
+    "name": "Hans Werner Van Wyk",
+    "publicationCount": 27,
+    "keywordCount": 108
+  },
+  {
+    "id": "IZV0013",
+    "name": "Ia Vardishvili",
+    "publicationCount": 3,
+    "keywordCount": 14
+  },
+  {
+    "id": "VARGAAD",
+    "name": "Adriana Vargas Nordcbeck",
+    "publicationCount": 66,
+    "keywordCount": 235
+  },
+  {
+    "id": "JGV0001",
+    "name": "Jose Vasconcelos Neto",
+    "publicationCount": 139,
+    "keywordCount": 480
+  },
+  {
+    "id": "IBV0002",
+    "name": "Iris Vega Erramuspe",
+    "publicationCount": 30,
+    "keywordCount": 112
+  },
+  {
+    "id": "DZV0013",
+    "name": "Daniel Vergara",
+    "publicationCount": 7,
+    "keywordCount": 31
+  },
+  {
+    "id": "BKV0003",
+    "name": "Brian Via",
+    "publicationCount": 188,
+    "keywordCount": 620
+  },
+  {
+    "id": "CZV0008",
+    "name": "Christopher Vickers",
+    "publicationCount": 18,
+    "keywordCount": 80
+  },
+  {
+    "id": "SLV0008",
+    "name": "Silvia Vilches",
+    "publicationCount": 32,
+    "keywordCount": 143
+  },
+  {
+    "id": "AZV0019",
+    "name": "Aleksandr Vinel",
+    "publicationCount": 45,
+    "keywordCount": 164
+  },
+  {
+    "id": "VINSOED",
+    "name": "Edgar Vinson",
+    "publicationCount": 127,
+    "keywordCount": 413
+  },
+  {
+    "id": "SSV0002",
+    "name": "Simerjeet Virk",
+    "publicationCount": 97,
+    "keywordCount": 333
+  },
+  {
+    "id": "HZW0024",
+    "name": "Haruka Wada",
+    "publicationCount": 97,
+    "keywordCount": 324
+  },
+  {
+    "id": "WADSWDD",
+    "name": "Danielle Wadsworth",
+    "publicationCount": 176,
+    "keywordCount": 535
+  },
+  {
+    "id": "AGW0006",
+    "name": "Alan Walker",
+    "publicationCount": 45,
+    "keywordCount": 185
+  },
+  {
+    "id": "WALKEH1",
+    "name": "Harvell Walker",
+    "publicationCount": 36,
+    "keywordCount": 146
+  },
+  {
+    "id": "WANGCHE",
+    "name": "Chengming Wang",
+    "publicationCount": 247,
+    "keywordCount": 674
+  },
+  {
+    "id": "WANGCHI",
+    "name": "Chih-hsuan Wang",
+    "publicationCount": 75,
+    "keywordCount": 284
+  },
+  {
+    "id": "HZW0101",
+    "name": "Huijun Wang",
+    "publicationCount": 14,
+    "keywordCount": 58
+  },
+  {
+    "id": "JZW0001",
+    "name": "Jin Wang",
+    "publicationCount": 82,
+    "keywordCount": 281
+  },
+  {
+    "id": "JZW0284",
+    "name": "Jinquan Wang",
+    "publicationCount": 32,
+    "keywordCount": 100
+  },
+  {
+    "id": "RZW0090",
+    "name": "Rongxuan Wang",
+    "publicationCount": 21,
+    "keywordCount": 70
+  },
+  {
+    "id": "XZW0070",
+    "name": "Xu Wang",
+    "publicationCount": 79,
+    "keywordCount": 289
+  },
+  {
+    "id": "WANGXUE",
+    "name": "Xueyi Wang",
+    "publicationCount": 138,
+    "keywordCount": 388
+  },
+  {
+    "id": "YZW0008",
+    "name": "Yen-Yao Wang",
+    "publicationCount": 35,
+    "keywordCount": 139
+  },
+  {
+    "id": "WANGYIF",
+    "name": "Yifen Wang",
+    "publicationCount": 46,
+    "keywordCount": 153
+  },
+  {
+    "id": "WDW0022",
+    "name": "William Ward",
+    "publicationCount": 12,
+    "keywordCount": 55
+  },
+  {
+    "id": "KWH0011",
+    "name": "Katilya Shandrell Ware",
+    "publicationCount": 20,
+    "keywordCount": 74
+  },
+  {
+    "id": "DAW0036",
+    "name": "Daniel Warner",
+    "publicationCount": 198,
+    "keywordCount": 621
+  },
+  {
+    "id": "MNW0018",
+    "name": "Matthew Waters",
+    "publicationCount": 91,
+    "keywordCount": 304
+  },
+  {
+    "id": "GPW0016",
+    "name": "Gwendolyn Watson",
+    "publicationCount": 15,
+    "keywordCount": 70
+  },
+  {
+    "id": "DZW0086",
+    "name": "Donovan Watts",
+    "publicationCount": 2,
+    "keywordCount": 5
+  },
+  {
+    "id": "SOW0002",
+    "name": "Sarah Watts",
+    "publicationCount": 27,
+    "keywordCount": 96
+  },
+  {
+    "id": "AJW0055",
+    "name": "Aurora Weaver",
+    "publicationCount": 22,
+    "keywordCount": 93
+  },
+  {
+    "id": "WEIMAWH",
+    "name": "Wendi Weimar",
+    "publicationCount": 138,
+    "keywordCount": 486
+  },
+  {
+    "id": "WEISBEL",
+    "name": "Elizabeth Weisbrod",
+    "publicationCount": 25,
+    "keywordCount": 101
+  },
+  {
+    "id": "CAW0103",
+    "name": "Candice Welhausen",
+    "publicationCount": 16,
+    "keywordCount": 71
+  },
+  {
+    "id": "MJW0087",
+    "name": "Makeela Wells",
+    "publicationCount": 8,
+    "keywordCount": 37
+  },
+  {
+    "id": "MJW0081",
+    "name": "Michael Wesson",
+    "publicationCount": 18,
+    "keywordCount": 74
+  },
+  {
+    "id": "RCW0043",
+    "name": "Rachel West",
+    "publicationCount": 27,
+    "keywordCount": 95
+  },
+  {
+    "id": "WESTRAN",
+    "name": "Randy West",
+    "publicationCount": 131,
+    "keywordCount": 412
+  },
+  {
+    "id": "WESTRSC",
+    "name": "Salisa Westrick",
+    "publicationCount": 114,
+    "keywordCount": 401
+  },
+  {
+    "id": "EMW0009",
+    "name": "Eric Wetzel",
+    "publicationCount": 29,
+    "keywordCount": 114
+  },
+  {
+    "id": "PBW0011",
+    "name": "Peter White",
+    "publicationCount": 14,
+    "keywordCount": 58
+  },
+  {
+    "id": "WHITLHP",
+    "name": "Heather Whitley",
+    "publicationCount": 48,
+    "keywordCount": 183
+  },
+  {
+    "id": "SNW0003",
+    "name": "Stewart Whittemore",
+    "publicationCount": 2,
+    "keywordCount": 9
+  },
+  {
+    "id": "CZW0043",
+    "name": "Christopher Wilburn",
+    "publicationCount": 33,
+    "keywordCount": 139
+  },
+  {
+    "id": "LCW0045",
+    "name": "Lydia Wilkes",
+    "publicationCount": 11,
+    "keywordCount": 49
+  },
+  {
+    "id": "GRW0010",
+    "name": "Geoffrey Williams",
+    "publicationCount": 98,
+    "keywordCount": 309
+  },
+  {
+    "id": "GMW0015",
+    "name": "Gwendolyn Williams",
+    "publicationCount": 21,
+    "keywordCount": 95
+  },
+  {
+    "id": "JRW0107",
+    "name": "Janna Willoughby",
+    "publicationCount": 50,
+    "keywordCount": 192
+  },
+  {
+    "id": "AEW0009",
+    "name": "Alan Wilson",
+    "publicationCount": 131,
+    "keywordCount": 441
+  },
+  {
+    "id": "TKW0005",
+    "name": "Tracy Witte",
+    "publicationCount": 134,
+    "keywordCount": 397
+  },
+  {
+    "id": "WOHLEEC",
+    "name": "Elisha Wohleb",
+    "publicationCount": 16,
+    "keywordCount": 67
+  },
+  {
+    "id": "MEW0099",
+    "name": "Matthew Wolak",
+    "publicationCount": 32,
+    "keywordCount": 129
+  },
+  {
+    "id": "MDW0092",
+    "name": "Marnin Wolfe",
+    "publicationCount": 42,
+    "keywordCount": 148
+  },
+  {
+    "id": "JSW0030",
+    "name": "Jeremy Wolter",
+    "publicationCount": 22,
+    "keywordCount": 87
+  },
+  {
+    "id": "SZW0161",
+    "name": "Sunjae Won",
+    "publicationCount": 11,
+    "keywordCount": 48
+  },
+  {
+    "id": "WOODSSU",
+    "name": "Suzanne Woods-Groves",
+    "publicationCount": 36,
+    "keywordCount": 135
+  },
+  {
+    "id": "MRW0016",
+    "name": "Michelle Worosz",
+    "publicationCount": 53,
+    "keywordCount": 217
+  },
+  {
+    "id": "WORTHDL",
+    "name": "Debra Worthington",
+    "publicationCount": 26,
+    "keywordCount": 106
+  },
+  {
+    "id": "WOWERJA",
+    "name": "Jacek Wower",
+    "publicationCount": 92,
+    "keywordCount": 287
+  },
+  {
+    "id": "WRIGHR2",
+    "name": "Russell Wright",
+    "publicationCount": 100,
+    "keywordCount": 361
+  },
+  {
+    "id": "HAX0001",
+    "name": "Haotian Xu",
+    "publicationCount": 18,
+    "keywordCount": 76
+  },
+  {
+    "id": "PZX0002",
+    "name": "Pei Xu",
+    "publicationCount": 29,
+    "keywordCount": 119
+  },
+  {
+    "id": "MZY0033",
+    "name": "Mark Yampolskiy",
+    "publicationCount": 81,
+    "keywordCount": 268
+  },
+  {
+    "id": "YAY0001",
+    "name": "Yang Yang",
+    "publicationCount": 25,
+    "keywordCount": 105
+  },
+  {
+    "id": "ZZY0066",
+    "name": "Zutao Yang",
+    "publicationCount": 117,
+    "keywordCount": 403
+  },
+  {
+    "id": "QIY0002",
+    "name": "Qiang Yao",
+    "publicationCount": 45,
+    "keywordCount": 163
+  },
+  {
+    "id": "MTY0004",
+    "name": "Matthew Yarnold",
+    "publicationCount": 65,
+    "keywordCount": 251
+  },
+  {
+    "id": "YILMALE",
+    "name": "Levent Yilmaz",
+    "publicationCount": 377,
+    "keywordCount": 1406
+  },
+  {
+    "id": "FZY0015",
+    "name": "Fan Yin",
+    "publicationCount": 97,
+    "keywordCount": 280
+  },
+  {
+    "id": "BMY0004",
+    "name": "Beverly Yordy",
+    "publicationCount": 11,
+    "keywordCount": 41
+  },
+  {
+    "id": "YOSTKEV",
+    "name": "Keven Yost",
+    "publicationCount": 16,
+    "keywordCount": 72
+  },
+  {
+    "id": "NEY0002",
+    "name": "Norman Youngblood",
+    "publicationCount": 26,
+    "keywordCount": 97
+  },
+  {
+    "id": "SAY0001",
+    "name": "Susan Youngblood",
+    "publicationCount": 17,
+    "keywordCount": 69
+  },
+  {
+    "id": "DIY0002",
+    "name": "Di Yuan",
+    "publicationCount": 2,
+    "keywordCount": 9
+  },
+  {
+    "id": "ZZY0065",
+    "name": "Zongliang Yue",
+    "publicationCount": 54,
+    "keywordCount": 195
+  },
+  {
+    "id": "ZABALME",
+    "name": "Michael Zabala",
+    "publicationCount": 40,
+    "keywordCount": 154
+  },
+  {
+    "id": "MAZ0014",
+    "name": "Miles Zachary",
+    "publicationCount": 41,
+    "keywordCount": 165
+  },
+  {
+    "id": "CEZ0003",
+    "name": "Christian Zamiela",
+    "publicationCount": 11,
+    "keywordCount": 42
+  },
+  {
+    "id": "ZENGPEN",
+    "name": "Peng Zeng",
+    "publicationCount": 37,
+    "keywordCount": 151
+  },
+  {
+    "id": "ZHANGD1",
+    "name": "Daowei Zhang",
+    "publicationCount": 103,
+    "keywordCount": 399
+  },
+  {
+    "id": "XZZ0004",
+    "name": "Xinyu Zhang",
+    "publicationCount": 168,
+    "keywordCount": 502
+  },
+  {
+    "id": "ZHANGY3",
+    "name": "Yaoqi Zhang",
+    "publicationCount": 154,
+    "keywordCount": 576
+  },
+  {
+    "id": "YZZ0235",
+    "name": "Yifan Zhang",
+    "publicationCount": 4,
+    "keywordCount": 20
+  },
+  {
+    "id": "YZZ0226",
+    "name": "Yuming Zhang",
+    "publicationCount": 16,
+    "keywordCount": 61
+  },
+  {
+    "id": "ZEZ0002",
+    "name": "Zezhong Zhang",
+    "publicationCount": 11,
+    "keywordCount": 46
+  },
+  {
+    "id": "ZZH0054",
+    "name": "Hong Zhao",
+    "publicationCount": 178,
+    "keywordCount": 417
+  },
+  {
+    "id": "JZZ0121",
+    "name": "Jingyi Zheng",
+    "publicationCount": 50,
+    "keywordCount": 196
+  },
+  {
+    "id": "YZZ0225",
+    "name": "Yimin Zhong",
+    "publicationCount": 17,
+    "keywordCount": 58
+  },
+  {
+    "id": "HHZ0001",
+    "name": "Huaguo Zhou",
+    "publicationCount": 173,
+    "keywordCount": 530
+  },
+  {
+    "id": "YZZ0154",
+    "name": "Yang Zhou",
+    "publicationCount": 116,
+    "keywordCount": 423
+  },
+  {
+    "id": "YZZ0239",
+    "name": "Yinong Zhou",
+    "publicationCount": 31,
+    "keywordCount": 120
+  },
+  {
+    "id": "MLZ0004",
+    "name": "Michelle Zorn",
+    "publicationCount": 23,
+    "keywordCount": 104
+  },
+  {
+    "id": "HZZ0006",
+    "name": "Haibo Zou",
+    "publicationCount": 144,
+    "keywordCount": 457
+  }
+]

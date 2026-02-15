@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experts</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Experts</h1>
+  </header>
+
+  <!-- Minimal structure for B3 logic; B2 will refine layout and styling -->
+  <section class="controls">
+    <label for="expert-search">Search by name</label>
+    <input type="text" id="expert-search" placeholder="Type name...">
+
+    <label for="expert-sort">Sort by</label>
+    <select id="expert-sort">
+      <option value="name">Name</option>
+      <option value="publications">Publications (high first)</option>
+      <option value="keywords">Keywords (high first)</option>
+    </select>
+  </section>
+
+  <section class="expert-browse">
+    <div id="expert-list" class="expert-list">
+      Loading…
+    </div>
+    <div id="expert-detail" class="expert-detail">
+      Select an expert.
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/experts.js"></script>
+</body>
+</html>
