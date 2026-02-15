@@ -14,8 +14,9 @@ Thumbs.db
 *.tmp
 .cache/
 
-# Optional: uncomment if you add Node tooling later
-# node_modules/
-# dist/
-# .env
-# .env.local
+# Secrets (DB password, etc.)
+.env
+.env.local
+
+# Node (for scripts/experts_export.js)
+node_modules/
