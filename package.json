@@ -1,0 +1,15 @@
+{
+  "name": "ausme-prototype",
+  "version": "1.0.0",
+  "description": "AUSME prototype – Opportunity & Expert pages",
+  "private": true,
+  "scripts": {
+    "start": "npx http-server -p 3000 -c-1",
+    "export:experts": "node scripts/experts_export.js --export",
+    "export:experts:inspect": "node scripts/experts_export.js --inspect"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.11.0"
+  }
+}
