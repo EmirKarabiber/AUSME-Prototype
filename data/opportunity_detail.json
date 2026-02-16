@@ -1,1 +1,18 @@
-{}
+{
+  "id": 15936,
+  "number": "07HQPA0028",
+  "title": "Cooperative Ecosystem Studies Unit, Rocky Mountain CESU",
+  "description": "The U.S. Geological Surveys is offering a cooperative-agreement opportunity to universities that have the ability to conduct research on dendrohydrological  reconstructions that meet the objectives listed below",
+  "post_date": "2007-07-09T00:00:00",
+  "due_date": "2007-07-19T00:00:00",
+  "url": null,
+  "award_ceiling": 24957.00,
+  "award_floor": 24957.00,
+  "estimated_funding": 24957.00,
+  "agency": {
+    "id": 23
+  },
+  "category": {
+    "id": 1
+  }
+}
