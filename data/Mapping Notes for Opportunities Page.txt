@@ -1,0 +1,21 @@
+opportunities.json
+| JSON Field        | Database Table | Column            |
+| ----------------- | -------------- | ----------------- |
+| id                | opportunities  | opp_id            |
+| number            | opportunities  | number            |
+| title             | opportunities  | title             |
+| post_date         | opportunities  | post_date         |
+| due_date          | opportunities  | due_date          |
+| agency_id         | opportunities  | agency_id         |
+| category_id       | opportunities  | category_id       |
+| award_ceiling     | opportunities  | award_ceiling     |
+| award_floor       | opportunities  | award_floor       |
+| estimated_funding | opportunities  | estimated_funding |
+
+opportunity_detail.json
+| JSON Field  | Database Table | Column      |
+| ----------- | -------------- | ----------- |
+| description | opportunities  | description |
+| url         | opportunities  | url         |
+| agency.id   | opportunities  | agency_id   |
+| category.id | opportunities  | category_id |
