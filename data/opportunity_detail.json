@@ -1,18 +1,153 @@
 {
-  "id": 15936,
-  "number": "07HQPA0028",
-  "title": "Cooperative Ecosystem Studies Unit, Rocky Mountain CESU",
-  "description": "The U.S. Geological Surveys is offering a cooperative-agreement opportunity to universities that have the ability to conduct research on dendrohydrological  reconstructions that meet the objectives listed below",
-  "post_date": "2007-07-09T00:00:00",
-  "due_date": "2007-07-19T00:00:00",
-  "url": null,
-  "award_ceiling": 24957.00,
-  "award_floor": 24957.00,
-  "estimated_funding": 24957.00,
-  "agency": {
-    "id": 23
-  },
-  "category": {
-    "id": 1
+  "opportunities": {
+    "15936": {
+      "opp_id": 15936,
+      "number": "07HQPA0028",
+      "title": "Cooperative Ecosystem Studies Unit, Rocky Mountain CESU",
+      "post_date": "2007-07-09",
+      "due_date": "2007-07-19",
+      "description": "The U.S. Geological Survey is offering a cooperative-agreement opportunity to universities that have the ability to conduct research on dendrohydrological reconstructions that meet the objectives outlined in the funding announcement.",
+      "url": null,
+      "agency_id": 23,
+      "category_id": 1,
+      "award_ceiling": 24957.00,
+      "award_floor": 24957.00,
+      "estimated_funding": 24957.00
+    },
+
+    "15937": {
+      "opp_id": 15937,
+      "number": "ED-GRANTS-070907-001",
+      "title": "Youth violence and related issues in persistently dangerous schools CFDA 84.184V",
+      "post_date": "2007-07-09",
+      "due_date": "2007-08-08",
+      "description": "Each funding opportunity description is a synopsis of information in the Federal Register application notice. For specific information about eligibility, applicants should consult the official Federal Register notice.",
+      "url": null,
+      "agency_id": 46,
+      "category_id": 1,
+      "award_ceiling": null,
+      "award_floor": null,
+      "estimated_funding": 8594000.00
+    },
+
+    "15939": {
+      "opp_id": 15939,
+      "number": "ED-GRANTS-070907-002",
+      "title": "State data collection; technical assistance CFDA 84.373X",
+      "post_date": "2007-07-09",
+      "due_date": "2007-08-23",
+      "description": "This funding opportunity supports state data collection initiatives and provides technical assistance. Applicants should review the official Federal Register notice for detailed requirements.",
+      "url": null,
+      "agency_id": 46,
+      "category_id": 1,
+      "award_ceiling": 400000.00,
+      "award_floor": null,
+      "estimated_funding": 13500000.00
+    },
+
+    "15941": {
+      "opp_id": 15941,
+      "number": "NNH07ZEA001N-EDL1",
+      "title": "ROA 2007: A.6 Entry, Descent, and Landing 1",
+      "post_date": "2007-07-09",
+      "due_date": "2007-08-20",
+      "description": "NASA Headquarters released this Research Announcement (NRA) in support of the Aeronautics Research Mission Directorate. The opportunity focuses on foundational research related to entry, descent, and landing technologies.",
+      "url": null,
+      "agency_id": 26,
+      "category_id": 1,
+      "award_ceiling": null,
+      "award_floor": null,
+      "estimated_funding": null
+    },
+
+    "17675": {
+      "opp_id": 17675,
+      "number": "CNCS-GRANTS-071307-001",
+      "title": "Volunteer Management",
+      "post_date": "2007-07-13",
+      "due_date": "2007-09-06",
+      "description": "The Corporation for National and Community Service announces up to $800,000 in grants to support nonprofit organizations in increasing volunteer retention and expanding volunteer program capacity.",
+      "url": null,
+      "agency_id": 529,
+      "category_id": 1,
+      "award_ceiling": 200000.00,
+      "award_floor": 50000.00,
+      "estimated_funding": 800000.00
+    },
+
+    "39237": {
+      "opp_id": 39237,
+      "number": "SGA-07-05",
+      "title": "Nat'l Tech Asst & Rsrch Cntr to Promote Ldrshp for Emp & Econ Ind for Adults w/disabilities",
+      "post_date": "2007-07-26",
+      "due_date": "2007-08-20",
+      "description": "ODEP will award one cooperative agreement to establish a national technical assistance and research center to promote employment and economic independence for adults with disabilities.",
+      "url": null,
+      "agency_id": 599,
+      "category_id": 1,
+      "award_ceiling": 2350000.00,
+      "award_floor": 2350000.00,
+      "estimated_funding": 2350000.00
+    },
+
+    "39241": {
+      "opp_id": 39241,
+      "number": "USDA-FNS-WIEBT",
+      "title": "FY 2007 WIC Electronic Benefits Transfer (EBT) Notice of Competitive Pre-Planning EBT Grant Solicitation",
+      "post_date": "2007-07-23",
+      "due_date": "2007-08-16",
+      "description": "The Food and Nutrition Service plans to award grant funds to WIC State agencies to support Electronic Benefits Transfer (EBT) pre-planning activities.",
+      "url": null,
+      "agency_id": 91,
+      "category_id": 1,
+      "award_ceiling": null,
+      "award_floor": null,
+      "estimated_funding": 500000.00
+    },
+
+    "39706": {
+      "opp_id": 39706,
+      "number": "PRM-AFR--08-CA-AF-090407-SUDAN",
+      "title": "PRM NGO Projects in Southern Sudan",
+      "post_date": "2007-09-04",
+      "due_date": "2007-10-09",
+      "description": "Limited funding is available to support NGOs working in southern Sudan in support of Sudanese refugee repatriation and reintegration.",
+      "url": null,
+      "agency_id": 279,
+      "category_id": 1,
+      "award_ceiling": 2000000.00,
+      "award_floor": 100000.00,
+      "estimated_funding": null
+    },
+
+    "39707": {
+      "opp_id": 39707,
+      "number": "PRM-AFR-08-CA-003-AF-090407",
+      "title": "PRM NGO Projects in the Great Lakes/Central Africa Region",
+      "post_date": "2007-09-04",
+      "due_date": "2007-10-09",
+      "description": "Funding is available to support repatriation and reintegration of refugees in the Great Lakes and Central Africa region, including Burundi and the Democratic Republic of the Congo.",
+      "url": null,
+      "agency_id": 279,
+      "category_id": 1,
+      "award_ceiling": 3000000.00,
+      "award_floor": 100000.00,
+      "estimated_funding": null
+    },
+
+    "39717": {
+      "opp_id": 39717,
+      "number": "PRM-AFR-08-CA-AF-09042007-CHAD",
+      "title": "PRM NGO Projects in Chad",
+      "post_date": "2007-09-06",
+      "due_date": "2007-10-09",
+      "description": "Proposed activities should support refugees in Chad, including Sudanese and Central African Republic refugees, across sectors such as protection, health, and education.",
+      "url": null,
+      "agency_id": 279,
+      "category_id": 1,
+      "award_ceiling": 3000000.00,
+      "award_floor": 100000.00,
+      "estimated_funding": null
+    }
   }
 }
