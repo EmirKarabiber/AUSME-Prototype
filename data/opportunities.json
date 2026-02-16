@@ -1,1 +1,30 @@
-[]
+{
+  "opportunities": [
+    {
+      "id": 101,
+      "number": "AUSME-001",
+      "title": "Advanced Energy Research Grant",
+      "post_date": "2026-01-15T00:00:00",
+      "due_date": "2026-05-01T23:59:59",
+      "agency_name": "Department of Energy",
+      "award_ceiling": 500000.00,
+      "award_floor": 100000.00,
+      "estimated_funding": 2000000.00,
+      "status": "Open"
+    },
+    {
+      "id": 102,
+      "number": "AUSME-002",
+      "title": "AI for Public Health Initiative",
+      "post_date": "2026-02-01T00:00:00",
+      "due_date": "2026-06-15T23:59:59",
+      "agency_name": "National Science Foundation",
+      "award_ceiling": 750000.00,
+      "award_floor": 250000.00,
+      "estimated_funding": 5000000.00,
+      "status": "Open"
+    }
+  ]
+}
+
+
