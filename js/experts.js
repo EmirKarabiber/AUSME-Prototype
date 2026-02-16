@@ -1,175 +1,360 @@
-/**
- * B3: JavaScript logic for Expert Page.
- * - Loads expert JSON data
- * - Search by name, sort by metrics, render list and profile
- */
+// Role B3: JavaScript Logic Owner
+// Refactored for Modularity: Separating Data, Logic, and UI
 
-(function () {
-  "use strict";
+// ==========================================
+// 1. DATA LAYER (Service)
+// ==========================================
+const DataService = {
+  experts: [],
+  expertDetails: {},
 
-  var experts = [];
-  var expertDetails = {}; // id -> { name, expertise, keywords, publications }
-  var sortBy = "name"; // "name" | "publications" | "keywords"
-  var searchQuery = "";
-
-  var listEl = document.getElementById("expert-list");
-  var detailEl = document.getElementById("expert-detail");
-  var searchInput = document.getElementById("expert-search");
-  var sortSelect = document.getElementById("expert-sort");
-
-  function loadData() {
-    Promise.all([
-      window.fetchJSON("data/experts.json"),
-      window.fetchJSON("data/expert_details.json"),
-    ])
-      .then(function (results) {
-        experts = Array.isArray(results[0]) ? results[0] : [];
-        expertDetails = results[1] && typeof results[1] === "object" ? results[1] : {};
-        render();
-      })
-      .catch(function (err) {
-        console.error("Expert data load error:", err);
-        if (listEl) listEl.textContent = "Failed to load experts. Check console.";
-      });
-  }
-
-  function filteredAndSortedExperts() {
-    var list = experts.slice();
-    if (searchQuery) {
-      var q = searchQuery.toLowerCase();
-      list = list.filter(function (e) {
-        return (e.name || "").toLowerCase().indexOf(q) !== -1;
-      });
+  async loadExperts() {
+    try {
+      const response = await fetch('data/experts.json');
+      this.experts = await response.json();
+    } catch (error) {
+      console.error("Failed to load experts:", error);
     }
-    list.sort(function (a, b) {
-      if (sortBy === "name") {
-        return (a.name || "").localeCompare(b.name || "");
-      }
-      if (sortBy === "publications") {
-        return (b.publicationCount || 0) - (a.publicationCount || 0);
-      }
-      if (sortBy === "keywords") {
-        return (b.keywordCount || 0) - (a.keywordCount || 0);
-      }
-      return 0;
-    });
-    return list;
-  }
+  },
 
-  function renderList() {
-    if (!listEl) return;
-    var list = filteredAndSortedExperts();
-    listEl.innerHTML = "";
-    list.forEach(function (expert) {
-      var item = document.createElement("div");
-      item.className = "expert-list-item";
-      item.setAttribute("data-expert-id", expert.id || "");
-      item.textContent = expert.name || "Unnamed";
-      var meta = document.createElement("span");
-      meta.className = "expert-list-meta";
-      meta.textContent = "Publications: " + (expert.publicationCount || 0) + ", Keywords: " + (expert.keywordCount || 0);
-      item.appendChild(meta);
-      item.addEventListener("click", function () {
-        showExpertProfile(expert);
-      });
-      listEl.appendChild(item);
-    });
-  }
-
-  function showExpertProfile(expert) {
-    if (!detailEl) return;
-    var data = expertDetails[expert.id] || expert;
-    var name = data.name || expert.name || "Unknown";
-    detailEl.innerHTML = "";
-
-    var nameEl = document.createElement("h3");
-    nameEl.textContent = name;
-    detailEl.appendChild(nameEl);
-
-    if (data.expertise && data.expertise.length) {
-      var expEl = document.createElement("p");
-      expEl.className = "expert-detail-section";
-      expEl.innerHTML = "<strong>Expertise</strong>: " + data.expertise.slice(0, 20).join(", ") + (data.expertise.length > 20 ? " …" : "");
-      detailEl.appendChild(expEl);
+  async loadExpertDetails() {
+    try {
+      const response = await fetch('data/expert_details.json');
+      this.expertDetails = await response.json();
+    } catch (error) {
+      console.error("Failed to load expert details:", error);
     }
-    if (data.keywords && data.keywords.length) {
-      var kwEl = document.createElement("p");
-      kwEl.className = "expert-detail-section";
-      kwEl.innerHTML = "<strong>Keywords</strong>: " + data.keywords.slice(0, 25).join(", ") + (data.keywords.length > 25 ? " …" : "");
-      detailEl.appendChild(kwEl);
+  },
+
+  getExperts() {
+    return this.experts;
+  },
+
+  getExpertByAuid(auid) {
+    // Return details if available, otherwise partial from list
+    return this.expertDetails[auid];
+  },
+
+  getPapersByAuid(auid) {
+    const details = this.expertDetails[auid];
+    return details ? details.publications : [];
+  }
+};
+
+// ==========================================
+// 2. BUSINESS LOGIC (Pure Functions)
+// ==========================================
+const Logic = {
+  CURRENT_YEAR: 2026,
+  ALL_TIME_YEAR: 1999, // Threshold for "All Time"
+
+  // Metric Calculations
+
+  // Calculates total citations received in years >= startYear
+  calculateCitationsSince(obj, startYear) {
+    // If All Time is selected, return total citations
+    if (startYear <= this.ALL_TIME_YEAR) {
+      return (obj.totalCitations || obj.total_citations || 0);
     }
 
-    if (data.publications && data.publications.length) {
-      var pubHead = document.createElement("h4");
-      pubHead.textContent = "Publications (" + data.publications.length + ")";
-      detailEl.appendChild(pubHead);
-      var pubList = document.createElement("ul");
-      pubList.className = "expert-publications";
-      data.publications.slice(0, 50).forEach(function (p) {
-        var li = document.createElement("li");
-        var title = p.title || "Untitled";
-        if (p.link) {
-          var a = document.createElement("a");
-          a.href = p.link;
-          a.target = "_blank";
-          a.rel = "noopener";
-          a.textContent = title;
-          li.appendChild(a);
-        } else {
-          li.textContent = title;
+    let total = 0;
+    // Check for citationsPerYear (Expert) or citation_per_year (Paper)
+    const cpy = obj.citationsPerYear || obj.citation_per_year;
+
+    if (!cpy) return 0;
+
+    // Handle Array format (Paper: [{year: 2024, citations: 5}])
+    if (Array.isArray(cpy)) {
+      cpy.forEach(entry => {
+        if (entry.year >= startYear) {
+          total += (entry.citations || 0);
         }
-        var meta = [];
-        if (p.publication_date) meta.push(p.publication_date);
-        if (p.published_in) meta.push(p.published_in);
-        if (p.total_citations != null) meta.push(p.total_citations + " citations");
-        if (meta.length) {
-          var span = document.createElement("span");
-          span.className = "expert-pub-meta";
-          span.textContent = " — " + meta.join(" · ");
-          li.appendChild(span);
-        }
-        pubList.appendChild(li);
       });
-      detailEl.appendChild(pubList);
-      if (data.publications.length > 50) {
-        var more = document.createElement("p");
-        more.className = "expert-pub-more";
-        more.textContent = "… and " + (data.publications.length - 50) + " more.";
-        detailEl.appendChild(more);
+    }
+    // Handle Object format (Expert: {"2024": 50})
+    else if (typeof cpy === 'object') {
+      Object.keys(cpy).forEach(year => {
+        if (parseInt(year) >= startYear) {
+          total += (cpy[year] || 0);
+        }
+      });
+    }
+
+    return total;
+  },
+
+  // Expert Filtering
+  filterExperts(experts, criteria) {
+    return experts.filter(expert => {
+      const fullText = `${expert.name} ${expert.title} ${expert.college} ${expert.department}`.toLowerCase();
+      const matchesSearch = !criteria.search || fullText.includes(criteria.search);
+      const matchesCollege = criteria.colleges.length === 0 || criteria.colleges.includes(expert.college);
+      const matchesDegree = criteria.degrees.length === 0 || criteria.degrees.includes(expert.degree);
+
+      // Filter by "Min Citations" in the selected Time Period
+      // The criteria.minCitations applies to the EFFECTIVE count (All Time or Since X)
+      const effectiveCitations = this.calculateCitationsSince(expert, criteria.recencyYear);
+      const matchesCitations = effectiveCitations >= criteria.minCitations;
+
+      return matchesSearch && matchesCollege && matchesDegree && matchesCitations;
+    });
+  },
+
+  // Paper Filtering
+  filterPapers(papers, criteria) {
+    return papers.filter(p => {
+      const pubYear = p.publication_date ? parseInt(p.publication_date.substring(0, 4)) : 0;
+      const textMatch = (p.title || '').toLowerCase().includes(criteria.search);
+
+      const yearMatch = pubYear >= criteria.startYear && pubYear <= criteria.endYear;
+
+      // Filter by "Min Citations" in the selected Time Period
+      const effectiveCitations = this.calculateCitationsSince(p, criteria.recencyYear);
+      const matchesCitations = effectiveCitations >= criteria.minCitations;
+
+      return textMatch && yearMatch && matchesCitations;
+    });
+  },
+
+  // Generic Sorting
+  sortData(data, sortType, recencyYear = 1999) {
+    return [...data].sort((a, b) => { // Return new array
+      switch (sortType) {
+        case 'relevance': return 0; // Default order
+        case 'name_asc': return (a.name || a.title).localeCompare(b.name || b.title);
+        case 'citations':
+          const citA = this.calculateCitationsSince(a, recencyYear);
+          const citB = this.calculateCitationsSince(b, recencyYear);
+          return citB - citA;
+        case 'year_desc':
+          const yA = a.publication_date ? new Date(a.publication_date).getTime() : 0;
+          const yB = b.publication_date ? new Date(b.publication_date).getTime() : 0;
+          return yB - yA;
+        case 'year_asc':
+          const yA2 = a.publication_date ? new Date(a.publication_date).getTime() : 0;
+          const yB2 = b.publication_date ? new Date(b.publication_date).getTime() : 0;
+          return yA2 - yB2;
+        default: return 0;
       }
-    } else if (!detailEl.querySelector("p") && !detailEl.querySelector("ul")) {
-      var fallback = document.createElement("p");
-      fallback.textContent = "Publications: " + (expert.publicationCount || 0) + ", Keywords: " + (expert.keywordCount || 0);
-      detailEl.appendChild(fallback);
+    });
+  }
+};
+
+// ==========================================
+// 3. UI LAYER (DOM Manipulation)
+// ==========================================
+const UIManager = {
+  // Helpers
+  el(id) { return document.getElementById(id); },
+  val(id) { return this.el(id) ? (this.el(id).value || '').toLowerCase() : ''; },
+  num(id) { return parseInt(this.el(id) ? this.el(id).value : 0) || 0; },
+
+  getchecked(containerId) {
+    const container = this.el(containerId);
+    if (!container) return [];
+    return Array.from(container.querySelectorAll('input:checked')).map(cb => cb.value);
+  },
+
+  // NOTE: syncSlider is removed/deprecated for citations as requested. 
+  // Kept only if needed for other things, but here we just attach directly.
+
+  // Rendering
+  renderExperts(experts, recencyYear) {
+    const container = this.el('expertsList');
+    if (!container) return; // Guard for wrong page
+
+    if (experts.length === 0) {
+      container.innerHTML = '<p>No experts match your filters.</p>';
+      return;
     }
-  }
 
-  function render() {
-    renderList();
-    if (detailEl && !detailEl.innerHTML && experts.length > 0) {
-      showExpertProfile(experts[0]);
+    container.innerHTML = experts.map(expert => {
+      const effective = Logic.calculateCitationsSince(expert, recencyYear);
+      const label = recencyYear <= 1999 ? "Total Cited" : `Citations Since ${recencyYear}`;
+      return `
+            <div class="card expert-card" onclick="window.location.href='papers.html?auid=${expert.id}'">
+                <h3>${expert.name}</h3>
+                <p><strong>Title:</strong> ${expert.title}</p>
+                <p><strong>College:</strong> ${expert.college}</p>
+                <p style="font-size:0.8em; color:#666;">${expert.degree}</p>
+                <div class="stats">
+                    <span style="font-weight:bold; color:#2980b9;">${label}: ${effective}</span>
+                </div>
+                <button class="view-papers-btn">View Papers</button>
+            </div>`;
+    }).join('');
+  },
+
+  renderPapers(papers, recencyYear) {
+    const container = this.el('papersList');
+    if (!container) return; // Guard for wrong page
+
+    if (papers.length === 0) {
+      container.innerHTML = '<p>No papers match your filters.</p>';
+      return;
     }
-  }
 
-  function onSearch() {
-    searchQuery = (searchInput && searchInput.value) ? searchInput.value.trim() : "";
-    render();
-  }
+    container.innerHTML = papers.map(paper => {
+      const effective = Logic.calculateCitationsSince(paper, recencyYear);
+      const label = recencyYear <= 1999 ? "Cited by" : `Citations Since ${recencyYear}`;
+      const yearStr = paper.publication_date ? paper.publication_date.substring(0, 4) : 'N/A';
 
-  function onSort() {
-    sortBy = (sortSelect && sortSelect.value) ? sortSelect.value : "name";
-    render();
-  }
+      return `
+            <div class="card paper-card" style="margin-bottom: 15px;">
+                <div style="display:flex; justify-content:space-between; align-items:start;">
+                    <h4 style="margin:0 0 5px 0; color:#333;">${paper.title}</h4>
+                    <span style="background:#eaf2f8; padding:2px 8px; border-radius:10px; font-size:0.8em; color:#2980b9;">${yearStr}</span>
+                </div>
+                <p class="meta" style="margin:5px 0;">${label}: ${effective}</p>
+                <p class="authors" style="font-size:0.9em;">${paper.authors_display || paper.authors || ''}</p>
+                ${paper.published_in ? `<p style="font-size:0.8em; color:#666;">Published in: ${paper.published_in}</p>` : ''}
+            </div>`;
+    }).join('');
+  },
 
-  function init() {
-    if (searchInput) searchInput.addEventListener("input", onSearch);
-    if (sortSelect) sortSelect.addEventListener("change", onSort);
-    loadData();
-  }
+  renderCheckboxes(items, containerId, namePrefix, callbackFunc) {
+    const container = this.el(containerId);
+    if (!container) return;
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
+    container.innerHTML = items.map(item => `
+            <div class="checkbox-visual">
+                <input type="checkbox" value="${item}" id="${namePrefix}_${item.replace(/[^a-zA-Z0-9]/g, '')}" class="filter-cb">
+                <label for="${namePrefix}_${item.replace(/[^a-zA-Z0-9]/g, '')}">${item}</label>
+            </div>
+        `).join('');
+
+    // Attach listeners dynamically
+    container.querySelectorAll('.filter-cb').forEach(cb => {
+      cb.addEventListener('change', callbackFunc);
+    });
   }
-})();
+};
+
+// ==========================================
+// 4. CONTROLLER (Orchestrator)
+// ==========================================
+const App = {
+  async init() {
+    // Router: simple check for elements
+    if (UIManager.el('expertsList')) {
+      await DataService.loadExperts();
+      this.initHome();
+    } else if (UIManager.el('papersList')) {
+      await DataService.loadExpertDetails();
+      this.initProfile();
+    }
+  },
+
+  // --- HOME PAGE ---
+  initHome() {
+    const experts = DataService.getExperts();
+
+    // 1. Render initial state (Default to All Time = 1999)
+    UIManager.renderExperts(experts, 1999);
+
+    // 2. Populate Filters
+    const colleges = [...new Set(experts.map(e => e.college).filter(Boolean))].sort();
+    const degrees = [...new Set(experts.map(e => e.degree).filter(Boolean))].sort();
+
+    UIManager.renderCheckboxes(colleges, 'collegeCheckboxes', 'col', () => this.refreshHome());
+    UIManager.renderCheckboxes(degrees, 'degreeCheckboxes', 'deg', () => this.refreshHome());
+
+    // 3. Attach Events
+    UIManager.el('searchInput').addEventListener('input', () => this.refreshHome());
+    UIManager.el('sortSelect').addEventListener('change', () => this.refreshHome());
+
+    // Time Period slider
+    const timeSlider = UIManager.el('recencyStartYearRange');
+    if (timeSlider) {
+      timeSlider.addEventListener('input', () => this.refreshHome());
+    }
+
+    // Min Citations Input (Direct listener, no sync)
+    const citationInput = UIManager.el('citationInput');
+    if (citationInput) {
+      citationInput.addEventListener('input', () => this.refreshHome());
+    }
+  },
+
+  refreshHome() {
+    // If slider is not present, default to 1999 (All Time)
+    const recencyYear = parseInt(UIManager.el('recencyStartYearRange') ? UIManager.el('recencyStartYearRange').value : 1999);
+
+    const criteria = {
+      search: UIManager.val('searchInput'),
+      colleges: UIManager.getchecked('collegeCheckboxes'),
+      degrees: UIManager.getchecked('degreeCheckboxes'),
+      minCitations: UIManager.num('citationInput'), // Text input value
+      recencyYear: recencyYear
+    };
+
+    let filtered = Logic.filterExperts(DataService.getExperts(), criteria);
+    let sorted = Logic.sortData(filtered, UIManager.val('sortSelect'), recencyYear);
+
+    UIManager.renderExperts(sorted, recencyYear);
+  },
+
+  // --- PROFILE PAGE ---
+  initProfile() {
+    const params = new URLSearchParams(window.location.search);
+    const auid = params.get('auid');
+    const expert = DataService.getExpertByAuid(auid);
+
+    if (!expert) return;
+
+    // 1. Header (Show All Time stats initially)
+    const totalCited = expert.publications.reduce((sum, p) => sum + (p.total_citations || 0), 0);
+
+    UIManager.el('expertHeader').innerHTML = `
+            <div class="card profile-header" style="margin-bottom: 20px;">
+                <h2 style="margin-top:0;">${expert.name}</h2>
+                <p>${expert.title || ''}, ${expert.department || ''}</p>
+                <p><strong>${expert.college || ''}</strong></p>
+                <div style="margin-top:10px; font-weight:bold; color:#2980b9;">
+                    Total Cited: ${totalCited}
+                </div>
+            </div>`;
+
+    // 2. Initial Papers
+    this.currentPapers = DataService.getPapersByAuid(auid);
+    this.refreshProfile();
+
+    // 3. Attach Events
+    UIManager.el('paperSearchInput').addEventListener('input', () => this.refreshProfile());
+    UIManager.el('paperSortSelect').addEventListener('change', () => this.refreshProfile());
+    UIManager.el('yearStart').addEventListener('input', () => this.refreshProfile());
+    UIManager.el('yearEnd').addEventListener('input', () => this.refreshProfile());
+
+    // Time Period slider
+    const paperTimeSlider = UIManager.el('paperRecencyStartYearRange');
+    if (paperTimeSlider) {
+      paperTimeSlider.addEventListener('input', () => this.refreshProfile());
+    }
+
+    // Min Citations Input
+    const paperCitationInput = UIManager.el('paperCitationInput');
+    if (paperCitationInput) {
+      paperCitationInput.addEventListener('input', () => this.refreshProfile());
+    }
+  },
+
+  refreshProfile() {
+    const recencyYear = parseInt(UIManager.el('paperRecencyStartYearRange') ? UIManager.el('paperRecencyStartYearRange').value : 1999);
+
+    const criteria = {
+      search: UIManager.val('paperSearchInput'),
+      minCitations: UIManager.num('paperCitationInput'),
+      startYear: UIManager.num('yearStart') || 1900,
+      endYear: UIManager.num('yearEnd') || 2100,
+      recencyYear: recencyYear
+    };
+
+    let filtered = Logic.filterPapers(this.currentPapers, criteria);
+    let sorted = Logic.sortData(filtered, UIManager.val('paperSortSelect'), recencyYear);
+
+    UIManager.renderPapers(sorted, recencyYear);
+  }
+};
+
+// Start App
+App.init();
