@@ -7,33 +7,49 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
   <header>
     <h1>Experts</h1>
   </header>
 
-  <!-- Minimal structure for B3 logic; B2 will refine layout and styling -->
+  <!-- Controls Section -->
   <section class="controls">
-    <label for="expert-search">Search by name</label>
-    <input type="text" id="expert-search" placeholder="Type name...">
+    <label for="searchInput">Search by name</label>
+    <input type="text" id="searchInput" placeholder="Type name...">
 
-    <label for="expert-sort">Sort by</label>
-    <select id="expert-sort">
-      <option value="name">Name</option>
-      <option value="publications">Publications (high first)</option>
-      <option value="keywords">Keywords (high first)</option>
+    <label for="sortSelect">Sort by</label>
+    <select id="sortSelect">
+      <option value="name_asc">Name (A–Z)</option>
+      <option value="citations">Citations (High → Low)</option>
+      <option value="relevance">Relevance</option>
     </select>
   </section>
 
+  <!-- Filter Sections (required by your JS logic) -->
+  <section class="filters">
+    <h3>Filter by College</h3>
+    <div id="collegeCheckboxes"></div>
+
+    <h3>Filter by Degree</h3>
+    <div id="degreeCheckboxes"></div>
+
+    <h3>Minimum Citations</h3>
+    <input type="number" id="citationInput" placeholder="Enter minimum citations" min="0">
+
+    <h3>Time Period (Start Year)</h3>
+    <input type="range" id="recencyStartYearRange" min="1999" max="2026" value="1999">
+  </section>
+
+  <!-- Experts List -->
   <section class="expert-browse">
-    <div id="expert-list" class="expert-list">
+    <div id="expertsList" class="expert-list">
       Loading…
-    </div>
-    <div id="expert-detail" class="expert-detail">
-      Select an expert.
     </div>
   </section>
 
   <script src="js/utils.js"></script>
   <script src="js/experts.js"></script>
+
 </body>
 </html>
+
