@@ -1,0 +1,253 @@
+
+:root {
+    --auburn-blue: #0C2340;
+    --auburn-orange: #E87722;
+    --auburn-orange-dark: #C35412;
+    --light-bg: #F7F8FC;
+    --gray-light: #E5E7EB;
+    --text-dark: #1F2937;
+
+    /* Optional: nicer shadows */
+    --shadow-soft: 0 2px 8px rgba(12, 35, 64, 0.08);
+    --shadow-hover: 0 10px 25px rgba(12, 35, 64, 0.15);
+    --focus-glow: 0 0 0 3px rgba(232, 119, 34, 0.20);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    background: var(--light-bg);   /* changed */
+    color: var(--text-dark);       /* changed */
+}
+.page-header {
+    background: var(--auburn-blue);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.main-layout {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Sidebar Styles */
+.filters {
+    width: 250px;
+    flex-shrink: 0;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft); /* changed */
+    height: fit-content;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* (Optional) make labels Auburn-blue */
+.filter-group label,
+.filters h3 {
+    color: var(--auburn-blue); /* added */
+    margin: 0 0 10px 0;
+
+}
+
+.checkbox-visual {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+/* Range Slider Styles */
+.range-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
+.range-inputs input {
+    width: 80px;
+}
+
+/* Main Content Styles */
+.content {
+    flex-grow: 1;
+}
+
+.top-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft); /* changed */
+}
+
+#searchInput {
+    flex-grow: 1;
+    font-size: 1.1em;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid var(--gray-light); /* changed */
+    border-radius: 6px;
+}
+
+/* Added focus styling so it feels branded */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--auburn-orange);
+    box-shadow: var(--focus-glow);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft); /* changed */
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover); /* changed */
+}
+
+.expert-card h3 {
+    color: var(--auburn-blue); /* changed */
+    margin-top: 0;
+}
+
+.paper-card {
+    border-left: 4px solid var(--auburn-orange); /* changed */
+    cursor: default;
+}
+
+.paper-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-soft); /* changed (keeps consistent) */
+}
+
+.meta {
+    color: #6B7280; /* changed from #7f8c8d to a cleaner neutral */
+    font-weight: 500;
+}
+
+.authors {
+    font-style: italic;
+    color: #4B5563; /* changed */
+    margin-bottom: 15px;
+}
+
+.abstract {
+    line-height: 1.5;
+    color: #374151; /* changed */
+}
+
+.stats {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--gray-light); /* changed */
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: var(--auburn-orange); /* changed */
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: var(--auburn-blue); /* changed */
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    color: var(--auburn-orange); /* added */
+}
+
+.view-papers-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: var(--auburn-orange); /* changed */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.view-papers-btn:hover {
+    background: var(--auburn-orange-dark); /* changed */
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 8px;
+}
+
+.page-btn {
+    background: white;
+    border: 2px solid var(--auburn-blue);
+    color: var(--auburn-blue);
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.page-btn:hover {
+    background: var(--auburn-blue);
+    color: white;
+}
+
+.page-btn.active {
+    background: var(--auburn-blue);
+    color: white;
+}
+

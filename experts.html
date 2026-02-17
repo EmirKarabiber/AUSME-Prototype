@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Search Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Find an Expert</h1>
+        </div>
+    </header>
+
+    <div class="container">
+
+
+        <div class="main-layout">
+            <!-- Sidebar Filters -->
+            <aside class="filters">
+                <h3>Filters</h3>
+
+                <div class="filter-group">
+                    <label><strong>Colleges</strong></label>
+                    <div id="collegeCheckboxes">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label><strong>Degrees</strong></label>
+                    <div id="degreeCheckboxes">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+
+
+                <div class="filter-group">
+                    <label><strong>Min Citations</strong></label>
+                    <div class="range-container">
+                        <div class="range-inputs">
+                            <span>Count:</span>
+                            <input type="number" id="citationInput" value="0" min="0" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label><strong>Time Period: <span id="recencyLabel">All Time</span></strong></label>
+                    <!-- Control the start year for the "Recent" window -->
+                    <div class="range-container">
+                        <!-- 1999 = All Time, 2000-2026 = Specific Years -->
+                        <input type="range" id="recencyStartYearRange" min="1999" max="2026" step="1" value="1999"
+                            oninput="const val = this.value; 
+                                        const label = document.getElementById('recencyLabel');
+                                        if(val <= 1999) { label.innerText = 'All Time'; } 
+                                        else { label.innerText = 'Since ' + val; }">
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="content">
+                <div class="controls top-bar">
+                    <input type="text" id="searchInput" placeholder="Search by Name, Degree, or College...">
+
+                    <select id="sortSelect">
+                        <option value="relevance">Best Match</option>
+                        <option value="name_asc">Name (A-Z)</option>
+                        <option value="citations">Most Citations</option>
+                    </select>
+                </div>
+
+                <div id="expertsList" class="grid">
+                    <!-- populated by JS -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/experts.js"></script>
+</body>
+
+</html>

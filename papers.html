@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Papers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+    <div class="container">
+        <a href="experts.html" class="back-btn">&larr; Back to Experts</a>
+
+        <div id="expertHeader">
+            <!-- Populated by JS -->
+        </div>
+
+        <div class="main-layout">
+            <aside class="filters">
+                <h3>Paper Filters</h3>
+
+                <div class="filter-group">
+                    <label><strong>Date Range</strong></label>
+                    <div class="range-inputs">
+                        <input type="number" id="yearStart" placeholder="1990">
+                        <span>to</span>
+                        <input type="number" id="yearEnd" placeholder="2026">
+                    </div>
+                </div>
+
+
+                <div class="filter-group">
+                    <label><strong>Min Citations</strong></label>
+                    <div class="range-container">
+                        <div class="range-inputs">
+                            <span>Min:</span>
+                            <input type="number" id="paperCitationInput" value="0" min="0" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label><strong>Time Period: <span id="paperRecencyLabel">All Time</span></strong></label>
+                    <div class="range-container">
+                        <input type="range" id="paperRecencyStartYearRange" min="1999" max="2026" step="1" value="1999"
+                            oninput="const val = this.value; 
+                                        const label = document.getElementById('paperRecencyLabel');
+                                        if(val <= 1999) { label.innerText = 'All Time'; } 
+                                        else { label.innerText = 'Since ' + val; }">
+                    </div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="controls top-bar">
+                    <input type="text" id="paperSearchInput" placeholder="Search by Title or Keyword...">
+                    <select id="paperSortSelect">
+                        <option value="year_desc">Newest First</option>
+                        <option value="year_asc">Oldest First</option>
+                        <option value="citations">Most Citations</option>
+                    </select>
+                </div>
+
+                <div id="papersList" class="grid" style="display: block;">
+                    <!-- populated by JS -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/experts.js"></script>
+</body>
+
+</html>
