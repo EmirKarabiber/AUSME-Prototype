@@ -251,3 +251,24 @@ select:focus {
     color: white;
 }
 
+/* Index / landing page buttons */
+main {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.index-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--auburn-orange);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.index-btn:hover {
+    background: var(--auburn-orange-dark);
+}
+
