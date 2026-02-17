@@ -1,0 +1,29 @@
+<body>
+  <h1>Opportunities</h1>
+
+  <!-- SEARCH + SORT CONTROLS (TEMP / LOCAL ONLY) -->
+  <input
+    id="opportunity-search"
+    type="text"
+    placeholder="Search opportunities..."
+  />
+
+  <select id="opportunity-sort">
+    <option value="due_asc">Due date (soonest)</option>
+    <option value="due_desc">Due date (latest)</option>
+    <option value="posted_desc">Posted (newest)</option>
+    <option value="posted_asc">Posted (oldest)</option>
+    <option value="title_asc">Title (A to Z)</option>
+    <option value="title_desc">Title (Z to A)</option>
+  </select>
+
+  <!-- LIST -->
+  <div id="opportunity-list"></div>
+
+  <hr />
+
+  <!-- DETAILS -->
+  <div id="opportunity-details"></div>
+
+  <script src="js/opportunity.js"></script>
+</body>
