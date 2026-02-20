@@ -11,6 +11,7 @@ opportunities.json
 | award_ceiling     | opportunities  | award_ceiling     |
 | award_floor       | opportunities  | award_floor       |
 | estimated_funding | opportunities  | estimated_funding |
+| eligibility       | opportunities  | eligibility       |
 
 opportunity_detail.json
 | JSON Field  | Database Table | Column      |
