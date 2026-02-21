@@ -7,6 +7,7 @@
 const DataService = {
   experts: [],
   expertDetails: {},
+  expertSimilarProfiles: {},
 
   async loadExperts() {
     try {
@@ -26,18 +27,31 @@ const DataService = {
     }
   },
 
+  async loadSimilarProfiles() {
+    try {
+      const response = await fetch('data/expert_similar_profiles.json');
+      if (!response.ok) return;
+      this.expertSimilarProfiles = await response.json();
+    } catch (error) {
+      // File may not exist yet; keep expertSimilarProfiles = {}
+    }
+  },
+
   getExperts() {
     return this.experts;
   },
 
   getExpertByAuid(auid) {
-    // Return details if available, otherwise partial from list
     return this.expertDetails[auid];
   },
 
   getPapersByAuid(auid) {
     const details = this.expertDetails[auid];
     return details ? details.publications : [];
+  },
+
+  getSimilarProfileAuids(auid) {
+    return this.expertSimilarProfiles[auid] || [];
   }
 };
 
@@ -241,6 +255,7 @@ const App = {
       this.initHome();
     } else if (UIManager.el('papersList')) {
       await DataService.loadExpertDetails();
+      await DataService.loadSimilarProfiles();
       this.initProfile();
     }
   },
@@ -315,11 +330,29 @@ const App = {
                 </div>
             </div>`;
 
-    // 2. Initial Papers
+    // 2. Similar researchers
+    const similarAuids = DataService.getSimilarProfileAuids(auid).slice(0, 10);
+    const similarEl = UIManager.el('similarProfiles');
+    if (similarEl) {
+      if (similarAuids.length === 0) {
+        similarEl.innerHTML = '';
+        similarEl.style.display = 'none';
+      } else {
+        similarEl.style.display = 'block';
+        const links = similarAuids.map(similarAuid => {
+          const similarExpert = DataService.getExpertByAuid(similarAuid);
+          const name = similarExpert ? similarExpert.name : similarAuid;
+          return `<a href="papers.html?auid=${encodeURIComponent(similarAuid)}" class="similar-profile-link">${name}</a>`;
+        }).join('');
+        similarEl.innerHTML = `<label><strong>Similar researchers</strong></label><div class="similar-profiles-links">${links}</div>`;
+      }
+    }
+
+    // 3. Initial Papers
     this.currentPapers = DataService.getPapersByAuid(auid);
     this.refreshProfile();
 
-    // 3. Attach Events
+    // 4. Attach Events
     UIManager.el('paperSearchInput').addEventListener('input', () => this.refreshProfile());
     UIManager.el('paperSortSelect').addEventListener('change', () => this.refreshProfile());
     UIManager.el('yearStart').addEventListener('input', () => this.refreshProfile());

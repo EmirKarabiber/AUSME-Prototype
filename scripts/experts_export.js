@@ -66,6 +66,7 @@ const TABLE_NAMES = [
   "users_degree",
   "papers",
   "paper_keywords",
+  "users_similarprofile",
 ];
 
 function typoName(name) {
@@ -112,12 +113,12 @@ const SQL_LIST_FULL = `
     e.title,
     c.name AS college,
     d.name AS department,
-    (SELECT degree_level FROM degree deg WHERE deg.faculty_id = r.employee_id LIMIT 1) AS degree,
-    (SELECT COUNT(*) FROM faculty_papers fp WHERE fp.faculty_id = r.employee_id) AS publicationCount,
+    '' AS degree,
+    (SELECT COUNT(*) FROM papers_researchers pr WHERE pr.researcher_id = r.employee_id) AS publicationCount,
     (SELECT COUNT(DISTINCT pk.keyword)
-     FROM faculty_papers fp
-     JOIN paper_keywords pk ON pk.paper_id = fp.paper_id
-     WHERE fp.faculty_id = r.employee_id) AS keywordCount
+     FROM papers_researchers pr
+     JOIN paper_keywords pk ON pk.paper_id = pr.paper_id
+     WHERE pr.researcher_id = r.employee_id) AS keywordCount
   FROM users_researcher r
   JOIN users_employee e ON e.auid = r.employee_id
   LEFT JOIN users_college c ON c.id = e.college_id
@@ -181,13 +182,13 @@ async function exportAllExpertsDetails(conn, experts) {
 
   // Keywords (via papers)
   const [kwRows] = await conn.query(`
-    SELECT fp.faculty_id, pk.keyword
-    FROM faculty_papers fp
-    JOIN paper_keywords pk ON pk.paper_id = fp.paper_id
+    SELECT pr.researcher_id, pk.keyword
+    FROM papers_researchers pr
+    JOIN paper_keywords pk ON pk.paper_id = pr.paper_id
   `);
   const seenKw = {};
   kwRows.forEach((r) => {
-    const id = String(r.faculty_id);
+    const id = String(r.researcher_id);
     const key = id + "\t" + (r.keyword || "");
     if (seenKw[key]) return;
     seenKw[key] = true;
@@ -196,15 +197,15 @@ async function exportAllExpertsDetails(conn, experts) {
 
   // Publications
   const [pubRows] = await conn.query(`
-    SELECT fp.faculty_id,
-           p.title, p.publication_date, p.link, p.authors, p.publisher, p.total_citations, p.citation_per_year
-    FROM faculty_papers fp
-    JOIN papers p ON p.paper_id = fp.paper_id
-    ORDER BY fp.faculty_id, p.publication_date DESC
+    SELECT pr.researcher_id,
+           p.title, p.publication_date, p.link, p.authors_display, p.published_in, p.total_citations, p.citation_per_year
+    FROM papers_researchers pr
+    JOIN papers p ON p.id = pr.paper_id
+    ORDER BY pr.researcher_id, p.publication_date DESC
   `);
 
   pubRows.forEach((r) => {
-    const id = String(r.faculty_id);
+    const id = String(r.researcher_id);
     if (!detailsById[id]) return;
 
     // Parse citation_per_year if string, or use as object
@@ -220,8 +221,8 @@ async function exportAllExpertsDetails(conn, experts) {
       title: r.title || "",
       publication_date: (r.publication_date instanceof Date) ? r.publication_date.toISOString().slice(0, 10) : (r.publication_date ? String(r.publication_date).slice(0, 10) : null),
       link: r.link || null,
-      authors_display: r.authors || null,
-      published_in: r.publisher || null,
+      authors_display: r.authors_display || null,
+      published_in: r.published_in || null,
       total_citations: r.total_citations != null ? Number(r.total_citations) : 0,
       citation_per_year: cpy
     });
@@ -246,6 +247,43 @@ async function exportAllExpertsDetails(conn, experts) {
   return detailsById;
 }
 
+/** Build expert_similar_profiles.json from users_similarprofile: { "auid": ["similar_auid1", ...], ... }. */
+async function exportSimilarProfiles(conn) {
+  const byAuid = {};
+  const tableNames = ["users_similarprofile", "users_similarprofiles"];
+
+  for (const tableName of tableNames) {
+    try {
+      const [rows] = await conn.query("SELECT * FROM ?? LIMIT 1", [tableName]);
+      if (!rows || rows.length === 0) continue;
+      const cols = Object.keys(rows[0]);
+      const idCol = cols.find((c) => /researcher_id|user_id|auid|faculty_id|source/.test(c)) || cols[0];
+      // Column that holds the *similar researcher's id* (never the score)
+      const scoreLike = (c) => /^score$/i.test(c) || /similarity|similarity_score/.test(c);
+      const candidateCols = cols.filter((c) => c !== idCol && !scoreLike(c));
+      const similarCol =
+        candidateCols.find((c) => /similar|target|match|other|_id|auid/.test(c)) ||
+        candidateCols[0] ||
+        cols[1];
+      const [allRows] = await conn.query("SELECT ??, ?? FROM ??", [idCol, similarCol, tableName]);
+
+      allRows.forEach((r) => {
+        const id = String(r[idCol] || "").trim();
+        const similar = String(r[similarCol] || "").trim();
+        if (!id || !similar || id === similar) return;
+        // Skip if "similar" looks like a score (numeric 0–1) not an employee code
+        if (/^\d*\.?\d+$/.test(similar) && similar.length <= 5) return;
+        if (!byAuid[id]) byAuid[id] = [];
+        if (!byAuid[id].includes(similar)) byAuid[id].push(similar);
+      });
+      break;
+    } catch (e) {
+      continue;
+    }
+  }
+  return byAuid;
+}
+
 async function runExport(conn) {
   const dataDir = path.join(PROJECT_ROOT, "data");
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
@@ -267,6 +305,15 @@ async function runExport(conn) {
     "utf8"
   );
   console.log("Wrote data/expert_details.json (detail view for all experts, with publications)");
+
+  const similarProfiles = await exportSimilarProfiles(conn);
+  fs.writeFileSync(
+    path.join(dataDir, "expert_similar_profiles.json"),
+    JSON.stringify(similarProfiles, null, 2),
+    "utf8"
+  );
+  const similarCount = Object.keys(similarProfiles).length;
+  console.log("Wrote data/expert_similar_profiles.json (" + similarCount + " experts with similar profiles)");
 }
 
 async function main() {

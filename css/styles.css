@@ -251,3 +251,17 @@ select:focus {
     color: white;
 }
 
+.similar-profiles .similar-profile-link {
+    display: block;
+    color: var(--auburn-blue);
+    text-decoration: none;
+    padding: 4px 0;
+    font-size: 0.95em;
+}
+.similar-profiles .similar-profile-link:hover {
+    text-decoration: underline;
+}
+.similar-profiles-links {
+    margin-top: 6px;
+}
+
