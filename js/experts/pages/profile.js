@@ -48,7 +48,6 @@ class ProfileApp {
                 <h2>${expert.name}</h2>
                 <p>${expert.title || ''}, ${expert.department || ''}</p>
                 <p><strong>${expert.college || ''}</strong></p>
-                
                 <div class="profile-citations">
                     Total Cited: ${totalCited}
                 </div>
