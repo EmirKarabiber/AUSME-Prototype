@@ -103,9 +103,6 @@ async function inspect(conn) {
 // -----------------------------------------------------------------------------
 // Export: SQL matches actual ausme_db schema
 // -----------------------------------------------------------------------------
-// -----------------------------------------------------------------------------
-// Export: SQL matches actual ausme_db schema
-// -----------------------------------------------------------------------------
 const SQL_LIST_FULL = `
   SELECT
     r.employee_id AS id,
@@ -113,7 +110,8 @@ const SQL_LIST_FULL = `
     e.title,
     c.name AS college,
     d.name AS department,
-    '' AS degree,
+    -- Hardcoded to query the secondary ausme_db database for degrees, as they do not exist in projects_db
+    (SELECT ud.degree_level FROM ausme_db.degree ud WHERE ud.faculty_id = r.employee_id LIMIT 1) AS degree,
     (SELECT COUNT(*) FROM papers_researchers pr WHERE pr.researcher_id = r.employee_id) AS publicationCount,
     (SELECT COUNT(DISTINCT pk.keyword)
      FROM papers_researchers pr

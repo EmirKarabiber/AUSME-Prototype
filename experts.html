@@ -7,6 +7,70 @@
     <title>Expert Search Demo</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+        .autocomplete-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Ghost Text Overlay Setup */
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        #searchGhost {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: #aaa;
+            background: transparent;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        #searchInput {
+            position: relative;
+            z-index: 2;
+            background: transparent;
+        }
+
+        .autocomplete-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: white;
+            border: 1px solid #ccc;
+            max-height: 250px;
+            overflow-y: auto;
+            display: none;
+            margin: 0;
+            padding: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        .suggestion-item {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-item:hover,
+        .autocomplete-active {
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +87,13 @@
         <div class="main-layout">
             <!-- Sidebar Filters -->
             <aside class="filters">
-                <h3>Filters</h3>
+                <div class="filters-header">
+                    <h3>Filters</h3>
+                    <button id="clearFiltersTop" class="reset-icon-btn" title="Clear Filters">
+                        &#x21bb;
+                    </button>
+                </div>
+
 
                 <div class="filter-group">
                     <label><strong>Colleges</strong></label>
@@ -38,7 +108,6 @@
                         <!-- Populated by JS -->
                     </div>
                 </div>
-
 
 
                 <div class="filter-group">
@@ -63,15 +132,26 @@
                                         else { label.innerText = 'Since ' + val; }">
                     </div>
                 </div>
+
+                <div class="filter-reset-bottom">
+                    <button id="clearFiltersBottom" class="reset-icon-btn" title="Clear Filters">
+                        &#x21bb;
+                    </button>
+                </div>
             </aside>
 
             <!-- Main Content -->
             <main class="content">
                 <div class="controls top-bar">
-                    <input type="text" id="searchInput" placeholder="Search by Name, Degree, or College...">
+                    <div class="autocomplete-container">
+                        <div class="input-wrapper">
+                            <input type="text" id="searchGhost" disabled>
+                            <input type="text" id="searchInput" placeholder="Search by Name...">
+                        </div>
+                        <div id="searchSuggestions" class="autocomplete-list"></div>
+                    </div>
 
                     <select id="sortSelect">
-                        <option value="relevance">Best Match</option>
                         <option value="name_asc">Name (A-Z)</option>
                         <option value="citations">Most Citations</option>
                     </select>
@@ -84,7 +164,7 @@
         </div>
     </div>
 
-    <script src="js/experts.js"></script>
+    <script type="module" src="js/experts/pages/home.js"></script>
 </body>
 
 </html>
