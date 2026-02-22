@@ -101,7 +101,7 @@ async function inspect(conn) {
 // Export: SQL matches main_ausme schema (users_researcher.employee_id = users_employee.auid)
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
-// Export: SQL matches actual ausme_db schema
+// Export: SQL matches main_ausme schema
 // -----------------------------------------------------------------------------
 const SQL_LIST_FULL = `
   SELECT
@@ -110,8 +110,7 @@ const SQL_LIST_FULL = `
     e.title,
     c.name AS college,
     d.name AS department,
-    -- Hardcoded to query the secondary ausme_db database for degrees, as they do not exist in projects_db
-    (SELECT ud.degree_level FROM ausme_db.degree ud WHERE ud.faculty_id = r.employee_id LIMIT 1) AS degree,
+    '' AS degree,
     (SELECT COUNT(*) FROM papers_researchers pr WHERE pr.researcher_id = r.employee_id) AS publicationCount,
     (SELECT COUNT(DISTINCT pk.keyword)
      FROM papers_researchers pr
@@ -245,9 +244,12 @@ async function exportAllExpertsDetails(conn, experts) {
   return detailsById;
 }
 
-/** Build expert_similar_profiles.json from users_similarprofile: { "auid": ["similar_auid1", ...], ... }. */
-async function exportSimilarProfiles(conn) {
+const TOP_N_SIMILAR = 10;
+
+/** Build expert_similar_profiles.json: top 10 from DB by score, or fallback by department/college/keywords/expertise. */
+async function exportSimilarProfiles(conn, experts, detailsById) {
   const byAuid = {};
+  const expertIds = new Set(experts.map((e) => e.id));
   const tableNames = ["users_similarprofile", "users_similarprofiles"];
 
   for (const tableName of tableNames) {
@@ -256,29 +258,79 @@ async function exportSimilarProfiles(conn) {
       if (!rows || rows.length === 0) continue;
       const cols = Object.keys(rows[0]);
       const idCol = cols.find((c) => /researcher_id|user_id|auid|faculty_id|source/.test(c)) || cols[0];
-      // Column that holds the *similar researcher's id* (never the score)
       const scoreLike = (c) => /^score$/i.test(c) || /similarity|similarity_score/.test(c);
+      const scoreCol = cols.find((c) => scoreLike(c));
       const candidateCols = cols.filter((c) => c !== idCol && !scoreLike(c));
       const similarCol =
         candidateCols.find((c) => /similar|target|match|other|_id|auid/.test(c)) ||
         candidateCols[0] ||
         cols[1];
-      const [allRows] = await conn.query("SELECT ??, ?? FROM ??", [idCol, similarCol, tableName]);
+
+      const selectCols = scoreCol ? [idCol, similarCol, scoreCol] : [idCol, similarCol];
+      const [allRows] = await conn.query("SELECT ?? FROM ??", [selectCols, tableName]);
 
       allRows.forEach((r) => {
         const id = String(r[idCol] || "").trim();
         const similar = String(r[similarCol] || "").trim();
         if (!id || !similar || id === similar) return;
-        // Skip if "similar" looks like a score (numeric 0–1) not an employee code
         if (/^\d*\.?\d+$/.test(similar) && similar.length <= 5) return;
+        if (!expertIds.has(similar)) return;
         if (!byAuid[id]) byAuid[id] = [];
-        if (!byAuid[id].includes(similar)) byAuid[id].push(similar);
+        const score = scoreCol != null ? Number(r[scoreCol]) : 1;
+        byAuid[id].push({ auid: similar, score });
       });
+
+      for (const id of Object.keys(byAuid)) {
+        byAuid[id].sort((a, b) => (b.score !== undefined && a.score !== undefined ? b.score - a.score : 0));
+        byAuid[id] = byAuid[id]
+          .slice(0, TOP_N_SIMILAR)
+          .map((x) => (typeof x === "object" && x.auid ? x.auid : x));
+      }
       break;
     } catch (e) {
       continue;
     }
   }
+
+  function similarityScore(a, b) {
+    const da = detailsById[a] || {};
+    const db = detailsById[b] || {};
+    let s = 0;
+    if ((da.department || "").trim() && da.department === db.department) s += 3;
+    if ((da.college || "").trim() && da.college === db.college) s += 2;
+    const kwA = new Set((da.keywords || []).map((k) => String(k).toLowerCase()));
+    const kwB = (db.keywords || []);
+    kwB.forEach((k) => {
+      if (kwA.has(String(k).toLowerCase())) s += 1;
+    });
+    const expA = new Set((da.expertise || []).map((e) => String(e).toLowerCase()));
+    const expB = (db.expertise || []);
+    expB.forEach((e) => {
+      if (expA.has(String(e).toLowerCase())) s += 1;
+    });
+    return s;
+  }
+
+  experts.forEach((expert) => {
+    const id = expert.id;
+    let list = byAuid[id] ? [...byAuid[id]] : [];
+    if (list.length < TOP_N_SIMILAR) {
+      const scored = experts
+        .filter((e) => e.id !== id)
+        .map((e) => ({ id: e.id, score: similarityScore(id, e.id) }))
+        .filter((x) => x.score > 0)
+        .sort((a, b) => b.score - a.score);
+      const existing = new Set(list);
+      for (const x of scored) {
+        if (existing.has(x.id)) continue;
+        list.push(x.id);
+        existing.add(x.id);
+        if (list.length >= TOP_N_SIMILAR) break;
+      }
+      byAuid[id] = list.slice(0, TOP_N_SIMILAR);
+    }
+  });
+
   return byAuid;
 }
 
@@ -304,7 +356,7 @@ async function runExport(conn) {
   );
   console.log("Wrote data/expert_details.json (detail view for all experts, with publications)");
 
-  const similarProfiles = await exportSimilarProfiles(conn);
+  const similarProfiles = await exportSimilarProfiles(conn, experts, allDetails);
   fs.writeFileSync(
     path.join(dataDir, "expert_similar_profiles.json"),
     JSON.stringify(similarProfiles, null, 2),
