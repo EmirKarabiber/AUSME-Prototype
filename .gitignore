@@ -20,3 +20,6 @@ Thumbs.db
 
 # Node (for scripts/experts_export.js)
 node_modules/
+
+# Images (headshots, etc.)
+images/
