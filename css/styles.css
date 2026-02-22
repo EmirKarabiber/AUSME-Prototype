@@ -1,4 +1,3 @@
-
 :root {
     --auburn-blue: #0C2340;
     --auburn-orange: #E87722;
@@ -16,9 +15,12 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0px;
-    background: var(--light-bg);   /* changed */
-    color: var(--text-dark);       /* changed */
+    background: var(--light-bg);
+    /* changed */
+    color: var(--text-dark);
+    /* changed */
 }
+
 .page-header {
     background: var(--auburn-blue);
     color: white;
@@ -52,7 +54,8 @@ body {
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: var(--shadow-soft); /* changed */
+    box-shadow: var(--shadow-soft);
+    /* changed */
     height: fit-content;
 }
 
@@ -69,7 +72,8 @@ body {
 /* (Optional) make labels Auburn-blue */
 .filter-group label,
 .filters h3 {
-    color: var(--auburn-blue); /* added */
+    color: var(--auburn-blue);
+    /* added */
     margin: 0 0 10px 0;
 
 }
@@ -112,18 +116,27 @@ body {
     background: white;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: var(--shadow-soft); /* changed */
+    box-shadow: var(--shadow-soft);
+    /* changed */
 }
 
-#searchInput {
+.input-wrapper {
     flex-grow: 1;
+    display: flex;
+}
+
+#searchInput,
+#searchGhost {
     font-size: 1.1em;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input,
 select {
     padding: 10px;
-    border: 1px solid var(--gray-light); /* changed */
+    border: 1px solid var(--gray-light);
+    /* changed */
     border-radius: 6px;
 }
 
@@ -145,74 +158,87 @@ select:focus {
     background: white;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: var(--shadow-soft); /* changed */
+    box-shadow: var(--shadow-soft);
+    /* changed */
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
 }
 
 .card:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-hover); /* changed */
+    box-shadow: var(--shadow-hover);
+    /* changed */
 }
 
 .expert-card h3 {
-    color: var(--auburn-blue); /* changed */
+    color: var(--auburn-blue);
+    /* changed */
     margin-top: 0;
 }
 
 .paper-card {
-    border-left: 4px solid var(--auburn-orange); /* changed */
+    border-left: 4px solid var(--auburn-orange);
+    /* changed */
     cursor: default;
 }
 
 .paper-card:hover {
     transform: none;
-    box-shadow: var(--shadow-soft); /* changed (keeps consistent) */
+    box-shadow: var(--shadow-soft);
+    /* changed (keeps consistent) */
 }
 
 .meta {
-    color: #6B7280; /* changed from #7f8c8d to a cleaner neutral */
+    color: #6B7280;
+    /* changed from #7f8c8d to a cleaner neutral */
     font-weight: 500;
 }
 
 .authors {
     font-style: italic;
-    color: #4B5563; /* changed */
+    color: #4B5563;
+    /* changed */
     margin-bottom: 15px;
 }
 
 .abstract {
     line-height: 1.5;
-    color: #374151; /* changed */
+    color: #374151;
+    /* changed */
 }
 
 .stats {
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 1px solid var(--gray-light); /* changed */
+    border-top: 1px solid var(--gray-light);
+    /* changed */
     display: flex;
     justify-content: space-between;
     font-weight: 600;
-    color: var(--auburn-orange); /* changed */
+    color: var(--auburn-orange);
+    /* changed */
 }
 
 .back-btn {
     display: inline-block;
     margin-bottom: 20px;
     text-decoration: none;
-    color: var(--auburn-blue); /* changed */
+    color: var(--auburn-blue);
+    /* changed */
     font-weight: 600;
 }
 
 .back-btn:hover {
-    color: var(--auburn-orange); /* added */
+    color: var(--auburn-orange);
+    /* added */
 }
 
 .view-papers-btn {
     width: 100%;
     margin-top: 15px;
     padding: 10px;
-    background: var(--auburn-orange); /* changed */
+    background: var(--auburn-orange);
+    /* changed */
     color: white;
     border: none;
     border-radius: 4px;
@@ -221,7 +247,8 @@ select:focus {
 }
 
 .view-papers-btn:hover {
-    background: var(--auburn-orange-dark); /* changed */
+    background: var(--auburn-orange-dark);
+    /* changed */
 }
 
 #pagination {
@@ -258,10 +285,11 @@ select:focus {
     padding: 4px 0;
     font-size: 0.95em;
 }
+
 .similar-profiles .similar-profile-link:hover {
     text-decoration: underline;
 }
+
 .similar-profiles-links {
     margin-top: 6px;
 }
-
