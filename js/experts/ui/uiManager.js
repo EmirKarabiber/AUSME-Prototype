@@ -49,6 +49,7 @@ export const UIManager = {
             <h3>${expert.name}</h3>
             <p><strong>Title:</strong> ${expert.title || ''}</p>
             <p><strong>College:</strong> ${expert.college || ''}</p>
+            <p><strong>Departments:</strong> ${expert.department || ''}</p>
             <p style="font-size:0.8em; color:#666;">
                 ${expert.degree || ''}
             </p>
@@ -115,8 +116,15 @@ export const UIManager = {
             <div class="checkbox-visual" style="flex-direction: column; align-items: flex-start; gap: 4px;">
                 <div style="display:flex; align-items:center; gap:8px; width: 100%;">
                     <input type="checkbox" value="${item.name}" id="${parentPrefix}_${item.name.replace(/[^a-zA-Z0-9]/g, '')}" class="filter-cb parent-cb">
-                    <label for="${parentPrefix}_${item.name.replace(/[^a-zA-Z0-9]/g, '')}"><strong>${item.name}</strong></label>
-                </div>
+<label for="${parentPrefix}_${item.name.replace(/[^a-zA-Z0-9]/g, '')}" class="college-label">
+    <img 
+        src="images/college_icons/${item.name}.svg"
+        class="college-icon"
+        alt="${item.name}"
+        onerror="this.style.display='none';"
+    >
+    <strong>${item.name}</strong>
+</label>                </div>
                 <div class="nested-checkboxes" style="margin-left: 24px; display: none; width: 100%; margin-top: 4px;">
                     ${item.children.map(child => `
                         <div class="checkbox-visual" style="margin-bottom: 4px;">
