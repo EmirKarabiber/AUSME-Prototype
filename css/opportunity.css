@@ -1,0 +1,45 @@
+/* Opportunity cards */
+#opportunity-list.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.opportunity-card {
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 14px;
+  background: #fff;
+  padding: 14px 16px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.opportunity-card.selected {
+  outline: 2px solid #0C2340;
+}
+
+.opportunity-card .opp-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.opportunity-card .opp-meta {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.opportunity-card {
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: #fff;
+}
