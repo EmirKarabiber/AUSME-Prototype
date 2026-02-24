@@ -126,9 +126,9 @@
                     <div class="range-container">
                         <!-- 1999 = All Time, 2000-2026 = Specific Years -->
                         <input type="range" id="recencyStartYearRange" min="1999" max="2026" step="1" value="1999"
-                            oninput="const val = this.value; 
+                            oninput="const val = this.value;
                                         const label = document.getElementById('recencyLabel');
-                                        if(val <= 1999) { label.innerText = 'All Time'; } 
+                                        if(val <= 1999) { label.innerText = 'All Time'; }
                                         else { label.innerText = 'Since ' + val; }">
                     </div>
                 </div>
