@@ -1,0 +1,86 @@
+Phase 1: Data & Database Mapping
+
+1. Database Overview
+
+Primary Tables Used:
+opportunities
+opportunity_statuses
+statuses
+agencies
+opportunity_categories
+opportunity_applicant_types
+
+2. Opportunity Status Mapping
+OPEN opportunities = status_id = 2 (“posted”)
+
+Relationships:
+opportunity_statuses.opportunity_id → opportunities.opp_id
+opportunity_statuses.status_id → statuses.id
+
+SQL to retrieve OPEN opportunities:
+
+SELECT o.*
+FROM opportunities o
+JOIN opportunity_statuses os 
+  ON o.opp_id = os.opportunity_id
+WHERE os.status_id = 2;
+
+3.  Agency & Category Relationships
+
+Agencies: opportunities.agency_id → agencies.id
+Flat structure, no parent → child hierarchy
+Categories: opportunities.category_id → opportunity_categories.id
+Verified referential integrity
+
+4. Eligibility Mapping
+Stored in opportunity_applicant_types
+Relationship: opportunity_applicant_types.opportunity_id → opportunities.opp_id
+Exported as: eligibility.json
+
+5. Keywords / Topics
+
+Tables: opportunity_topics, scope_topics, scope_topics_papers
+
+Relationship: opportunity_topics.opportunity_id → opportunities.opp_id
+
+Supports search and filtering
+
+6. JSON Schema Design
+
+A. opportunities.json – List page, search, filtering
+
+Field	Purpose
+opp_id	
+title	Opportunity 
+post_date	
+due_date	
+agency_id	
+category_id	
+award_ceiling	
+award_floor	
+estimated_funding	
+eligibility 
+
+B. opportunity_detail.json – Detail page
+
+Same OPEN opportunities as above, plus:
+
+description, url
+
+Both files use status_id = 2 to ensure consistency
+
+7. Field Definition 
+opp_id – Unique identifier for each opportunity.
+number – Official opportunity number/code.
+title – Name/title of the opportunity.
+post_date – Date the opportunity was posted.
+due_date – Application deadline.
+agency_id – Foreign key referencing agencies.id; indicates the agency offering the opportunity.
+category_id – Foreign key referencing opportunity_categories.id; indicates the opportunity’s category.
+award_ceiling – Maximum funding amount available for the opportunity.
+award_floor – Minimum funding amount available for the opportunity.
+estimated_funding – Total estimated funding for the opportunity.
+eligibility – Specifies which types of applicants can apply (e.g., nonprofits, government agencies, tribal governments); stored as a JSON array in opportunity_detail.json.
+description – Full textual description of the opportunity (included in opportunity_detail.json).
+url – Link to the official opportunity posting (included in opportunity_detail.json).
+status_id – Current status of the opportunity (2 = OPEN/posted).
