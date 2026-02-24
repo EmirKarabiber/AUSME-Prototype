@@ -2,69 +2,63 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Opportunity Search | AUSME</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/opportunity.css">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/opportunity.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
 
 <body>
-
-  <!-- ── HEADER ── -->
+  <!-- Match Experts header layout -->
   <header class="page-header">
-    <div class="header-inner">
-      <a href="index.html" class="header-back-btn">← Home</a>
-      <h1 class="header-title">Opportunity Search</h1>
+    <div class="container header-flex">
+      <h1>Opportunity Search</h1>
+      <a href="index.html" class="home-btn">Home</a>
     </div>
   </header>
 
-  <div class="main-layout">
-    <main class="content">
+  <!-- Match Experts container + layout -->
+  <div class="container">
+    <div class="main-layout">
+      <!-- Sidebar Filters -->
+      <aside id="opportunity-sidebar" class="filters"></aside>
 
-      <!-- SEARCH + SORT CONTROLS — always visible -->
-      <div class="controls top-bar">
-        <input id="opportunity-search" type="text" placeholder="Search opportunities…">
-        <select id="opportunity-sort">
-          <option value="due_asc">Due date (soonest)</option>
-          <option value="due_desc">Due date (latest)</option>
-          <option value="posted_desc">Posted (newest)</option>
-          <option value="posted_asc">Posted (oldest)</option>
-          <option value="title_asc">Title (A to Z)</option>
-          <option value="title_desc">Title (Z to A)</option>
-        </select>
-      </div>
-
-      <div class="opportunity-layout">
-
-        <!-- LEFT SIDEBAR: filters, always visible -->
-        <aside id="opportunity-sidebar"></aside>
-
-        <!-- RIGHT CONTENT -->
-        <div class="opportunity-content">
-
-          <!-- AGENCY BANNER: shown when filtering by a specific agency -->
-          <div id="agency-banner" class="agency-banner" style="display:none"></div>
-
-          <!-- LIST VIEW -->
-          <div id="opportunity-list-view">
-            <p id="opportunity-total-count"></p>
-            <div id="opportunity-list" class="grid"></div>
-          </div>
-
-          <!-- DETAIL VIEW: shown on card click, hidden otherwise -->
-          <div id="opportunity-detail-view" style="display:none">
-            <div id="opportunity-details"></div>
-          </div>
-
+      <!-- Main Content -->
+      <main class="content">
+        <!-- Search + Sort Bar (Experts-style top-bar) -->
+        <div class="controls top-bar">
+          <input id="opportunity-search" type="text" placeholder="Search opportunities…" />
+          <select id="opportunity-sort">
+            <option value="posted_desc">Posted (newest)</option>
+            <option value="posted_asc">Posted (oldest)</option>
+            <option value="due_asc">Due date (soonest)</option>
+            <option value="due_desc">Due date (latest)</option>
+            <option value="title_asc">Title (A to Z)</option>
+            <option value="title_desc">Title (Z to A)</option>
+          </select>
         </div>
 
-      </div>
+        <!-- Agency banner -->
+        <div id="agency-banner" class="agency-banner" style="display:none"></div>
 
-    </main>
+        <!-- List View -->
+        <div id="opportunity-list-view">
+          <p id="opportunity-total-count"></p>
+          <div id="opportunity-list" class="grid"></div>
+        </div>
+
+        <!-- Detail View -->
+        <div id="opportunity-detail-view" style="display:none">
+          <div id="opportunity-details"></div>
+        </div>
+      </main>
+    </div>
   </div>
 
   <script src="js/opportunity.js"></script>
 </body>
+
 </html>

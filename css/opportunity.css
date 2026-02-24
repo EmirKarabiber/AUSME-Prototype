@@ -1,89 +1,190 @@
-/* ═══════════════════════════════════════════════
-   OPPORTUNITY PAGE
-   ═══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════
+   OPPORTUNITY PAGE (EXPERTS UI MATCH)
+   Uses Experts theme/layout primitives + keeps Opportunity IDs intact.
+   ═══════════════════════════════════════ */
 
+/* ---- Experts theme tokens ---- */
 :root {
-  --navy:        #0C2340;
-  --navy-light:  #1a3a5c;
-  --accent:      #2563eb;
-  --accent-bg:   #eff6ff;
-  --border:      rgba(0,0,0,0.09);
-  --muted:       #6b7280;
-  --card-bg:     #ffffff;
-  --radius-lg:   16px;
-  --radius-md:   10px;
-  --radius-sm:   6px;
+  --auburn-blue: #0C2340;
+  --auburn-orange: #E87722;
+  --auburn-orange-dark: #C35412;
+
+  --light-bg: #F7F8FC;
+  --gray-light: #E5E7EB;
+  --text-dark: #1F2937;
+
+  --shadow-soft: 0 2px 8px rgba(12, 35, 64, 0.08);
+  --shadow-hover: 0 10px 25px rgba(12, 35, 64, 0.15);
+  --focus-glow: 0 0 0 3px rgba(232, 119, 34, 0.20);
+
+  /* Opportunity-specific helpers */
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --radius-sm: 6px;
+  --border: rgba(0, 0, 0, 0.10);
+  --muted: #6B7280;
+
+  /* "accent" alias so existing Opportunity pieces feel consistent */
+  --accent: var(--auburn-orange);
+  --accent-bg: rgba(232, 119, 34, 0.12);
 }
 
-/* ══════════════════════════════════════
-   HEADER
-══════════════════════════════════════ */
+/* ---- Page baseline (Experts style) ---- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  background: var(--light-bg);
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- Header (Experts style) ---- */
 .page-header {
-  background: var(--navy);
-  padding: 0 32px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  background: var(--auburn-blue);
+  color: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin: 20px 20px 30px;
 }
 
-.header-inner {
+.header-flex {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  height: 64px;
 }
 
-.header-back-btn {
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  padding: 6px 12px;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: var(--radius-sm);
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: color 0.15s, border-color 0.15s, background 0.15s;
-}
-.header-back-btn:hover {
-  color: #fff;
-  border-color: rgba(255,255,255,0.5);
-  background: rgba(255,255,255,0.08);
-}
-
-.header-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #fff;
+.page-header h1 {
   margin: 0;
-  letter-spacing: 0.01em;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-/* ══════════════════════════════════════
-   PAGE LAYOUT
-══════════════════════════════════════ */
-.opportunity-layout {
+/* Home button (Experts style) */
+.home-btn {
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.home-btn:hover {
+  background: var(--auburn-orange);
+  border-color: var(--auburn-orange);
+}
+
+/* ---- Layout (Experts style) ---- */
+.main-layout {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* Sidebar (Experts style) */
+.filters {
+  width: 280px;
+  flex-shrink: 0;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+/* Main content */
+.content {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+/* ---- Top bar (Experts style) ---- */
+.controls.top-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Inputs/selects (Experts style) */
+.controls.top-bar input[type="text"],
+.controls.top-bar select {
+  padding: 10px;
+  border: 1px solid var(--gray-light);
+  border-radius: 6px;
+  background: white;
+  color: var(--text-dark);
+}
+
+.controls.top-bar input[type="text"] {
+  flex: 1;
+  min-width: 240px;
+  box-sizing: border-box;
+}
+
+.controls.top-bar select {
+  min-width: 220px;
+  cursor: pointer;
+}
+
+/* Focus styling */
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--auburn-orange);
+  box-shadow: var(--focus-glow);
+}
+
+/* ---- Grid & Card primitives (Experts style) ---- */
+.grid {
   display: grid;
-  grid-template-columns: 268px 1fr;
-  gap: 24px;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: stretch;
 }
 
-.opportunity-content {
-  min-width: 0; /* prevent grid blowout */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 }
 
-/* ══════════════════════════════════════
-   AGENCY BANNER
-══════════════════════════════════════ */
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ---- Opportunity: banner ---- */
 .agency-banner {
   display: flex;
   align-items: center;
   gap: 16px;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 14px 20px;
-  margin-bottom: 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  padding: 14px 18px;
+  margin: 0 0 18px 0;
 }
 
 .agency-banner-logo {
@@ -96,28 +197,203 @@
 .agency-banner-name {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--auburn-blue);
   line-height: 1.3;
 }
 
-/* ══════════════════════════════════════
-   SIDEBAR
-══════════════════════════════════════ */
-#opportunity-sidebar {
-  position: sticky;
-  top: 24px;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 18px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+/* Total count */
+#opportunity-total-count {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0 0 14px 0;
 }
 
+/* ---- Opportunity list grid: keep #opportunity-list as grid container ---- */
+#opportunity-list.grid {
+  /* uses .grid above; this is here if you want to override sizing later */
+}
+
+/* ---- Opportunity cards: inherit .card look, keep your internal classes ---- */
+.opportunity-card {
+  /* If your JS already uses .opportunity-card only, you still get card-like look */
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s, box-shadow 0.2s, outline-color 0.2s;
+  cursor: pointer;
+
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--gray-light);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.opportunity-card.selected {
+  outline: 3px solid rgba(232, 119, 34, 0.25);
+  border-color: rgba(232, 119, 34, 0.45);
+}
+
+.opp-agency {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--auburn-orange);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.opp-title {
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--auburn-blue);
+}
+
+.opp-meta {
+  font-size: 0.92rem;
+  color: var(--muted);
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--gray-light);
+}
+
+/* ---- Load more ---- */
+.load-more-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0 6px;
+}
+
+.load-more-btn {
+  padding: 10px 24px;
+  background: var(--auburn-blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.load-more-btn:hover {
+  background: var(--auburn-orange);
+}
+
+/* No results / error */
+.no-results,
+.error-msg {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 1.0rem;
+  padding: 32px 0;
+  text-align: center;
+}
+
+/* ---- Detail panel ---- */
+.opp-details-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  padding: 28px 30px;
+  border: 1px solid var(--gray-light);
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 2px solid var(--auburn-blue);
+  color: var(--auburn-blue);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 18px;
+  transition: 0.2s ease;
+}
+.back-btn:hover {
+  background: var(--auburn-orange);
+  border-color: var(--auburn-orange);
+  color: white;
+}
+
+.opp-detail-agency {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--auburn-orange);
+  margin-bottom: 8px;
+}
+
+.opp-details-card h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.55rem;
+  line-height: 1.3;
+  color: var(--auburn-blue);
+}
+
+.opp-details-card p {
+  margin: 6px 0;
+  font-size: 0.98rem;
+  color: #374151;
+  line-height: 1.65;
+}
+
+.opp-details-card hr {
+  border: none;
+  border-top: 1px solid var(--gray-light);
+  margin: 18px 0;
+}
+
+.opp-details-card a {
+  color: var(--auburn-orange);
+  font-weight: 800;
+  text-decoration: none;
+}
+.opp-details-card a:hover {
+  text-decoration: underline;
+}
+
+/* Description toggle */
+.desc-toggle-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: var(--auburn-orange);
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.desc-toggle-btn:hover {
+  opacity: 0.8;
+}
+
+/* ---- Sidebar filter pieces (keeps your Opportunity DOM working) ---- */
 .filter-section {
   padding-bottom: 14px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--gray-light);
 }
 .filter-section:last-child {
   padding-bottom: 0;
@@ -125,12 +401,11 @@
 }
 
 .filter-heading {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 8px 4px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--auburn-blue);
+  margin: 0 0 10px 0;
 }
 
 .filter-list {
@@ -139,348 +414,98 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
 }
 
 .filter-option {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 5px 8px;
-  border-radius: var(--radius-sm);
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.1s ease;
-  font-size: 0.84rem;
+  transition: 0.15s ease;
+  font-size: 0.95rem;
   color: #374151;
 }
-.filter-option:hover { background: #f3f4f6; }
+.filter-option:hover {
+  background: rgba(12, 35, 64, 0.06);
+}
+
 .filter-option.active {
-  background: var(--accent-bg);
-  color: var(--accent);
-  font-weight: 600;
+  background: rgba(232, 119, 34, 0.12);
+  color: var(--auburn-orange-dark);
+  font-weight: 800;
 }
 
 .filter-option input[type="radio"] {
-  accent-color: var(--navy);
-  width: 13px;
-  height: 13px;
+  accent-color: var(--auburn-orange);
+  width: 14px;
+  height: 14px;
   flex-shrink: 0;
 }
 
-.filter-label { flex: 1; line-height: 1.3; }
+.filter-label {
+  flex: 1;
+  line-height: 1.25;
+}
 
 .filter-count {
-  font-size: 0.74rem;
+  font-size: 0.85rem;
   color: var(--muted);
-  background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.06);
   border-radius: 999px;
-  padding: 1px 6px;
+  padding: 2px 8px;
   flex-shrink: 0;
 }
-.filter-option.active .filter-count {
-  background: rgba(37,99,235,0.12);
-  color: var(--accent);
-}
 
-/* Agency search */
-.agency-search-wrap { margin-bottom: 6px; }
+/* Agency search input */
+.agency-search-wrap {
+  margin-bottom: 10px;
+}
 .agency-search-input {
   width: 100%;
   box-sizing: border-box;
-  padding: 6px 10px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  font-size: 0.82rem;
+  padding: 10px;
+  border: 1px solid var(--gray-light);
+  border-radius: 6px;
+  font-size: 0.95rem;
   outline: none;
-  background: #fafafa;
-  transition: border-color 0.15s;
+  background: #fff;
 }
-.agency-search-input:focus { border-color: var(--accent); background: #fff; }
 
+/* scroll area */
 .agency-filter-list {
-  max-height: 300px;
+  max-height: 340px;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #d1d5db transparent;
 }
 
-/* ══════════════════════════════════════
-   SEARCH + SORT BAR
-══════════════════════════════════════ */
-.controls.top-bar {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 14px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.controls.top-bar input[type="text"] {
-  flex: 1;
-  min-width: 200px;
-  padding: 9px 14px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  font-size: 0.9rem;
-  outline: none;
-  background: var(--card-bg);
-  transition: border-color 0.15s, box-shadow 0.15s;
-}
-.controls.top-bar input[type="text"]:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
-}
-
-.controls.top-bar select {
-  padding: 9px 14px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  font-size: 0.9rem;
-  background: var(--card-bg);
-  outline: none;
-  cursor: pointer;
-  color: #374151;
-}
-
-/* Total count */
-#opportunity-total-count {
-  font-size: 0.82rem;
-  color: var(--muted);
-  font-weight: 500;
-  margin: 0 0 14px 0;
-}
-
-/* ══════════════════════════════════════
-   CARD GRID
-══════════════════════════════════════ */
-#opportunity-list.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-auto-rows: 1fr;
-  gap: 14px;
-}
-
-.opportunity-card {
-  width: 100%;
-  text-align: left;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  background: var(--card-bg);
-  padding: 16px 18px;
-  cursor: pointer;
-  user-select: none;
-  transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.opportunity-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
-  border-color: rgba(0,0,0,0.15);
-}
-.opportunity-card.selected {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
-}
-
-.opp-agency {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.opp-title {
-  font-weight: 700;
-  font-size: 0.92rem;
-  line-height: 1.35;
-  color: #111827;
-}
-
-.opp-meta {
-  font-size: 0.8rem;
-  color: var(--muted);
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: auto;
-  padding-top: 12px;
-  border-top: 1px solid var(--border);
-}
-
-/* Load more */
-.load-more-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px 0 4px;
-}
-.load-more-btn {
-  padding: 9px 24px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  align-self: center;
-  background: var(--navy);
-  color: #fff;
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.load-more-btn:hover { background: var(--navy-light); }
-
-/* No results / error */
-.no-results, .error-msg {
-  grid-column: 1 / -1;
-  color: var(--muted);
-  font-size: 0.95rem;
-  padding: 32px 0;
-  text-align: center;
-}
-
-/* ══════════════════════════════════════
-   DETAIL PANEL
-══════════════════════════════════════ */
-.opp-details-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 28px 32px;
-}
-
-.back-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: none;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 7px 14px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--navy);
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: background 0.12s ease, border-color 0.12s ease;
-}
-.back-btn:hover {
-  background: #f1f5f9;
-  border-color: rgba(0,0,0,0.18);
-}
-
-.opp-detail-agency {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 6px;
-}
-
-.opp-details-card h2 {
-  margin: 0 0 12px 0;
-  font-size: 1.3rem;
-  line-height: 1.3;
-  color: #0f172a;
-}
-
-.opp-details-card p {
-  margin: 4px 0;
-  font-size: 0.9rem;
-  color: #374151;
-  line-height: 1.6;
-}
-
-.opp-details-card hr {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 16px 0;
-}
-
-.opp-details-card a {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-}
-.opp-details-card a:hover { text-decoration: underline; }
-
-.opp-details-card ul {
-  padding-left: 1.25rem;
-  margin: 4px 0 0;
-  line-height: 1.8;
-  font-size: 0.9rem;
-  color: #374151;
-}
-
-/* ── Responsive ── */
-@media (max-width: 860px) {
-  .opportunity-layout {
-    grid-template-columns: 1fr;
-  }
-  #opportunity-sidebar {
-    position: static;
-  }
-  .page-header {
-    padding: 0 16px;
-  }
-}
-
-/* ── Description toggle ── */
-.desc-toggle-btn {
-  display: inline-block;
-  margin-top: 10px;
-  background: none;
-  border: none;
-  color: var(--accent);
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 0;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.desc-toggle-btn:hover { opacity: 0.75; }
-
-/* Agency tree indentation (existing) */
+/* ---- Agency tree indentation + caret ---- */
 .filter-option.agency-child {
-  padding-left: 22px;
+  padding-left: 28px;
 }
 .filter-option.agency-grandchild {
-  padding-left: 40px;
+  padding-left: 48px;
 }
 
-/* ══════════════════════════════════════
-   AGENCY TREE UI (Parent/Child Aware Hooks)
-══════════════════════════════════════ */
-
-/* If your JS marks parents with a class like "agency-parent" */
 .filter-option.agency-parent .filter-label {
-  font-weight: 650;
+  font-weight: 850;
 }
 
-/* Optional: make children slightly muted vs parent */
+/* Optional: muted children */
 .filter-option.agency-child .filter-label,
 .filter-option.agency-grandchild .filter-label {
-  font-weight: 500;
-  color: #4b5563;
+  font-weight: 600;
+  color: #4B5563;
 }
 
-/* OPTIONAL caret button for expand/collapse:
-   If your JS renders something like:
-   <button class="agency-toggle" aria-label="Toggle children"></button>
-   right before the label, these styles will work.
-*/
+/* Caret button */
 .agency-toggle {
   width: 18px;
   height: 18px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--gray-light);
   background: #fff;
   border-radius: 6px;
   display: inline-flex;
@@ -488,12 +513,12 @@
   justify-content: center;
   cursor: pointer;
   flex-shrink: 0;
-  transition: background 0.12s ease, border-color 0.12s ease;
+  transition: 0.12s ease;
 }
 .agency-toggle:hover {
-  background: #f8fafc;
-  border-color: rgba(0,0,0,0.18);
+  background: rgba(12, 35, 64, 0.06);
 }
+
 .agency-toggle::before {
   content: "▾";
   font-size: 12px;
@@ -501,19 +526,11 @@
   color: #475569;
 }
 
-/* If collapsed, rotate caret */
 .filter-option.is-collapsed .agency-toggle::before {
   content: "▸";
 }
 
-/* OPTIONAL hierarchical wrapper:
-   If your JS wraps a parent and its children like:
-   <li class="agency-node is-collapsed">
-     <div class="filter-option agency-parent">...</div>
-     <ul class="agency-children">...</ul>
-   </li>
-   then this will hide children when collapsed.
-*/
+/* Collapse behavior */
 .agency-node .agency-children {
   list-style: none;
   margin: 0;
@@ -522,8 +539,36 @@
 .agency-node.is-collapsed > .agency-children {
   display: none;
 }
-
-/* Make children feel grouped under parent */
 .agency-children .filter-option {
   margin-left: 6px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 980px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+  }
+
+  .controls.top-bar select {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-header {
+    margin: 12px 12px 18px;
+    padding: 22px 14px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .controls.top-bar {
+    padding: 12px;
+  }
 }

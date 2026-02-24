@@ -713,20 +713,16 @@
 
   function buildDescHtml(desc, oppId) {
     if (!desc) return "<p>N/A</p>";
-    const paragraphs = desc.split("\n").filter(s => s.trim());
-    const full = paragraphs.map(s => "<p>" + escapeHtml(s.trim()) + "</p>").join("");
-    if (desc.length <= 600) return full;
-    let charCount = 0;
-    const shortParas = [];
-    for (const p of paragraphs) {
-      if (charCount >= 600) break;
-      shortParas.push("<p>" + escapeHtml(p.trim()) + "</p>");
-      charCount += p.length;
-    }
-    const shortHtml = shortParas.join("");
+    const LIMIT = 400;
+    const full = "<p>" + escapeHtml(desc.trim()) + "</p>";
+    if (desc.length <= LIMIT) return full;
+    // Truncate at the last word boundary before LIMIT so we don't cut mid-word
+    let cutAt = LIMIT;
+    while (cutAt > 0 && desc[cutAt] !== " ") cutAt--;
+    const shortText = desc.slice(0, cutAt).trim() + "…";
     const id = "desc-" + String(oppId);
     return (
-      "<div id=\"" + id + "-short\">" + shortHtml +
+      "<div id=\"" + id + "-short\"><p>" + escapeHtml(shortText) + "</p>" +
         "<button class=\"desc-toggle-btn\" onclick=\"" +
           "document.getElementById('" + id + "-short').style.display='none';" +
           "document.getElementById('" + id + "-full').style.display='';" +
