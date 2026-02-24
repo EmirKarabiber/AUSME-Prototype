@@ -2,7 +2,7 @@
 
 ## Purpose
 
-**B3:** Get expert data from MySQL (`main_ausme`) and produce the JSON consumed by `experts.js` (`data/experts.json`, `data/expert_details.json`).
+**B3:** Get expert data from MySQL (`main_ausme`) and produce the JSON consumed by `experts.js` (`data/experts.json`, `data/expert_details.json`, `data/expert_similar_profiles.json`).
 
 ## Setup
 
@@ -34,8 +34,9 @@ node scripts/experts_export.js --export
 
 ## Output
 
-- **data/experts.json** – list: `id`, `name`, `publicationCount`, `keywordCount`
+- **data/experts.json** – list: `id`, `name`, `publicationCount`, `keywordCount`, etc.
 - **data/expert_details.json** – all experts’ detail: `name`, `expertise[]`, `keywords[]`, `publications[]`
+- **data/expert_similar_profiles.json** – similar researchers per expert (from `users_similarprofile`), shown on each researcher’s profile page
 
 To view the app: run `npm start` and open **http://localhost:3000/experts.html**.
 
@@ -49,5 +50,6 @@ To view the app: run `npm start` and open **http://localhost:3000/experts.html**
 | `papers_researchers`  | Publication count per researcher |
 | `papers`              | Paper records |
 | `paper_keywords`      | keyword, paper_id → keyword count |
+| `users_similarprofile` (or `users_similarprofiles`) | similar researcher links → expert_similar_profiles.json |
 
 If your schema differs, run `--inspect` and edit the SQL in `scripts/experts_export.js`.
