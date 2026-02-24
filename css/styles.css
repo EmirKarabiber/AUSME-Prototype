@@ -125,6 +125,35 @@ body {
     display: flex;
 }
 
+/* Search overlay: ghost + input must stack; wrapper must not grow and must contain ghost */
+.autocomplete-container .input-wrapper {
+    display: block;
+    position: relative;
+    flex-grow: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Keep ghost overlaying the visible input only (contained by wrapper) */
+.autocomplete-container #searchGhost {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: #aaa;
+    background: transparent;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.autocomplete-container #searchInput {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+
 #searchInput,
 #searchGhost {
     font-size: 1.1em;
@@ -150,9 +179,26 @@ select:focus {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
     align-items: stretch;   /* ensures equal height rows */
+}
+
+/* Experts list: force 3 columns on wide screens so it matches experts branch */
+#expertsList.grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1100px) {
+    #expertsList.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    #expertsList.grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .card {
