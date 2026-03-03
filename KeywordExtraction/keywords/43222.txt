@@ -1,0 +1,3 @@
+Title: Quantum algorithm; Quantum computer; Quantum information processing; Algorism; Quantum graph
+Intro: Quantum algorithm; Quantum dot cellular automaton; NIST; Research program; Photon antibunching
+Full: Quantum algorithm; Algorithmic complexity; Quantum cellular automaton; Quadratic assignment problem; True quantified Boolean formula
