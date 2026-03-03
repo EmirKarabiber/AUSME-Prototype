@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunity Keyword Extraction</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface: #1e293b;
+            --surface-hover: #334155;
+            --primary: #3b82f6;
+            --primary-glow: rgba(59, 130, 246, 0.4);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --highlight: rgba(59, 130, 246, 0.25);
+            --highlight-border: #60a5fa;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar: Search & Keywords */
+        .sidebar {
+            width: 380px;
+            background-color: var(--surface);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            box-sizing: border-box;
+            gap: 24px;
+            overflow-y: auto;
+        }
+
+        /* Main View: Document */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            scroll-behavior: smooth;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            margin: 0;
+            font-weight: 600;
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: #0f172a;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px var(--primary-glow);
+        }
+
+        .search-results {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .result-item {
+            padding: 12px;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 8px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .result-item:hover {
+            background: var(--surface-hover);
+            border-color: var(--border);
+        }
+
+        .result-item .opp-number {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .result-item .opp-title {
+            font-size: 0.9rem;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Keywords Panel */
+        .keywords-panel {
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        button.btn-extract {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px var(--primary-glow);
+        }
+
+        button.btn-extract:hover:not(:disabled) {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px var(--primary-glow);
+            filter: brightness(1.1);
+        }
+
+        button.btn-extract:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .keyword-item {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--border);
+            padding: 12px 16px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .keyword-item:hover {
+            border-color: var(--primary);
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .keyword-name {
+            font-weight: 500;
+        }
+
+        .keyword-score {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            background: var(--bg-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+        }
+
+        /* Pulse / Bloom Animation */
+        @keyframes bloom {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 var(--primary-glow);
+            }
+
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 0 15px 2px var(--primary-glow);
+                border-color: var(--primary);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 transparent;
+            }
+        }
+
+        .keyword-bloom {
+            animation: bloom 0.8s ease-out;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            display: none;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top: 3px solid var(--primary);
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Document View */
+        .doc-header h2 {
+            font-size: 2rem;
+            margin: 0 0 8px 0;
+            line-height: 1.2;
+        }
+
+        .doc-header .opp-meta {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .doc-body {
+            background: var(--surface);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            line-height: 1.7;
+            font-size: 1.05rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            color: #cbd5e1;
+            white-space: pre-wrap;
+            position: relative;
+        }
+
+        .gradient-layer {
+            border-radius: 4px;
+            transition: all 0.3s;
+            display: inline;
+        }
+
+        /* Dim text when one is highlighted */
+        .doc-body.is-highlighting {
+            color: rgba(203, 213, 225, 0.15);
+        }
+
+        .gradient-layer.layer-core {
+            background-color: var(--highlight);
+            border-bottom: 2px solid var(--highlight-border);
+            color: #fff !important;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            padding: 2px 0;
+        }
+
+        .manual-form {
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .manual-form textarea,
+        .manual-form input {
+            width: 100%;
+            background: #0f172a;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .mode-toggle {
+            display: flex;
+            gap: 8px;
+        }
+
+        .mode-btn {
+            flex: 1;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .mode-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h1>Ausme Extraction UI</h1>
+
+        <div class="mode-toggle">
+            <button class="mode-btn active" id="searchModeBtn" onclick="toggleMode('search')">Search Mode</button>
+            <button class="mode-btn" id="manualModeBtn" onclick="toggleMode('manual')">Manual Entry</button>
+        </div>
+
+        <div id="searchContainer">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by Opportunity ID or Title..."
+                    autocomplete="off">
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div id="manualContainer" class="manual-form">
+            <input type="text" id="manualTitle" placeholder="Opportunity Title...">
+            <textarea id="manualDesc" placeholder="Opportunity Description..." rows="8"></textarea>
+        </div>
+
+        <div class="keywords-panel" style="display: none;" id="keywordsPanel">
+            <h3 style="margin:0; font-size: 1rem; color: var(--text-muted);">Extracted Keywords</h3>
+            <button class="btn-extract" id="extractBtn" onclick="extractKeywords()">
+                <span class="btn-text">Run Keyword Extraction</span>
+                <div class="spinner" id="extractSpinner"></div>
+            </button>
+
+            <div id="keywordsResults" style="display: none; flex-direction: column; gap: 20px;">
+                <div>
+                    <h4 style="margin: 0 0 8px 0; font-size: 0.9rem; color: #cbd5e1;">From Title Only</h4>
+                    <div id="titleKeywordsList" style="display: flex; flex-direction: column; gap: 8px;"></div>
+                </div>
+                <div>
+                    <h4 style="margin: 0 0 8px 0; font-size: 0.9rem; color: #cbd5e1;">From First 15% (Intro)</h4>
+                    <div id="introKeywordsList" style="display: flex; flex-direction: column; gap: 8px;"></div>
+                </div>
+                <div>
+                    <h4 style="margin: 0 0 8px 0; font-size: 0.9rem; color: #cbd5e1;">From Full Document</h4>
+                    <div id="fullKeywordsList" style="display: flex; flex-direction: column; gap: 8px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content" id="mainContent" style="display: none;">
+        <div class="doc-header">
+            <h2 id="docTitle">Title Here</h2>
+            <div class="opp-meta" id="docMeta">Number Here</div>
+        </div>
+        <div class="doc-body" id="docBody">
+            <!-- p tags go here -->
+        </div>
+    </div>
+
+    <script>
+        let currentOppId = null;
+        let currentOppText = "";
+        let searchTimeout;
+
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        const mainContent = document.getElementById('mainContent');
+        const docTitle = document.getElementById('docTitle');
+        const docMeta = document.getElementById('docMeta');
+        const docBody = document.getElementById('docBody');
+
+        const keywordsPanel = document.getElementById('keywordsPanel');
+        const extractBtn = document.getElementById('extractBtn');
+        const btnText = extractBtn.querySelector('.btn-text');
+        const extractSpinner = document.getElementById('extractSpinner');
+        const keywordsResults = document.getElementById('keywordsResults');
+
+        const titleKeywordsList = document.getElementById('titleKeywordsList');
+        const introKeywordsList = document.getElementById('introKeywordsList');
+        const fullKeywordsList = document.getElementById('fullKeywordsList');
+
+        // Debounced search
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            const q = e.target.value.trim();
+            if (!q) {
+                searchResults.innerHTML = '';
+                return;
+            }
+            searchTimeout = setTimeout(() => {
+                fetch(`/api/search?q=${encodeURIComponent(q)}`)
+                    .then(res => res.json())
+                    .then(data => renderSearchResults(data));
+            }, 300);
+        });
+
+        function renderSearchResults(data) {
+            searchResults.innerHTML = '';
+            data.forEach(item => {
+                const el = document.createElement('div');
+                el.className = 'result-item';
+                el.innerHTML = `
+                    <div class="opp-number">${item.number || item.opp_id}</div>
+                    <div class="opp-title">${item.title}</div>
+                `;
+                el.onclick = () => loadOpportunity(item.unique_id);
+                searchResults.appendChild(el);
+            });
+        }
+
+        function loadOpportunity(oppId) {
+            currentOppId = oppId;
+            searchResults.innerHTML = ''; // hide results
+            // Reset state
+            keywordsPanel.style.display = 'flex';
+            keywordsResults.style.display = 'none';
+            titleKeywordsList.innerHTML = '';
+            introKeywordsList.innerHTML = '';
+            fullKeywordsList.innerHTML = '';
+
+            extractBtn.style.display = 'block';
+            mainContent.style.display = 'none';
+
+            fetch(`/api/opportunities/${oppId}`)
+                .then(res => res.json())
+                .then(data => {
+                    docTitle.textContent = data.title;
+                    docMeta.textContent = `ID: ${data.opp_id} | Ref: ${data.number}`;
+
+                    currentOppText = data.text || "";
+                    docBody.innerHTML = '';
+                    docBody.textContent = currentOppText;
+
+                    mainContent.style.display = 'flex';
+                });
+        }
+
+        let currentHoveredKeyword = null;
+        let globalKeywordsState = {
+            "title_keywords": {},
+            "intro_keywords": {},
+            "full_keywords": {}
+        };
+
+        function toggleMode(mode) {
+            document.getElementById('searchModeBtn').classList.toggle('active', mode === 'search');
+            document.getElementById('manualModeBtn').classList.toggle('active', mode === 'manual');
+            document.getElementById('searchContainer').style.display = mode === 'search' ? 'block' : 'none';
+            document.getElementById('manualContainer').style.display = mode === 'manual' ? 'flex' : 'none';
+
+            if (mode === 'manual') {
+                currentOppId = "manual";
+                keywordsPanel.style.display = 'flex';
+                extractBtn.style.display = 'block';
+            } else {
+                currentOppId = null;
+                keywordsPanel.style.display = 'none';
+            }
+        }
+
+        async function extractKeywords() {
+            if (!currentOppId) return;
+
+            // UI loading state
+            btnText.style.display = 'none';
+            extractSpinner.style.display = 'block';
+            extractBtn.disabled = true;
+
+            // Reset States
+            globalKeywordsState = { "title_keywords": {}, "intro_keywords": {}, "full_keywords": {} };
+            titleKeywordsList.innerHTML = '';
+            introKeywordsList.innerHTML = '';
+            fullKeywordsList.innerHTML = '';
+            keywordsResults.style.display = 'flex';
+
+            try {
+                let response;
+                if (currentOppId === "manual") {
+                    const title = document.getElementById('manualTitle').value;
+                    const description = document.getElementById('manualDesc').value;
+                    currentOppText = description;
+                    docTitle.textContent = title;
+                    docMeta.textContent = "Manual Extraction";
+                    docBody.textContent = description;
+                    mainContent.style.display = 'flex';
+
+                    response = await fetch('/api/extract_manual', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ title, description })
+                    });
+                } else {
+                    response = await fetch(`/api/extract/${currentOppId}`, { method: 'POST' });
+                }
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder('utf-8');
+
+                let buffer = "";
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    buffer += decoder.decode(value, { stream: true });
+                    const parts = buffer.split('\n\n');
+                    buffer = parts.pop(); // keep the last incomplete chunk
+
+                    for (const part of parts) {
+                        if (part.startsWith('data: ')) {
+                            try {
+                                const payload = JSON.parse(part.substring(6));
+                                handleSSE(payload);
+                            } catch (e) {
+                                console.error("Error parsing SSE JSON:", e);
+                            }
+                        }
+                    }
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Failed to extract keywords. Check console.");
+            } finally {
+                extractBtn.style.display = 'none'; // hide button, show results instead
+                btnText.style.display = 'block';
+                extractSpinner.style.display = 'none';
+                extractBtn.disabled = false;
+            }
+        }
+
+        function handleSSE(payload) {
+            const scope = payload.scope; // "title_keywords", "intro_keywords", "full_keywords"
+            const name = payload.keyword;
+
+            if (payload.phase === 1) {
+                globalKeywordsState[scope][name] = payload;
+            } else if (payload.phase === 2) {
+                if (globalKeywordsState[scope][name]) {
+                    Object.assign(globalKeywordsState[scope][name], payload);
+                    // Add visual pulse effect to the button
+                    triggerPulse(scope, name);
+                }
+            } else if (payload.phase === 3) {
+                if (globalKeywordsState[scope][name]) {
+                    globalKeywordsState[scope][name].gradient_spans.push(payload.gradient);
+                }
+            }
+
+            // Immediately Render UI Updates
+            if (scope === "title_keywords") renderKeywordGroup(Object.values(globalKeywordsState.title_keywords), titleKeywordsList, "title_keywords");
+            if (scope === "intro_keywords") renderKeywordGroup(Object.values(globalKeywordsState.intro_keywords), introKeywordsList, "intro_keywords");
+            if (scope === "full_keywords") renderKeywordGroup(Object.values(globalKeywordsState.full_keywords), fullKeywordsList, "full_keywords");
+
+            // If the user's mouse is actively resting on this exact keyword, instantly re-trigger the visual highlight to make it bloom
+            if (currentHoveredKeyword && currentHoveredKeyword.scope === scope && currentHoveredKeyword.name === name) {
+                injectHighlight(globalKeywordsState[scope][name]);
+            }
+        }
+
+        function triggerPulse(scope, name) {
+            // Find the element in the UI
+            const containerMap = {
+                "title_keywords": titleKeywordsList,
+                "intro_keywords": introKeywordsList,
+                "full_keywords": fullKeywordsList
+            };
+            const container = containerMap[scope];
+            if (!container) return;
+
+            const items = container.querySelectorAll('.keyword-item');
+            items.forEach(item => {
+                if (item.querySelector('.keyword-name').textContent === name) {
+                    item.classList.remove('keyword-bloom');
+                    void item.offsetWidth; // Trigger reflow
+                    item.classList.add('keyword-bloom');
+                }
+            });
+        }
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g,
+                tag => ({
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    "'": '&#39;',
+                    '"': '&quot;'
+                }[tag] || tag)
+            );
+        }
+
+        function renderKeywordGroup(keywords, containerEl, scopeName) {
+            containerEl.innerHTML = '';
+            if (!keywords || keywords.length === 0) {
+                containerEl.innerHTML = '<div style="color: var(--text-muted); font-size: 0.85rem;">No keywords found.</div>';
+                return;
+            }
+
+            keywords.forEach(kw => {
+                const el = document.createElement('div');
+                el.className = 'keyword-item';
+                el.innerHTML = `
+                    <span class="keyword-name">${kw.keyword}</span>
+                    <span class="keyword-score">${kw.score.toFixed(3)}</span>
+                `;
+
+                // Add hover events for exact substring highlighting
+                el.addEventListener('mouseenter', () => {
+                    currentHoveredKeyword = { scope: scopeName, name: kw.keyword };
+                    injectHighlight(kw);
+                });
+
+                el.addEventListener('mouseleave', () => {
+                    currentHoveredKeyword = null;
+                    docBody.classList.remove('is-highlighting');
+                    docBody.textContent = currentOppText;
+                });
+
+                containerEl.appendChild(el);
+            });
+        }
+
+        // Programmatically inject the CSS glow spans so we can call it recursively from the SSE loop
+        function injectHighlight(kw) {
+            const spans = kw.gradient_spans;
+            if (spans && spans.length > 0 && currentOppText) {
+
+                docBody.classList.add('is-highlighting');
+
+                // We will build the HTML by slicing the string.
+                // To handle overlapping spans (Russian Doll style), 
+                // we start with the outermost span, wrap it, then find the inner span inside that, etc.
+
+                // Let's sort spans by size descending (widest first)
+                const sortedSpans = [...spans].sort((a, b) => (b.end - b.start) - (a.end - a.start));
+
+                let htmlResult = "";
+
+                const outermost = sortedSpans[0];
+
+                // Add text before the outermost glow
+                htmlResult += escapeHTML(currentOppText.substring(0, outermost.start));
+
+                // Now we recursively build the Russian dolls
+                function buildNestedGlows(spansList, currentTextStartIdx, currentTextEndIdx) {
+                    if (spansList.length === 0) {
+                        return escapeHTML(currentOppText.substring(currentTextStartIdx, currentTextEndIdx));
+                    }
+
+                    const currentSpan = spansList[0];
+                    const remainingSpans = spansList.slice(1);
+
+                    const before = currentOppText.substring(currentTextStartIdx, currentSpan.start);
+                    const after = currentOppText.substring(currentSpan.end, currentTextEndIdx);
+
+                    // Calculate text opacity based on how deep we are
+                    const totalLayers = sortedSpans.length;
+                    const currentDepth = totalLayers - spansList.length;
+
+                    // Text opacity smoothly ramps from 0.2 at the edges to 0.9 near the core
+                    const minOp = 0.2;
+                    const maxOp = 0.9;
+                    const progress = totalLayers > 1 ? (currentDepth / (totalLayers - 1)) : 1.0;
+
+                    // Use a smooth ease-in-out curve for the transition
+                    const smoothProgress = progress * progress * (3 - 2 * progress);
+                    const opacity = minOp + (maxOp - minOp) * smoothProgress;
+
+                    const isCore = spansList.length === 1;
+                    const coreClass = isCore ? 'layer-core' : '';
+                    const coreId = isCore ? 'id="current-hl"' : '';
+
+                    let res = escapeHTML(before);
+                    res += `<span ${coreId} class="gradient-layer ${coreClass}" style="color: rgba(203, 213, 225, ${opacity.toFixed(3)});">`;
+                    res += buildNestedGlows(remainingSpans, currentSpan.start, currentSpan.end);
+                    res += `</span>`;
+                    res += escapeHTML(after);
+
+                    return res;
+                }
+
+                htmlResult += buildNestedGlows(sortedSpans, outermost.start, outermost.end);
+
+                // Add remaining text after the outermost glow
+                htmlResult += escapeHTML(currentOppText.substring(outermost.end));
+
+                docBody.innerHTML = htmlResult;
+
+                const hlNode = document.getElementById('current-hl');
+                if (hlNode) {
+                    hlNode.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
